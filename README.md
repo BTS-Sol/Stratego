@@ -1,0 +1,2 @@
+# Stratego
+Help Me Stratego
