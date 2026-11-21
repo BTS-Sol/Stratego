@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mechaniken – Stratego 3D Handbuch</title><link rel="stylesheet" href="stil.css"></head>
+<body><header class="top"><div class="in"><a class="logo" href="index.html">STRATEGO 3D · HANDBUCH</a>
+<nav><a href="index.html">Start</a><a href="bedienung.html">Bedienung</a><a href="mechaniken.html" class=on>Mechaniken</a><a href="bauen.html">Bauen &amp; Gebäude</a><a href="feldzug.html">Feldzug</a><a href="modi.html">Spielmodi</a><a href="karten.html">Karten</a><a href="geschichte.html">Geschichte</a><a href="einheiten.html">Alle Einheiten</a></nav></div></header>
+<main>
+<h1>Spielmechaniken</h1>
+<p class="lead">Jeder Soldat wird einzeln simuliert: er sucht sich Ziele, schlägt, schießt, wird müde, hat Angst. Die
+Bataillone darüber halten die Formation, gehorchen Befehlen und fliehen, wenn die Moral bricht. Diese Seite erklärt alle
+Regeln – mit den echten Zahlen aus dem Spiel.</p>
+<div class="toc">
+<a href="#nahkampf">Nahkampf</a><a href="#fernkampf">Fernkampf und Beschuss</a><a href="#explosion">Artillerie und Explosionen</a>
+<a href="#panzer">Rüstung, Härte und Durchschlag</a><a href="#moral">Moral und Flucht</a><a href="#ausdauer">Ausdauer</a>
+<a href="#formationen">Formationen</a><a href="#verhalten">Verhalten der Truppen</a><a href="#feldherren">Feldherren und Standarten</a>
+<a href="#gelaende">Gelände</a><a href="#wetter">Wetter</a><a href="#munition">Munition und Nachschub</a>
+<a href="#sanitaet">Sanität</a><a href="#flieger">Hubschrauber</a><a href="#schutz">Schutzfahrzeuge und Kuppel</a>
+<a href="#sieg">Siegbedingungen</a><a href="#kriegsrufe">Kriegsrufe (Fertigkeiten)</a><a href="#pfad">Wegfindung</a>
+</div>
+
+<h2 id="nahkampf">Nahkampf</h2>
+<p>Steht ein Soldat nah genug an seinem Ziel und ist seine Waffe bereit, schlägt er zu. Ob er trifft, hängt von seinem
+<b>Angriff</b> und der <b>Verteidigung</b> des Gegners ab:</p>
+<div class="box">Trefferchance = 28 % × e<sup>0,035 × (Angriff − Verteidigung)</sup>, mindestens 4 %, höchstens 90 %.<br>
+Schaden = Waffenschaden × Zufall (45–85 %) × (1 − Rüstung × 0,8) × Härte-Faktor.</div>
+<ul>
+<li><b>Flanke und Rücken:</b> Wer von der Seite angegriffen wird, verteidigt sich nur mit 70 %, von hinten nur mit 40 %.
+Fliehende verteidigen sich mit 30 %. Ein <b>Karree</b> hat keine Flanke und keinen Rücken.</li>
+<li><b>Ansturm:</b> Wer mit mehr als halber Höchstgeschwindigkeit aufprallt, macht Zusatzschaden (Wert „Ansturm“ der
+Einheit, bei schwerer Reiterei bis +140 %). Bergauf gibt es keinen Ansturm, gegen ein Karree verpufft er, und Reiter
+richten gegen ein Karree nur halben Schaden an. Im <b>Keil</b> bekommt die Spitze zusätzlich +7 Angriff.</li>
+<li><b>Gegen Reiterei:</b> Speere und Piken bekommen gegen Berittene +10 Angriff je Punkt „Anti-Reiter“ und entsprechend mehr
+Schaden; im <b>Wall</b> (gestemmte Speere) noch einmal das 1,5-Fache.</li>
+<li><b>Kamele:</b> Pferde scheuen vor Kamelen – feindliche Reiter verlieren 9 Angriff.</li>
+<li><b>Höhe:</b> Wer von oben angreift, bekommt bis +6 Angriff; der Verteidiger auf der Anhöhe bis +8 Verteidigung. Dazu ändert
+der Höhenunterschied die Trefferchance um bis zu ±25 %.</li>
+<li><b>Hinter Mauern:</b> Verteidiger in Gebäuden und auf Mauern nehmen im Nahkampf nur 55 % Schaden – dafür leidet das Gebäude.</li>
+<li><b>Wucht:</b> Treffer stoßen den Gegner zurück, schwere Angreifer und Ansturm deutlich weiter.</li>
+<li><b>Erschöpfung</b> senkt die Kampfkraft um bis zu 25 %, <b>Veteranen-Ränge</b> erhöhen sie (Feldzug).</li>
+</ul>
+
+<h2 id="fernkampf">Fernkampf und Beschuss</h2>
+<ul>
+<li>Jede Fernwaffe hat Reichweite, Nachladezeit, Streuung, Schaden und Munition. Bögen und Wurfgeschütze schießen im hohen
+Bogen über die eigenen Reihen, Musketen und Gewehre brauchen freie Schusslinie.</li>
+<li><b>Höhenvorteil:</b> je Meter Höhenunterschied 1,2 % Reichweite – von −15 % (bergauf) bis +25 % (bergab).</li>
+<li><b>Schützen auf Türmen und Mauern:</b> +25 % Reichweite, 30 % genauer, +20 % Schaden und gute Deckung.</li>
+<li><b>Deckung:</b> Wer direkt hinter einer Mauer steht, ist aus flachem Winkel fast nicht zu treffen. Steilfeuer
+(Pfeile im Bogen, Mörser) erreicht ihn trotzdem.</li>
+<li><b>Schilde</b> fangen Geschosse ab – sehr gut gegen Pfeile und Steine, kaum gegen Kugeln. In der <b>Schildkröte</b>
+schützen die Schilde rundum und von oben.</li>
+<li><b>Lockere Formation</b> senkt Verluste durch Beschuss und Explosionen deutlich.</li>
+<li><b>Nebel und Rauch:</b> Truppen in einer Nebelwand werden von Schützen über 12 m Entfernung nicht mehr anvisiert.</li>
+</ul>
+
+<h2 id="explosion">Artillerie und Explosionen</h2>
+<p>Jedes Geschütz verschießt sein eigenes Geschoss, das man im Flug sieht: der große Bolzen des Skorpions, der Felsbrocken des
+Onagers, die Steinkugel der Bombarde, die eiserne Kanonenkugel, die Mörser- und Haubitzengranate, die Rakete mit Feuerschweif,
+die Leuchtspur des Panzers und die Lenkrakete. Geschosse mit Flächenwirkung treffen alles im Radius – mit abnehmender Wirkung
+nach außen. Dichte Formationen leiden am meisten. Geschütze ohne Ziel in Reichweite nehmen von selbst Tore und Mauern unter
+Feuer.</p>
+
+<h2 id="panzer">Rüstung, Härte und Durchschlag</h2>
+<ul>
+<li><b>Rüstung</b> (0–92 %) senkt jeden Treffer: Schaden × (1 − Rüstung × 0,8).</li>
+<li><b>Härte</b> beschreibt das Ziel: 0 = Mensch oder Tier, 1 = Holz und leichte Fahrzeuge, 2 = gepanzert, 3 = schwerer Panzer.</li>
+<li><b>Durchschlag</b> der Waffe zieht von der Härte ab. Je größer der Rest, desto weniger Schaden kommt an. Deshalb kann
+ein Bogen einen Kampfpanzer praktisch nicht verletzen – eine Panzerfaust schon.</li>
+<li>Im Feldzug und in der Feldschlacht verbessert die Ausrüstungsstufe „Durchschlag“ auf Stufe 3 und 5 den Durchschlag.</li>
+</ul>
+
+<h2 id="moral">Moral und Flucht</h2>
+<ul>
+<li>Jedes Bataillon hat Moral. Ihre <b>Obergrenze</b> sinkt mit den Verlusten: Moralwert × (35 % + 65 % × Anteil der
+Überlebenden).</li>
+<li>Verluste, Beschuss, Flanken- und Rückenangriffe, fliehende Nachbarn und ein gefallener Feldherr kosten Moral.
+Die <b>Disziplin</b> der Truppe dämpft diese Schläge.</li>
+<li><b>Rückhalt:</b> Eigene Truppen in 40 m Umkreis (im Verhältnis zu den Feinden dort) mindern Moralverluste um bis zu 40 %.</li>
+<li><b>Erholung:</b> ohne Bedrohung +2,5 je Sekunde; Feldherren in der Nähe +1/s; eine wehende <b>Standarte</b> +0,6/s und
++15 % Obergrenze.</li>
+<li><b>Flucht:</b> Bei Moral 0 – oder wenn nur noch 12 % der Truppe leben (außer bei sehr disziplinierten Truppen) – flieht
+das Bataillon. Nachbarn in 45 m Umkreis verlieren dann Moral.</li>
+<li><b>Sammeln:</b> Fliehende sammeln sich, wenn sie sich erholt haben (Moral über 25) und nicht mehr bedroht sind; weit
+weg vom Feind geht das schnell. Wer zweimal gesammelt wurde und wieder flieht, <b>verlässt das Schlachtfeld</b> – außer
+ein Feldherr ruft ihn zurück (oder der Kriegsruf „Sammelruf“).</li>
+<li><b>Fällt der Feldherr</b>, verliert jedes eigene Bataillon 14 / Disziplin Moral (halb so viel, wer weit vom Kampf steht).</li>
+<li><b>Erschöpfung über 80 %</b> zehrt im Angesicht des Feindes zusätzlich an der Moral.</li>
+</ul>
+
+<h2 id="ausdauer">Ausdauer</h2>
+<div class="tbl"><table><tr><th>Tätigkeit</th><th>Erschöpfung je Sekunde (Fußvolk)</th><th>Reiter</th></tr>
+<tr><td>Marschieren</td><td>+0,5 %</td><td>+0,25 %</td></tr>
+<tr><td>Laufen oder Angriff</td><td>+2,5 %</td><td>+1,25 %</td></tr>
+<tr><td>Im Nahkampf</td><td>+1,8 %</td><td>+0,9 %</td></tr>
+<tr><td>Stehen ohne Kampf</td><td colspan=2>−2 % (Erholung)</td></tr>
+</table></div>
+<p>Volle Erschöpfung bedeutet −30 % Tempo und −25 % Kampfkraft. Reiter verbrauchen nur die Hälfte – das Pferd trägt.
+Ein erschöpftes Bataillon, das im Kampf steckt, löst sich auf Befehl trotzdem: Ein Marschbefehl aus dem Gefecht heraus wird
+zum <b>Rückzug</b> – die Truppe setzt sich vom Feind ab, statt stehen zu bleiben.</p>
+<div class="box tip"><b>Tipp:</b> Zwei Linien hintereinander und die vordere nach einer Weile durch die hintere ablösen –
+so kämpft immer eine ausgeruhte Truppe.</div>
+
+<h2 id="formationen">Formationen</h2>
+<div class="tbl"><table><tr><th>Formation</th><th>Wirkung</th><th class=num>Tempo</th><th>Wer kann sie?</th></tr><tr><td><b>Linie</b></td><td>Normale, dichte Formation in Rotten und Gliedern</td><td class=num>100 %</td><td>alle</td></tr><tr><td><b>Locker</b></td><td>Weiter Abstand: weniger Verluste durch Beschuss und Explosionen, schwächer im Nahkampf</td><td class=num>105 %</td><td>alle</td></tr><tr><td><b>Wall</b></td><td>Schild- oder Pikenwall: langsam, aber sehr stark von vorn</td><td class=num>45 %</td><td>43 Einheiten, z. B. Ägyptischer Krieger, Hastatus, Keltiberische Scutarii, Pedites Extraordinarii, Gallischer Krieger, Germanische Leibwache</td></tr><tr><td><b>Schildkröte</b></td><td>Schildkröte: Schilde rundum und über den Köpfen – Pfeile, Bolzen und Steine prallen ab. Sehr langsam, im Nahkampf beengt.</td><td class=num>35 %</td><td>18 Einheiten, z. B. Hastatus, Keltiberische Scutarii, Pedites Extraordinarii, Legionär, Prätorianer, Kreuzritter</td></tr><tr><td><b>Keil</b></td><td>Keil: die Spitze bricht in die feindliche Linie – deutlich stärkerer Ansturm, aber offene Flanken</td><td class=num>100 %</td><td>53 Einheiten, z. B. Keltiberische Scutarii, Gallischer Krieger, Xianzhen (Gao Shuns Sturmtruppe), Wikinger, Berserker, Ulfheðnar (Wolfskrieger)</td></tr><tr><td><b>Karree</b></td><td>Karree: hohles Viereck, nach allen Seiten gleich stark. Reiterei prallt ab. Sehr langsam.</td><td class=num>30 %</td><td>32 Einheiten, z. B. Hethitischer Speerträger, Phalangit, Argyraspiden (Silberschilde), Triarier, Libysche Speerträger, Yulin-Garde (Gefiederter Wald)</td></tr></table></div>
+<p>Mit <kbd>F</kbd> wechselt man reihum. Die KI wählt auch selbst: Schildkröte unter Beschuss, Karree gegen nahende Reiter,
+Keil für den Reiterangriff. Eine vom Spieler befohlene Formation lässt sie eine Weile in Ruhe.</p>
+<p><b>Tiefe:</b> Große Bataillone stehen in mindestens drei bis vier Gliedern, Musketiere in drei, Reiter in zwei – lächerliche
+Ein-Mann-Linien gibt es nicht. An Engstellen (Tor, Bresche, Furt) zieht sich ein Bataillon von selbst schmaler zusammen.</p>
+
+<h2 id="verhalten">Verhalten der Truppen</h2>
+<ul>
+<li><b>Angriff</b> (Sandbox): jeder Soldat sucht sich selbst den nächsten Feind.</li>
+<li><b>Halten:</b> bleibt stehen und kämpft nur gegen Feinde in der Nähe.</li>
+<li><b>Formation:</b> rückt geordnet vor, eine einfache KI gibt die Befehle.</li>
+<li><b>Befehl:</b> vom Spieler oder vom KI-General geführt.</li>
+<li>Truppengattungen handeln nach ihrer Art: Legionen bilden unter Beschuss die Schildkröte, Spießer gegen Reiter das Karree,
+Plänkler und berittene Schützen weichen dem Nahkampf aus, schwere Reiterei reitet nach dem Aufprall zurück und greift
+erneut an, Schützen ziehen sich hinter das eigene Fußvolk zurück.</li>
+</ul>
+
+<h2 id="feldherren">Feldherren und Standarten</h2>
+<p>Historische Feldherren (Alexander, Caesar, Hannibal, Dschingis Khan, Saladin, Richard Löwenherz, Jeanne d’Arc, Friedrich
+der Große, Napoleon …) heben die Moral in ihrem Umkreis, stärken die Kampfkraft und haben eigene Kniffe: Reserven an
+bröckelnde Stellen, Reiterei abwehren, Flankenangriff, Umfassung, Feuerkonzentration, Scheinflucht, Sammeln.
+Bataillone ab 100 Mann führen eine <b>Standarte</b>: solange sie weht, hält die Moral besser.</p>
+<div class="tbl"><table><tr><th>Feldherr</th><th>Kniff</th><th>Wirkung</th><th class=num>Umkreis</th></tr>
+<tr><td>Gaius Iulius Caesar</td><td>Legionsdrill</td><td>Moral +, Kampfkraft +12 %, Reserven, Abwehr von Reiterei</td><td class=num>75 m</td></tr><tr><td>Alexander der Große</td><td>Hammer und Amboss</td><td>führt selbst, schickt die Reiterei in die Flanke</td><td class=num>60 m</td></tr><tr><td>Hannibal Barkas</td><td>Umfassung</td><td>Reiterei schließt von beiden Seiten</td><td class=num>65 m</td></tr><tr><td>Dschingis Khan</td><td>Scheinflucht</td><td>berittene Schützen weichen aus und schießen weiter</td><td class=num>80 m</td></tr><tr><td>Saladin</td><td>Zermürben</td><td>Schützen konzentrieren das Feuer, Moral bricht kaum</td><td class=num>75 m</td></tr><tr><td>Richard Löwenherz</td><td>Löwenherz</td><td>Ritter in seiner Nähe schlagen deutlich härter zu</td><td class=num>50 m</td></tr><tr><td>Jeanne d&#x27;Arc</td><td>Die Jungfrau von Orléans</td><td>Fliehende sammeln sich in ihrer Nähe sofort</td><td class=num>95 m</td></tr><tr><td>Friedrich der Große</td><td>Schiefe Schlachtordnung</td><td>Übermacht an einem Flügel</td><td class=num>75 m</td></tr><tr><td>Napoleon Bonaparte</td><td>Grande Batterie</td><td>alle Geschütze auf ein Ziel, Reserven zum Durchbruch</td><td class=num>85 m</td></tr><tr><td>Feldmarschall</td><td>Stab und Telefon</td><td>Feuerkonzentration und Reserven</td><td class=num>130 m</td></tr><tr><td>Kommandeur</td><td>Lagebild in Echtzeit</td><td>erkennt jeden Angriff, Feuer auf ein Ziel</td><td class=num>170 m</td></tr><tr><td>KI-Kommandeur</td><td>Taktische KI</td><td>präzise Truppen, sofortige Reaktion</td><td class=num>220 m</td></tr>
+</table></div>
+
+<h2 id="gelaende">Gelände</h2>
+<ul>
+<li><b>Anhöhen:</b> weiter schießen, schwerer getroffen werden, im Nahkampf stärker. Bergauf langsamer und kein Sturmangriff.</li>
+<li><b>Wald:</b> schützt vor Beschuss, bremst Reiter und Fahrzeuge.</li>
+<li><b>Wasser und Sumpf:</b> bremsen stark; tiefe Flüsse lassen sich nur an Furten oder Brücken überqueren.</li>
+<li><b>Steile Felsen</b> sind unpassierbar.</li>
+</ul>
+
+<h2 id="wetter">Wetter</h2>
+<div class="tbl"><table><tr><th>Wetter</th><th>Wirkung</th></tr><tr><td><b>Klar</b></td><td>Klare Sicht, trockener Boden</td></tr><tr><td><b>Regen</b></td><td>Aufgeweichter Boden: alle langsamer, Fahrzeuge besonders. Nasse Bogensehnen tragen weniger weit, Musketen versagen oft. Wer rennt, rutscht leicht aus.</td></tr><tr><td><b>Schnee</b></td><td>Tiefer Schnee: alle deutlich langsamer, Reiter am meisten. Schlechte Sicht verkürzt die Reichweite und macht Schüsse ungenauer. Am Hang rutschen viele aus.</td></tr></table></div>
+<p>Tempo bei Regen: Fußvolk 90 %, Reiter 85 %, Fahrzeuge 80 %. Bei Schnee: 80 %, 70 % und 75 %.</p>
+
+<h2 id="munition">Munition und Nachschub</h2>
+<ul>
+<li>Schützen haben begrenzte Munition. Ein <b>Munitionslager</b> nahe der eigenen Aufstellung versorgt sie: Schützen in der
+Nähe füllen dort auf.</li>
+<li>Geht einer Truppe die Munition aus und liegt das Lager höchstens 140 m entfernt, holt sie selbst Nachschub und kehrt an ihren
+Platz zurück. <b>Trossknechte, Knappen und Munitionsträger</b> nehmen ihr den Weg ab.</li>
+<li>Der Knopf <b>Nachschub</b> füllt das Lager auf (Feldschlacht: mit Abklingzeit; Feldzug: gegen Gold) oder errichtet ein neues.</li>
+<li>Im Feldzug wächst das Lager mit der Feldherrnstufe (+3 % je Stufe) und der Fertigkeit „Quartiermeister“.</li>
+</ul>
+
+<h2 id="sanitaet">Sanität</h2>
+<p>Sanitäter (Medicus, Feldscher, Sanitäter …) heilen Verwundete in ihrer Nähe – mehrere gleichzeitig, bis ihr Vorrat erschöpft
+ist. Frei gewordene Sanitäter laufen von selbst hinter das am härtesten kämpfende eigene Bataillon.</p>
+
+<h2 id="flieger">Hubschrauber</h2>
+<ul>
+<li>Kampfhubschrauber fliegen in rund 16 m Höhe. Nahkämpfer erreichen sie nicht – nur Schützen, Maschinengewehre, Raketen und
+Geschütze.</li>
+<li>Sie ignorieren Gelände, Mauern, Gräben und Gedränge und schießen von oben.</li>
+<li>Abgeschossene Hubschrauber stürzen ab und explodieren am Boden.</li>
+</ul>
+
+<h2 id="schutz">Schutzfahrzeuge und Energiekuppel</h2>
+<ul>
+<li><b>Panzerwand-Fahrzeuge</b> gibt es für jedes Zeitalter: Pluteus (Antike), Sturmwand (Mittelalter), Sappenwalze
+(Linienzeit), Rollschild (Weltkriege) und Schildwagen (Moderne). Sie fangen Geschosse von vorn ab.</li>
+<li>Rechtsklick einer Truppe auf das Fahrzeug: sie <b>folgt dicht dahinter</b>. Kurz vor dem Ziel bleibt das Fahrzeug stehen,
+damit die Truppe vorbei stürmen kann.</li>
+<li>Der <b>Kuppelwagen</b> der Zukunft spannt eine blaue Energiekuppel von etwa 20 m Durchmesser auf (rund 2 × 2 Kästchen):
+kein Schaden hinein und keiner hinaus – weder Geschosse noch Explosionen noch Nahkampf über die Grenze.</li>
+</ul>
+
+<h2 id="sieg">Siegbedingungen</h2>
+<div class="tbl"><table><tr><th>Bedingung</th><th>Regel</th></tr><tr><td><b>Vernichtung</b></td><td>Gewonnen hat, wer als Letzter noch kämpfende Truppen hat.</td></tr><tr><td><b>Ort halten</b></td><td>Haltet den markierten Ort allein besetzt, bis die Zeit abgelaufen ist.</td></tr><tr><td><b>König</b></td><td>Jede Seite hat einen schwachen König. Fällt er, flieht sein ganzes Heer.</td></tr></table></div>
+
+<h2 id="kriegsrufe">Kriegsrufe (Fertigkeiten im Feldzug)</h2>
+<p>Im Feldzug ist jeder Erfahrungspunkt auch ein Fertigkeitspunkt. Aktive Fertigkeiten (Kriegsrufe) wirken in der Schlacht auf
+die gerade gewählten Bataillone und haben eine Abklingzeit; passive gelten immer. Die Leiste der Kriegsrufe ist rechts
+angedockt und horizontal angeordnet, damit sie die Übersichten nicht verdeckt.</p>
+<div class="tbl"><table><tr><th>Fertigkeit</th><th>Art</th><th>ab Stufe</th><th>Wirkung Stufe 1</th><th>Wirkung Stufe 3</th>
+<th>Kosten (Punkte)</th></tr><tr><td><b>Kriegsruf</b></td><td>aktiv</td><td>1</td><td>+20% Schaden und +25 Moral für 20 s · Abklingzeit 90 s</td><td>+40% Schaden und +25 Moral für 20 s · Abklingzeit 60 s</td><td>150 / 500 / 1.500</td></tr><tr><td><b>Ansporn</b></td><td>aktiv</td><td>1</td><td>+25% Tempo und Angriffstempo für 20 s · Abklingzeit 90 s</td><td>+45% Tempo und Angriffstempo für 20 s · Abklingzeit 60 s</td><td>150 / 500 / 1.500</td></tr><tr><td><b>Berserkerwut</b></td><td>aktiv</td><td>6</td><td>+50% Schaden, +30% Angriffstempo, kein Fliehen, −10 Rüstung · 15 s · Abklingzeit 120 s</td><td>+90% Schaden, +30% Angriffstempo, kein Fliehen, −10 Rüstung · 25 s · Abklingzeit 120 s</td><td>400 / 1.200 / 3.000</td></tr><tr><td><b>Unverwundbarkeit</b></td><td>aktiv</td><td>12</td><td>Keinerlei Verluste für 5 s · Abklingzeit 150 s</td><td>Keinerlei Verluste für 12 s · Abklingzeit 110 s</td><td>800 / 2.000 / 5.000</td></tr><tr><td><b>Wiederbelebung</b></td><td>aktiv</td><td>16</td><td>10% der Gefallenen kehren sofort zurück · einmal je Schlacht</td><td>30% der Gefallenen kehren sofort zurück · einmal je Schlacht</td><td>1.000 / 2.500 / 6.000</td></tr><tr><td><b>Deckung!</b></td><td>aktiv</td><td>4</td><td>−50% Schaden durch Pfeile, Kugeln und Granaten für 15 s – Schilde hoch, Köpfe runter · Abklingzeit 90 s</td><td>−80% Schaden durch Pfeile, Kugeln und Granaten für 25 s – Schilde hoch, Köpfe runter · Abklingzeit 70 s</td><td>300 / 900 / 2.400</td></tr><tr><td><b>Sammelruf</b></td><td>aktiv</td><td>8</td><td>Fliehende sammeln sich sofort, +40 Moral (Wert in Punkten) · Abklingzeit 120 s</td><td>Fliehende sammeln sich sofort, +70 Moral (Wert in Punkten) · Abklingzeit 80 s</td><td>500 / 1.500 / 3.500</td></tr><tr><td><b>Nebelwand</b></td><td>aktiv</td><td>10</td><td>Rauch verhüllt die Truppe: feindliche Schützen verlieren sie 8 s aus dem Blick · Abklingzeit 140 s</td><td>Rauch verhüllt die Truppe: feindliche Schützen verlieren sie 16 s aus dem Blick · Abklingzeit 100 s</td><td>600 / 1.800 / 4.000</td></tr><tr><td><b>Händler</b></td><td>passiv</td><td>1</td><td>Entlassen bringt 40% des Werts zurück (sonst 30%)</td><td>Entlassen bringt 60% des Werts zurück (sonst 30%)</td><td>100 / 400 / 1.200</td></tr><tr><td><b>Feldscher</b></td><td>passiv</td><td>1</td><td>Auffüllen (Heilung) kostet 15% weniger</td><td>Auffüllen (Heilung) kostet 45% weniger</td><td>150 / 500 / 1.500</td></tr><tr><td><b>Quartiermeister</b></td><td>passiv</td><td>1</td><td>Pfeillager: +20% Munition (zusätzlich zum Stufenbonus)</td><td>Pfeillager: +60% Munition (zusätzlich zum Stufenbonus)</td><td>100 / 400 / 1.200</td></tr></table></div>
+
+<h2 id="pfad">Wegfindung</h2>
+<ul>
+<li>Jeder Soldat folgt einem Wegefeld zum Ziel, das Mauern, Gebäude, tiefes Wasser und Klippen umgeht. Wird ein Bataillon durch
+ein Hindernis getrennt, findet jeder Teil um das Hindernis herum, und die Truppe ordnet sich am Ziel wieder.</li>
+<li>Zerstörte Tore und Breschen werden als Durchgang genutzt. An Engstellen (Tor, Bresche, Furt) zieht sich das Bataillon zur
+Kolonne zusammen.</li>
+<li>Hubschrauber brauchen keine Wege.</li>
+</ul>
+</main>
+<footer>Stratego 3D – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit <code>python handbuch/erzeugen.py</code></footer>
+<script>
+document.querySelectorAll('table.sortable').forEach(tb=>{
+ tb.querySelectorAll('th.s').forEach((th,i)=>{let asc=true;th.addEventListener('click',()=>{
+  const rows=[...tb.tBodies[0].rows];const col=th.cellIndex;
+  rows.sort((a,b)=>{const x=a.cells[col].dataset.v??a.cells[col].innerText,y=b.cells[col].dataset.v??b.cells[col].innerText;
+   const nx=parseFloat(x),ny=parseFloat(y);const r=(!isNaN(nx)&&!isNaN(ny))?nx-ny:x.localeCompare(y,'de');return asc?r:-r});
+  asc=!asc;rows.forEach(r=>tb.tBodies[0].appendChild(r));});});});
+const q=document.getElementById('q'),fe=document.getElementById('fe'),fc=document.getElementById('fc');
+function flt(){const s=(q?q.value:'').toLowerCase(),e=fe?fe.value:'',c=fc?fc.value:'';
+ document.querySelectorAll('[data-f]').forEach(el=>{const ok=(!s||el.dataset.f.includes(s))&&(!e||el.dataset.era===e)&&(!c||el.dataset.cat===c);
+  el.style.display=ok?'':'none';});}
+[q,fe,fc].forEach(x=>x&&x.addEventListener('input',flt));
+</script></body></html>
