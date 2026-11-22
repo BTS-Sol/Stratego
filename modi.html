@@ -44,6 +44,44 @@ Reichweite, Moral). Bezahlt wird mit den Punkten des Armee-Budgets; „−“ gi
 <li><b>Teams</b> haben einen <b>gemeinsamen Aufstellungsbereich</b>. Verbündete sehen live, wohin der andere seine Truppen
 stellen will.</li>
 <li>Bricht die Verbindung ab (Handy gesperrt, WLAN weg), zeigt das Spiel „Mitspieler getrennt“ an.</li>
+<li><b>Chat:</b> am Rand, einklappbar – siehe <a href="bedienung.html">Bedienung</a>.</li>
+</ul>
+
+<h2 id="auto">Auto-Stratego</h2>
+<p>Ein Mehrspieler-Modus fürs Handy nach dem Prinzip der Autobattler: <b>planen statt befehligen</b>. Der Host startet
+„Auto-Stratego“ im Hauptmenü, Mitspieler öffnen die angezeigte Adresse im Handy-Browser. Freie Plätze (bis vier Spieler)
+füllen KI-Bots auf.</p>
+<ol>
+<li><b>Lobby:</b> ein oder mehrere Zeitalter, Startgeld (1.500 bis 8.000), Rundenzahl (5 bis 20), Anzahl der KI-Bots und das
+Kampftempo. Die Einstellungen bleiben gespeichert.</li>
+<li><b>Planung (60 s):</b> Jeder sieht drei zufällige Einheiten und kauft davon beliebig viele Bataillone. Verkaufen bringt
+50 %. <b>Neu würfeln</b> kostet Startgeld/8, ein <b>Buff</b> – eine Ausrüstungsstufe einer Waffenklasse wie im Feldzug –
+Startgeld/10. Unter <b>Aufstellung</b> wählt man die Kampfweise. Bei mehreren Zeitaltern erscheinen die späteren erst im Laufe
+des Spiels und werden dann häufiger.</li>
+<li><b>Kampf:</b> Die KI stellt auf und kämpft. Schützen stehen nach Reichweite gestaffelt (kurze vorn, weite hinten), Geschütze
+ganz hinten, Munitionsträger am Munitionslager. Tempo: 2×, ab 30 s 3×, ab 40 s 6×, ab 50 s 8× (einstellbar). Ab 90 s rechnet
+der PC den Rest unsichtbar aus; ist der Kampf dann noch offen, entscheiden die verbleibenden Truppen und das Verlustverhältnis.</li>
+<li><b>Ergebnis:</b> Jede Runde gibt es das Startgeld, für einen Sieg noch einmal. Das Heer bleibt vollständig erhalten.</li>
+</ol>
+<div class="tbl"><table><tr><th>Kampfweise</th><th>Was die KI tut</th></tr>
+<tr><td><b>Defensiv</b></td><td>Schützen hinter dem Fußvolk, die Linie hält, bis der Feind herankommt (höchstens 45 s);
+Reiterei als Reserve.</td></tr>
+<tr><td><b>Ausgewogen</b></td><td>Geschlossene Linie, Schützen dahinter, Reiter an den Flanken – alle rücken gemeinsam vor.</td></tr>
+<tr><td><b>Flankenangriff</b></td><td>Das Fußvolk bindet den Feind, die Reiterei reitet im Bogen in seinen Rücken.</td></tr>
+<tr><td><b>Sturm</b></td><td>Schützen vorn als Plänkler, alles greift sofort im Laufschritt an.</td></tr>
+</table></div>
+<ul>
+<li><b>Gegner:</b> ein zufälliges Bataillon-Heer aus den freigeschalteten Zeitaltern – in Runde 1 etwa 70 % des Startgeldes,
+danach jede Runde um gut ein Startgeld stärker. Alle Spieler treffen in einer Runde auf denselben Gegner.</li>
+<li><b>Spielerkämpfe ab Runde 3:</b> Die beiden stärksten Heere kämpfen gegeneinander, bei vier Spielern zusätzlich Platz 3 gegen
+Platz 4. Wer in der Vorrunde gegen einen Spieler gekämpft hat, kämpft diesmal gegen ein zufälliges Bataillon – niemand kämpft
+zweimal hintereinander gegen einen anderen Spieler.</li>
+<li><b>Ausscheiden:</b> nach drei Niederlagen in Folge oder drei Niederlagen gegen denselben Spieler. Ausgeschiedene stehen
+ausgegraut in der Wertung und können weiter zusehen.</li>
+<li><b>Ende:</b> nach der letzten Runde oder wenn nur noch einer übrig ist. Es gewinnt, wer die meisten Siege hat.</li>
+<li><b>Handy:</b> aufgebaut wie ein Gameboy – oben der Bildschirm mit der eigenen Schlacht (wischen dreht, zwei Finger zoomen),
+darunter eine LCD-Anzeige mit Runde, Timer und Gold, dann die Reiter <b>Kaufen</b> (mit Einheitenbildern), <b>Buff</b>,
+<b>Aufstellung</b> und <b>Wertung</b> sowie der große <b>Bereit</b>-Knopf. Im Querformat steht das Bild links, das Menü rechts.</li>
 </ul>
 
 <h2>Gemeinsame Verteidigung (Koop)</h2>
@@ -80,7 +118,8 @@ wahlweise eine <b>Kamerafahrt</b> („Ansicht übernehmen“ speichert die aktue
 </ol>
 <p>Eigene Szenarien erscheinen unter <b>Geschichte → Eigene Szenarien</b> zum Ansehen und Bearbeiten.</p>
 </main>
-<footer>Stratego 3D – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit <code>python handbuch/erzeugen.py</code></footer>
+<footer>Stratego 3D · Version 1.0.3 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
+<code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{
  tb.querySelectorAll('th.s').forEach((th,i)=>{let asc=true;th.addEventListener('click',()=>{

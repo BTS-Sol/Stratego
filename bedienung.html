@@ -79,12 +79,33 @@ Das Handy bitte <b>quer</b> halten.</p>
 Vollbild – „Leisten weg“ blendet alles aus</td></tr>
 </table></div>
 
+<h2>Mauszeiger</h2>
+<p>Der Zeiger zeigt, was ein Klick bewirkt. Alle Zeiger sind eigens für das Spiel gezeichnet.</p>
+<div class="tbl"><table><tr><th>Zeiger</th><th>Bedeutung</th></tr>
+<tr><td>Pfeil</td><td>normal</td></tr>
+<tr><td>Hand</td><td>über einem Knopf oder beim Verschieben eines Bataillons in der Aufstellung</td></tr>
+<tr><td>Schwert</td><td>Truppe gewählt, Maus über einem Feind: Rechtsklick greift an</td></tr>
+<tr><td>Marschziel (Ring mit Fähnchen)</td><td>Truppe gewählt, Maus über freiem Boden: Rechtsklick marschiert</td></tr>
+<tr><td>Turm</td><td>Truppe gewählt, Maus über einem Gebäude: Rechtsklick besetzt es</td></tr>
+<tr><td>Axt</td><td>Truppe gewählt, Maus über einem feindlichen Bauwerk: Rechtsklick belagert (oder plündert ein Lager)</td></tr>
+<tr><td>Spaten</td><td>Bauen: Feldbefestigungen, Mauern, Gebäude</td></tr>
+<tr><td>Plus</td><td>Sandbox und Szenario-Editor: Truppen oder Symbole setzen</td></tr>
+<tr><td>Drehpfeil</td><td>Aufstellung: Bataillone drehen</td></tr>
+<tr><td>Zielkreuz</td><td>Karteneditor: Gelände formen</td></tr>
+</table></div>
+
+<h2>Chat im Mehrspieler</h2>
+<p>Im normalen Mehrspieler gibt es am Rand einen einklappbaren Chat. Der Host klickt ins Eingabefeld und schreibt (solange
+er tippt, lösen die Tasten keine Befehle aus), <kbd>Enter</kbd> sendet, <kbd>Esc</kbd> verlässt das Feld. Mitspieler im Browser
+haben rechts ein eigenes Chatfenster; eingeklappt meldet ein leuchtender „CHAT“-Reiter neue Nachrichten.</p>
+
 <h2>Einstellungen</h2>
 <p>Erreichbar im Hauptmenü, mit <kbd>F2</kbd> und in der Schlacht über den Knopf <b>Einstellungen</b>. Musik ist überall gleich
 laut; Geräusche werden leiser, je weiter die Kamera vom Geschehen entfernt ist. <kbd>Strg</kbd>+<kbd>M</kbd> schaltet die
 Musik stumm. Eigene Musikstücke liegen im Ordner <code>assets/Music</code>.</p>
 </main>
-<footer>Stratego 3D – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit <code>python handbuch/erzeugen.py</code></footer>
+<footer>Stratego 3D · Version 1.0.3 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
+<code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{
  tb.querySelectorAll('th.s').forEach((th,i)=>{let asc=true;th.addEventListener('click',()=>{
