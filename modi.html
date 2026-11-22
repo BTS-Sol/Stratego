@@ -2,7 +2,7 @@
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Spielmodi – Stratego 3D Handbuch</title><link rel="stylesheet" href="stil.css"></head>
 <body><header class="top"><div class="in"><a class="logo" href="index.html">STRATEGO 3D · HANDBUCH</a>
-<nav><a href="index.html">Start</a><a href="bedienung.html">Bedienung</a><a href="mechaniken.html">Mechaniken</a><a href="bauen.html">Bauen &amp; Gebäude</a><a href="feldzug.html">Feldzug</a><a href="modi.html" class=on>Spielmodi</a><a href="karten.html">Karten</a><a href="geschichte.html">Geschichte</a><a href="einheiten.html">Alle Einheiten</a></nav></div></header>
+<nav><a href="index.html">Start</a><a href="bedienung.html">Bedienung</a><a href="mechaniken.html">Mechaniken</a><a href="bauen.html">Bauen &amp; Gebäude</a><a href="feldzug.html">Feldzug</a><a href="modi.html" class=on>Spielmodi</a><a href="karten.html">Karten</a><a href="geschichte.html">Geschichte</a><a href="einheiten.html">Alle Einheiten</a><a href="changelog.html">Änderungen</a></nav></div></header>
 <main>
 <h1>Spielmodi</h1>
 
@@ -15,6 +15,12 @@ Untergruppen mit Symbolen; Filter nach Zeitalter.</li>
 <li>24 fertige Szenarien: 100 Musketiere vs 10 Spartaner, 300 Spartaner vs 12 SAS, 500 Bauern vs 1 Panzer, 200 Ritter vs 2 Panzer, Elefanten vs Pikeniere, Legion vs Phalanx (Hügel), Waldgefecht, Thermopylen (Gebirgspass), Häuserkampf im Dorf, Burgsturm, Moderne vs Zukunft, Kamele gegen Ritter (Wüste), Mongolen gegen Ritter, Massenschlacht 6.000, Massenschlacht 20.000, Massenschlacht 50.000, Kampf um die Furten (Fluss), Napoleon an den Seen, Wüstensturm, Die Schlucht, Sturm aufs Hochland, Vier Reiche (König), Drei gegen einen, Hügel halten (Ort halten).</li>
 <li>45 Heeresvorlagen, die eine Seite mit einem Klick passend zu einer Epoche füllen: Steinzeit-Horde, Eiszeit-Bestien, Dinosaurier, Ägypten (Neues Reich), Hethiter, Griechische Hopliten, Perserreich, Hunnen (Attila), Makedonien (Alexander), Römische Legion, Karthago (Hannibal), Gallier und Germanen, Wikinger, Byzanz, Frankenreich, Kreuzfahrer, Englisches Heer (Azincourt), Sarazenen, Mongolen, Arabische Wüstenkrieger, Samurai, Song-China, Hussiten (Wagenburg), Landsknechte, Spanischer Tercio, Napoleonische Armee, Westfront 1916, Zweiter Weltkrieg, Kalter Krieg, Moderne Armee, Zukunft, Azteken, Ming-China, Frankreich (Jeanne d&#x27;Arc), Japan (Sengoku), Preußen (Friedrich), Stellungskrieg 1916, Sparta, Theben (Leuktra), Achämenidenreich, Römische Republik, Han-China, Sassanidenreich, Kiewer Rus, Polen-Litauen (Kircholm).</li>
 <li><kbd>Enter</kbd> startet, <kbd>Strg</kbd>+<kbd>Z</kbd> macht rückgängig. Bis zu 60.000 Soldaten.</li>
+<li><b>Direkt steuern:</b> In der laufenden Schlacht lassen sich die Bataillone <b>aller Seiten</b> befehligen – Linksklick oder
+Rahmen wählt, Rechtsklick marschiert, greift an, besetzt oder belagert, rechts ziehen stellt eine Linie auf. <kbd>Strg</kbd>+<kbd>A</kbd>
+wählt alle der Seite (mit <kbd>Shift</kbd>: alle überhaupt), dazu <kbd>H</kbd> Halt, <kbd>R</kbd> Laufen, <kbd>F</kbd> Formation,
+<kbd>G</kbd> Feuer, <kbd>T</kbd> Stellung. Ein befehligtes Bataillon folgt danach nur noch deinen Befehlen.</li>
+<li><b>Speichern/Laden</b> legt Aufstellungen im Ordner <code>aufstellungen</code> ab. <b>Exportieren …</b> speichert die Schlacht
+als Datei <code>.s3schlacht</code> zum Weitergeben – eigene Karten stecken mit drin. <b>Importieren …</b> öffnet so eine Datei.</li>
 </ul>
 
 <h2>Feldschlacht</h2>
@@ -52,6 +58,27 @@ Die Schwierigkeit bestimmen die Spieler selbst über die Punkte, die jeder für 
 <h2>Karteneditor</h2>
 <p>Gelände anheben und absenken, glätten, Wasser, Wald und Felsen setzen, Karten zufällig erzeugen, Gebäude platzieren und alles
 speichern. Gespeicherte Karten liegen im Ordner <code>maps</code> und stehen in Sandbox und Feldschlacht zur Wahl.</p>
+<p><b>Mauern, Palisaden und Draht</b> zieht man wie in der Sandbox: entweder mit gedrückter Maustaste ziehen oder Ecke für Ecke
+klicken (Kette); sie rasten an freien Enden ein, <kbd>Shift</kbd> rastet auf 15°, Rechtsklick oder <kbd>Esc</kbd> beendet die Kette.</p>
+<p><b>Exportieren …</b> speichert die Karte als <code>.s3karte</code> zum Weitergeben, <b>Importieren …</b> legt eine solche Datei zu den
+eigenen Karten. Gewählt wird im normalen Dateidialog; Standardordner ist <code>austausch</code> im Spielordner.</p>
+
+<h2 id="szenario">Szenario-Editor</h2>
+<p>Unter <b>Geschichte → Szenario-Editor</b> baut man eigene Geschichtsszenen wie die eingebauten:</p>
+<ol>
+<li><b>Grundlage wählen:</b> eine gespeicherte oder importierte Sandbox-Schlacht (<code>.s3schlacht</code>) – oder nur eine Karte
+(auch <code>.s3karte</code>). Mit „Truppen in der Sandbox aufstellen“ geht es in die Sandbox; „Übernehmen → Szenario-Editor“
+bringt die Aufstellung zurück.</li>
+<li><b>Titel, Ort und Zeit, Einleitung</b> und die Namen der Seiten eintragen.</li>
+<li><b>Zeitleiste:</b> „+ Ereignis“ legt ein Ereignis an. Jedes hat eine Zeit (in Sekunden), einen Untertitel (Titel und Text),
+wahlweise eine <b>Kamerafahrt</b> („Ansicht übernehmen“ speichert die aktuelle Kamera; Dauer und Schwenk einstellbar), einen
+<b>Ton</b> (Horn, Angriffssignal, Kampfgeschrei, Explosion …), ein <b>Symbol</b> mit Beschriftung auf der Karte und
+<b>Zeitlupe</b>.</li>
+<li><b>Ende:</b> Titel und Text der Schlusskarte; das Ende kommt, wenn eine Seite gewinnt, oder nach einer festen Zeit.</li>
+<li><b>Abspielen</b> zeigt das Szenario als Show – „Zurück“ führt wieder in den Editor. <b>Speichern</b> legt es im Ordner
+<code>szenarien</code> ab, <b>Exportieren …</b> als <code>.s3szenario</code>-Datei (eigene Karten stecken mit drin).</li>
+</ol>
+<p>Eigene Szenarien erscheinen unter <b>Geschichte → Eigene Szenarien</b> zum Ansehen und Bearbeiten.</p>
 </main>
 <footer>Stratego 3D – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit <code>python handbuch/erzeugen.py</code></footer>
 <script>

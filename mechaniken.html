@@ -2,7 +2,7 @@
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mechaniken – Stratego 3D Handbuch</title><link rel="stylesheet" href="stil.css"></head>
 <body><header class="top"><div class="in"><a class="logo" href="index.html">STRATEGO 3D · HANDBUCH</a>
-<nav><a href="index.html">Start</a><a href="bedienung.html">Bedienung</a><a href="mechaniken.html" class=on>Mechaniken</a><a href="bauen.html">Bauen &amp; Gebäude</a><a href="feldzug.html">Feldzug</a><a href="modi.html">Spielmodi</a><a href="karten.html">Karten</a><a href="geschichte.html">Geschichte</a><a href="einheiten.html">Alle Einheiten</a></nav></div></header>
+<nav><a href="index.html">Start</a><a href="bedienung.html">Bedienung</a><a href="mechaniken.html" class=on>Mechaniken</a><a href="bauen.html">Bauen &amp; Gebäude</a><a href="feldzug.html">Feldzug</a><a href="modi.html">Spielmodi</a><a href="karten.html">Karten</a><a href="geschichte.html">Geschichte</a><a href="einheiten.html">Alle Einheiten</a><a href="changelog.html">Änderungen</a></nav></div></header>
 <main>
 <h1>Spielmechaniken</h1>
 <p class="lead">Jeder Soldat wird einzeln simuliert: er sucht sich Ziele, schlägt, schießt, wird müde, hat Angst. Die
@@ -14,6 +14,7 @@ Regeln – mit den echten Zahlen aus dem Spiel.</p>
 <a href="#formationen">Formationen</a><a href="#verhalten">Verhalten der Truppen</a><a href="#feldherren">Feldherren und Standarten</a>
 <a href="#gelaende">Gelände</a><a href="#wetter">Wetter</a><a href="#munition">Munition und Nachschub</a>
 <a href="#sanitaet">Sanität</a><a href="#flieger">Hubschrauber</a><a href="#schutz">Schutzfahrzeuge und Kuppel</a>
+<a href="#sicht">Sichtschutz und Tarnung</a><a href="#ki">Die KI</a>
 <a href="#sieg">Siegbedingungen</a><a href="#kriegsrufe">Kriegsrufe (Fertigkeiten)</a><a href="#pfad">Wegfindung</a>
 </div>
 
@@ -168,6 +169,30 @@ Geschütze.</li>
 damit die Truppe vorbei stürmen kann.</li>
 <li>Der <b>Kuppelwagen</b> der Zukunft spannt eine blaue Energiekuppel von etwa 20 m Durchmesser auf (rund 2 × 2 Kästchen):
 kein Schaden hinein und keiner hinaus – weder Geschosse noch Explosionen noch Nahkampf über die Grenze.</li>
+</ul>
+
+<h2 id="sicht">Sichtschutz und Tarnung</h2>
+<ul>
+<li><b>Wald und Gebüsch</b> verbergen Fußtruppen und leichte Reiter: Feinde sehen sie erst auf <b>15 m</b> – Schützen schießen
+nicht auf sie, und die KI weiß nicht, wo sie stehen. Fahrzeuge, Großtiere, schwere Reiter und Feldherren sind zu groß dafür.</li>
+<li>Wer <b>angreift</b> (schießt oder zuschlägt), verrät seine Stellung <b>dauerhaft</b>.</li>
+<li><b>Lauerer</b> – Scharfschützen, Jäger, Voltigeure, Ninja, Agrianer, Jaguarkrieger, SAS und SEALs – sind nach einem Schuss nur
+<b>3 Sekunden</b> sichtbar und verschwinden dann wieder.</li>
+<li>Der <b>Gauß-Scharfschütze</b> der Zukunft trägt ein <b>Tarnfeld</b>: er ist auch auf offenem Feld verborgen.</li>
+<li>In der Feldschlacht blendet das Spiel verborgene Feinde aus – Figuren, Fahnen und Minikarte. Eigene verborgene Truppen tragen
+den Zustand „Verborgen (Sichtschutz)“.</li>
+</ul>
+
+<h2 id="ki">Die KI</h2>
+<ul>
+<li><b>Aufstellung passend zum Gegner:</b> Die KI kennt das Heer, gegen das sie antritt. Gegen viel Reiterei stellt sie Speere
+und Piken an die Enden ihrer Linie und die Schützen dahinter, gegen viel Artillerie stellt sie ungeschütztes Fußvolk locker auf,
+gegen ein Schützenheer schickt sie die Schilde nach vorn.</li>
+<li><b>Schlachtplan:</b> Zu Beginn vergleicht sie die Kräfte und sucht die schwächere Flanke des Gegners (wenig Spieße, wenig
+Reiterei). Ihre Reiterei reitet im weiten Bogen um diese Flanke und fällt dem Gegner in den Rücken – zuerst auf Schützen,
+Geschütze und Tross. Ist sie weit überlegen, umfasst sie von beiden Seiten.</li>
+<li><b>Unterlegen</b> bleibt sie mit dem Fußvolk in Stellung und lässt die eigenen Schützen arbeiten; die Reiterei wartet dann als
+Reserve hinter der Linie und greift nur an, was durchbricht.</li>
 </ul>
 
 <h2 id="sieg">Siegbedingungen</h2>
