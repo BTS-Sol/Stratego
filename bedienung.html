@@ -9,7 +9,7 @@
 Tastenübersicht.</p>
 
 <h2>Tastenübersicht (wie im Spiel)</h2>
-<div class="tbl"><table><tr><th>Bereich</th><th>Tasten</th></tr><tr><td><b>Kamera</b></td><td>W A S D / Pfeile: schieben · Q E: drehen · Bild↑ Bild↓: neigen · +/− oder Mausrad: zoomen · rechte oder mittlere Maustaste ziehen: drehen · Pos1: Grundstellung · C: Kameramodus · K: Kampfflug</td></tr><tr><td><b>Sandbox</b></td><td>Linksklick: setzen · Rechtsklick: radieren · Tab: Seite wechseln · Strg+Z: rückgängig · Entf: Bataillon löschen · R: Gebäude drehen · Enter: Schlacht starten</td></tr><tr><td><b>Schlacht</b></td><td>Leertaste: Pause · Punkt: Einzelschritt (Shift: 1 s) · Komma: langsamer · Tempo-Regler: ziehen oder Mausrad (0,1× bis 8×) · 1–4: Tempo · Tab: Statistik · L: Bataillonsliste · V: Kamera folgt · A: Autokampf (Feldschlacht) · Klick auf die Minikarte: dorthin schauen</td></tr><tr><td><b>Feldschlacht</b></td><td>Linksklick: wählen (ziehen = Rahmen) · Rechtsklick: Marsch/Angriff (ziehen = Linie) · H: Halt · R: Laufen · F: Formation · G: Feuer frei · Strg+A: alle</td></tr><tr><td><b>Gelände</b></td><td>Auf einer Anhöhe: weiter schießen, schwerer getroffen werden, im Nahkampf stärker. Bergauf langsamer, kein Sturmangriff. Regen und Schnee bremsen, verkürzen die Reichweite und lassen Läufer ausrutschen.</td></tr><tr><td><b>Allgemein</b></td><td>F1: diese Hilfe · Strg+M: Musik stumm · Esc: zurück</td></tr></table></div>
+<div class="tbl"><table><tr><th>Bereich</th><th>Tasten</th></tr><tr><td><b>Kamera</b></td><td>W A S D / Pfeile: schieben · Q E: drehen · Bild↑ Bild↓: neigen · +/− oder Mausrad: zoomen · rechte oder mittlere Maustaste ziehen: drehen · Pos1: Grundstellung · C: Kameramodus · K: Kampfflug</td></tr><tr><td><b>Sandbox</b></td><td>Linksklick: setzen · Rechtsklick: radieren · Tab: Seite wechseln · Strg+Z: rückgängig · Entf: Bataillon löschen · R: Gebäude drehen · Enter: Schlacht starten</td></tr><tr><td><b>Schlacht</b></td><td>Leertaste: Pause · Punkt: Einzelschritt (Shift: 1 s) · Komma: langsamer · Tempo-Regler: ziehen oder Mausrad (0,1× bis 8×) · 1–4: Tempo · Tab: Statistik · L: Bataillonsliste · V: Kamera folgt · A: Autokampf (die KI führt, du greifst ein) · Klick auf die Minikarte: dorthin schauen</td></tr><tr><td><b>Truppen führen</b></td><td>Linksklick: wählen (ziehen = Rahmen) · Rechtsklick: Marsch, Angriff, Besetzen (ziehen = Linie) · H: Halt · R: Laufen · F: Formation · G: Feuer frei · T: Stellung halten · Strg+A: alle</td></tr><tr><td><b>Gelände</b></td><td>Auf einer Anhöhe: weiter schießen, schwerer getroffen werden, im Nahkampf stärker. Bergauf langsamer, kein Sturmangriff. Regen und Schnee bremsen, verkürzen die Reichweite und lassen Läufer ausrutschen.</td></tr><tr><td><b>Allgemein</b></td><td>F1: diese Hilfe · Strg+M: Musik stumm · Esc: zurück</td></tr></table></div>
 
 <h2>Truppen führen</h2>
 <div class="tbl"><table>
@@ -34,7 +34,8 @@ folgt dicht dahinter.</td></tr>
 (siehe <a href="mechaniken.html#formationen">Formationen</a>).</td></tr>
 <tr><td>Feuer frei</td><td><kbd>G</kbd> – Schützen schießen selbstständig oder halten das Feuer zurück.</td></tr>
 <tr><td>Stellung halten</td><td><kbd>T</kbd> – die Truppe verfolgt keine Feinde, sondern bleibt an ihrem Platz.</td></tr>
-<tr><td>Autokampf</td><td><kbd>A</kbd> – die KI führt deine Seite, du kannst jederzeit eingreifen.</td></tr>
+<tr><td>Autokampf</td><td><kbd>A</kbd> – die KI führt deine Seite, du kannst jederzeit eingreifen
+(siehe <a href="mechaniken.html#autokampf">Autokampf, Drill und KI</a>).</td></tr>
 <tr><td>Bauen</td><td>Bauleute wählen, unten in der Befehlsleiste die Bauweise anklicken, dann mit der rechten
 Maustaste eine Linie ziehen (siehe <a href="bauen.html">Bauen</a>).</td></tr>
 <tr><td>Kriegsrufe</td><td>Rechts angedockte Leiste (nur im Feldzug, wenn gelernt): Bataillone wählen, Ruf anklicken.</td></tr>
@@ -51,9 +52,8 @@ der frei drehbaren 3D-Kamera um.</div>
 <h2>Schlacht-Oberfläche</h2>
 <ul>
 <li><b>Oben:</b> Stärke der Seiten, Uhr, Tempo-Regler (0,1× bis 8×; <kbd>1</kbd>–<kbd>4</kbd>, Mausrad), Pause, Einzelschritt.</li>
-<li><b>Unten:</b> Befehlsleiste der gewählten Truppe – Laufen, Halt, Formationen, Feuer frei, Bauweisen. Die Knöpfe sind in
-Gruppen geordnet und brechen bei schmalen Fenstern um.</li>
-<li><b>Rechts:</b> Kriegsrufe (horizontal, angedockt), Nachschub (Munitionslager), Autokampf, <b>Einstellungen</b>
+<li><b>Unten:</b> Befehlsleiste der gewählten Truppe – Laufen, Halt, Formationen, Feuer frei, Bauweisen.</li>
+<li><b>Rechts:</b> Kriegsrufe, Nachschub (Munitionslager), Autokampf, <b>Einstellungen</b>
 (Musik, Geräusche, Grafik – auch mitten in der Schlacht).</li>
 <li><b>Verlaufskurve</b> (unten): Stärke der Seiten über die Zeit; über das Auswahlfeld lässt sie sich auf eine
 Truppengattung filtern (z. B. nur Reiterei).</li>
@@ -80,7 +80,7 @@ Vollbild – „Leisten weg“ blendet alles aus</td></tr>
 </table></div>
 
 <h2>Mauszeiger</h2>
-<p>Der Zeiger zeigt, was ein Klick bewirkt. Alle Zeiger sind eigens für das Spiel gezeichnet.</p>
+<p>Der Mauszeiger verrät, was ein Klick bewirken wird.</p>
 <div class="tbl"><table><tr><th>Zeiger</th><th>Bedeutung</th></tr>
 <tr><td>Pfeil</td><td>normal</td></tr>
 <tr><td>Hand</td><td>über einem Knopf oder beim Verschieben eines Bataillons in der Aufstellung</td></tr>
@@ -104,7 +104,7 @@ haben rechts ein eigenes Chatfenster; eingeklappt meldet ein leuchtender „CHAT
 laut; Geräusche werden leiser, je weiter die Kamera vom Geschehen entfernt ist. <kbd>Strg</kbd>+<kbd>M</kbd> schaltet die
 Musik stumm. Eigene Musikstücke liegen im Ordner <code>assets/Music</code>.</p>
 </main>
-<footer>Stratego 3D · Version 1.0.3 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
+<footer>Stratego 3D · Version 1.0.4 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
 <code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{

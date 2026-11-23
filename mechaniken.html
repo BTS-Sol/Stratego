@@ -9,14 +9,50 @@
 Bataillone darüber halten die Formation, gehorchen Befehlen und fliehen, wenn die Moral bricht. Diese Seite erklärt alle
 Regeln – mit den echten Zahlen aus dem Spiel.</p>
 <div class="toc">
-<a href="#nahkampf">Nahkampf</a><a href="#fernkampf">Fernkampf und Beschuss</a><a href="#explosion">Artillerie und Explosionen</a>
+<a href="#soldat">So kämpft ein Soldat</a><a href="#nahkampf">Nahkampf</a><a href="#wucht">Ansturm, Wucht und Überreiten</a>
+<a href="#fernkampf">Fernkampf und Beschuss</a><a href="#explosion">Artillerie und Explosionen</a>
 <a href="#panzer">Rüstung, Härte und Durchschlag</a><a href="#moral">Moral und Flucht</a><a href="#ausdauer">Ausdauer</a>
-<a href="#formationen">Formationen</a><a href="#verhalten">Verhalten der Truppen</a><a href="#feldherren">Feldherren und Standarten</a>
+<a href="#formationen">Formationen</a><a href="#autokampf">Autokampf, Drill und KI</a><a href="#feldherren">Feldherren und Standarten</a>
 <a href="#gelaende">Gelände</a><a href="#wetter">Wetter</a><a href="#munition">Munition und Nachschub</a>
 <a href="#sanitaet">Sanität</a><a href="#flieger">Hubschrauber</a><a href="#schutz">Schutzfahrzeuge und Kuppel</a>
-<a href="#sicht">Sichtschutz und Tarnung</a><a href="#ki">Die KI</a>
+<a href="#sicht">Sichtschutz und Tarnung</a>
 <a href="#sieg">Siegbedingungen</a><a href="#kriegsrufe">Kriegsrufe (Fertigkeiten)</a><a href="#pfad">Wegfindung</a>
 </div>
+
+<h2 id="soldat">So kämpft ein Soldat</h2>
+<p>Jeder Soldat entscheidet für sich, wen er angreift – aber nur im Rahmen dessen, was sein Bataillon ihm erlaubt. Zwei Regeln
+bestimmen das: die <b>Zielwahl</b> und die <b>Leine</b> zu seinem Platz in der Formation.</p>
+<h3>Zielwahl</h3>
+<ul>
+<li>Jeder Soldat betrachtet die sechs nächsten Feinde und nimmt den mit der kleinsten Kennzahl <b>Entfernung² × Vorliebe</b>.</li>
+<li><b>Vorliebe:</b> Ein Ziel, das er kaum verletzen kann (Härte zwei Stufen über seinem Durchschlag), zählt sechsfach, eine Stufe
+darüber doppelt. Panzerabwehr dagegen sucht gepanzerte Ziele (Faktor 0,15) – sie sieht einen Panzer in 60 m wie einen Soldaten
+in 23 m.</li>
+<li><b>Fliehende</b> sind uninteressant, solange ein kämpfender Feind in der Nähe ist: Sie zählen, als stünden sie 30 m weiter weg.</li>
+<li><b>Hubschrauber</b> nehmen nur Schützen ins Visier. Verborgene sieht niemand über 15 m hinaus, Truppen im Rauch kein Schütze
+über 12 m.</li>
+<li><b>Gebäude:</b> Belagerungsgeschütze beschießen Besatzungen bevorzugt (Faktor 0,05), Flächenwaffen ebenfalls (0,5);
+Nahkämpfer meiden Besatzungen hinter dicken Mauern.</li>
+<li><b>Befohlenes Ziel:</b> Hat das Bataillon einen Angriffsbefehl, gilt dieses Ziel – andere Feinde nur, wenn sie näher als 10 m
+herankommen.</li>
+<li><b>Treue zum Ziel:</b> Ein Soldat wechselt nur, wenn ein neues Ziel um mehr als 30 % günstiger ist. Nah am Feind prüft er
+mehrmals pro Sekunde, wer weiter als 30 m entfernt ist, nur etwa jede Sekunde.</li>
+</ul>
+<h3>Eingreifen und Leine</h3>
+<p>Ein Soldat im Bataillon hat seinen Platz in der Formation. Er geht auf einen Feind los, wenn der näher ist als sein
+<b>Eingreifradius</b> – und nicht weiter als die <b>Leine</b> von seinem Platz entfernt steht. Sonst bleibt er in Reih und Glied.</p>
+<div class="tbl"><table><tr><th>Lage des Bataillons</th><th class=num>Eingreifradius</th><th class=num>Leine</th></tr>
+<tr><td>Stehen oder Marschieren</td><td class=num>7 m (geschlossen 3 m)</td><td class=num>9 m (geschlossen 4 m)</td></tr>
+<tr><td>Angriffsbefehl</td><td class=num>4,2 m (geschlossen 3,2 m)</td><td class=num>6,5 m</td></tr>
+<tr><td>Angriff im Keil</td><td class=num>7 m</td><td class=num>18 m</td></tr>
+<tr><td>Rückzug (Marschbefehl aus dem Gefecht)</td><td class=num>1,2 m</td><td class=num>2 m</td></tr>
+<tr><td>Wache, Besatzung</td><td class=num>wie oben</td><td class=num>4 m</td></tr>
+<tr><td>Sandbox „Angriff“ (frei)</td><td class=num>unbegrenzt</td><td class=num>unbegrenzt</td></tr>
+</table></div>
+<p>„Geschlossen“ heißt Schildkröte, Karree oder Wall. Darum kämpft eine Linie mit Angriffsbefehl in breiter Front: Jeder kämpft
+mit dem, der vor ihm steht, statt dass alle auf den nächsten Feind zulaufen und die Linie zum Klumpen wird. Der Keil darf tief in
+die feindlichen Reihen – genau dafür ist er da. Schützen schießen, sobald ihr Ziel in Reichweite ist, und greifen erst im
+Handgemenge (3,5 m) zur Nahkampfwaffe.</p>
 
 <h2 id="nahkampf">Nahkampf</h2>
 <p>Steht ein Soldat nah genug an seinem Ziel und ist seine Waffe bereit, schlägt er zu. Ob er trifft, hängt von seinem
@@ -26,18 +62,61 @@ Schaden = Waffenschaden × Zufall (45–85 %) × (1 − Rüstung × 0,8) × Här
 <ul>
 <li><b>Flanke und Rücken:</b> Wer von der Seite angegriffen wird, verteidigt sich nur mit 70 %, von hinten nur mit 40 %.
 Fliehende verteidigen sich mit 30 %. Ein <b>Karree</b> hat keine Flanke und keinen Rücken.</li>
-<li><b>Ansturm:</b> Wer mit mehr als halber Höchstgeschwindigkeit aufprallt, macht Zusatzschaden (Wert „Ansturm“ der
-Einheit, bei schwerer Reiterei bis +140 %). Bergauf gibt es keinen Ansturm, gegen ein Karree verpufft er, und Reiter
-richten gegen ein Karree nur halben Schaden an. Im <b>Keil</b> bekommt die Spitze zusätzlich +7 Angriff.</li>
+<li><b>Ansturm:</b> Wer mit mehr als halber Höchstgeschwindigkeit aufprallt, macht Zusatzschaden – Einzelheiten unter
+<a href="#wucht">Ansturm, Wucht und Überreiten</a>.</li>
 <li><b>Gegen Reiterei:</b> Speere und Piken bekommen gegen Berittene +10 Angriff je Punkt „Anti-Reiter“ und entsprechend mehr
 Schaden; im <b>Wall</b> (gestemmte Speere) noch einmal das 1,5-Fache.</li>
 <li><b>Kamele:</b> Pferde scheuen vor Kamelen – feindliche Reiter verlieren 9 Angriff.</li>
 <li><b>Höhe:</b> Wer von oben angreift, bekommt bis +6 Angriff; der Verteidiger auf der Anhöhe bis +8 Verteidigung. Dazu ändert
 der Höhenunterschied die Trefferchance um bis zu ±25 %.</li>
 <li><b>Hinter Mauern:</b> Verteidiger in Gebäuden und auf Mauern nehmen im Nahkampf nur 55 % Schaden – dafür leidet das Gebäude.</li>
-<li><b>Wucht:</b> Treffer stoßen den Gegner zurück, schwere Angreifer und Ansturm deutlich weiter.</li>
+<li><b>Rückstoß:</b> Jeder Treffer schiebt das Opfer zurück – um so weiter, je schwerer der Angreifer im Verhältnis ist.</li>
 <li><b>Erschöpfung</b> senkt die Kampfkraft um bis zu 25 %, <b>Veteranen-Ränge</b> erhöhen sie (Feldzug).</li>
 </ul>
+
+<h2 id="wucht">Ansturm, Wucht und Überreiten</h2>
+<p>Ein Reiterangriff ist keine Rauferei, sondern Physik: Wer mit Tempo und Gewicht kommt, wirft Menschen um. Drei Regeln
+greifen ineinander.</p>
+<h3>Ansturm – der erste Schlag</h3>
+<ul>
+<li>Wer mit mehr als halber Höchstgeschwindigkeit trifft, richtet <b>Schaden × (1 + Ansturmwert)</b> an. Ritter haben
+Ansturm 1,5 – ihr erster Schlag trifft also 2,5-fach.</li>
+<li>Im <b>Keil</b> wirkt der Ansturm 2,2-fach, und die Spitze bekommt +7 Angriff: Ritter im Keil treffen beim Aufprall mit dem
+4,3-fachen Schaden.</li>
+<li>Kein Ansturm bergauf (steht das Ziel gut 1,5 m höher) und keiner gegen ein Karree; Reiter richten gegen ein Karree ohnehin
+nur halben Schaden an.</li>
+<li><b>Rückstoß:</b> 1,6 × Masse des Angreifers ÷ Masse des Opfers – beim Ansturm dreimal so weit, im Keil noch einmal das
+2,2-Fache. Ein Elefant schleudert Fußvolk meterweit.</li>
+</ul>
+<h3>Wucht – der Schwung</h3>
+<ul>
+<li>Reiter, Großtiere und Kampfwagen bauen im Galopp Wucht auf: ab 65 % ihres Höchsttempos, solange sie nicht im Nahkampf
+stecken, jede Sekunde 60 % ihres Höchstwerts. Nach knapp zwei Sekunden Galopp ist sie voll.</li>
+<li>Der <b>Höchstwert</b> ist Masse<sup>0,7</sup> × Tempo ÷ 28: Ritter 1,0 · Höhlenbär 1,1 · Kriegselefant 3,4 · Mammut 4,7 ·
+Triceratops 6,8 · Tyrannosaurus 10. Kriegshunde und Wölfe kommen nur auf rund 0,4.</li>
+<li>Fällt das Tempo unter 30 %, verfliegt die Wucht schnell – in gut einer halben Sekunde zur Hälfte.</li>
+<li><b>Durchreiten:</b> Solange noch Wucht da ist (über 0,35) oder der Reiter schnell ist, bleibt er im Nahkampf nicht stehen,
+sondern reitet weiter durch die Reihen. Gegen gestemmte Spieße, Karree und Anti-Reiter-Truppen gelingt das nur mit gewaltiger
+Wucht (über 2,5) – also Elefanten, Mammuts und Dinosauriern.</li>
+</ul>
+<h3>Überreiten – Menschen umwerfen</h3>
+<p>Prallen Reiter mit über halbem Tempo (oder mit Wucht) auf Fußvolk, kann jede Berührung den Gegner umwerfen:</p>
+<div class="box">Chance = Grundwert × Schwung × Gewicht ÷ (1 + Widerstand ÷ max(1, Masse ÷ 10)) ÷ (1 + 1,5 × Rüstung)<br>
+Grundwert: 80 % gegen Schützen ohne Nahkampfwaffe, sonst 15 % · Schwung: Tempo- oder Wuchtanteil, höchstens 1,3 ·
+Gewicht: Masse ÷ 5, zwischen 0,6 und 6<br>
+Widerstand = Anti-Reiter × 1,6 + gestemmt (Wall) 1,2 + Karree 1,2 + Schildblock 0,6</div>
+<ul>
+<li>Wer umgeworfen wird, liegt 1,4–2,6 Sekunden am Boden, verteidigt sich in der Zeit nur mit 40 %, wird 3–5,5 m weggeschleudert
+und erleidet 35–60 % des Reiterschadens (mehr beim Ansturm, weniger mit Rüstung).</li>
+<li>Jedes Opfer kostet den Reiter Wucht – gepanzerte und gestemmte Gegner viel mehr, schwere Reittiere spüren es weniger.
+Darum bleibt ein Ritterangriff in einem tiefen Speerwall stecken, während er leichte Schützen reihenweise umreitet.</li>
+<li><b>In die Spieße geritten:</b> Wirft ein Reiter einen Speerträger nicht um, bleibt er mit der Chance Widerstand ÷ (2 +
+Widerstand) an ihm hängen (bei schweren Tieren seltener). Dann verliert er drei Viertel seines Tempos und die ganze Wucht und
+erleidet 15–35 Schaden je Widerstandspunkt.</li>
+</ul>
+<div class="box tip"><b>Praxis:</b> Reiterei braucht Anlauf – mindestens zwei Sekunden Galopp – und ein weiches Ziel: Schützen,
+Geschütze, eine offene Flanke. Frontal gegen Speerwall oder Karree verliert sie Wucht, Pferde und Moral. Unter KI-Führung löst
+sich schwere Reiterei deshalb nach 5–7 Sekunden Handgemenge, reitet 45 m zurück und setzt erneut an.</div>
 
 <h2 id="fernkampf">Fernkampf und Beschuss</h2>
 <ul>
@@ -70,22 +149,47 @@ ein Bogen einen Kampfpanzer praktisch nicht verletzen – eine Panzerfaust schon
 </ul>
 
 <h2 id="moral">Moral und Flucht</h2>
+<p>Schlachten werden selten bis zum letzten Mann ausgefochten – sie enden, wenn eine Seite den Mut verliert. Jedes Bataillon hat
+eine Moral, zu Beginn gleich dem Moralwert seiner Einheit (zwischen 30 und 300; Musketiere 55, Legionäre 75, Ritter 85). Die
+<b>Disziplin</b> (0,6 bis 6) teilt fast jeden Moralverlust: Doppelt so diszipliniert heißt halb so erschüttert.</p>
+<h3>Was Moral kostet</h3>
+<div class="tbl"><table><tr><th>Ereignis</th><th>Moralverlust</th></tr>
+<tr><td>Eigene Gefallene</td><td>je Gefallenem 130 ÷ Anfangsstärke ÷ Disziplin – 10 % Verluste kosten also 13 ÷ Disziplin.
+Mit wehender Standarte 20 % weniger.</td></tr>
+<tr><td>Treffer in den Rücken</td><td>je Treffer zusätzlich 28 ÷ Anfangsstärke ÷ Disziplin</td></tr>
+<tr><td>Ein Nachbar flieht (bis 45 m)</td><td>7 ÷ Disziplin – halb so viel, wer über 70 m vom Feind entfernt steht</td></tr>
+<tr><td>Der eigene Feldherr fällt</td><td>14 ÷ Disziplin für jedes Bataillon – halb so viel fern vom Kampf</td></tr>
+<tr><td>Wilder Ansturm des Gegners</td><td>einmalig 9 ÷ Disziplin beim Aufprall (Gallier, Germanen, Wikinger, Berserker,
+Highlander, Zulu, Jaguarkrieger …)</td></tr>
+<tr><td>Erschöpfung über 80 %</td><td>im Angesicht des Feindes bis 0,8 je Sekunde</td></tr>
+</table></div>
+<p><b>Rückhalt</b> mildert alle diese Verluste: Faktor 1 − 0,4 × eigene ÷ (eigene + feindliche Männer im Umkreis von 40 m). Wer
+mitten im eigenen Heer steht, verliert bis zu 40 % weniger; wer allein gegen eine Übermacht steht, trägt jeden Schlag voll.</p>
+<h3>Obergrenze und Erholung</h3>
 <ul>
-<li>Jedes Bataillon hat Moral. Ihre <b>Obergrenze</b> sinkt mit den Verlusten: Moralwert × (35 % + 65 % × Anteil der
-Überlebenden).</li>
-<li>Verluste, Beschuss, Flanken- und Rückenangriffe, fliehende Nachbarn und ein gefallener Feldherr kosten Moral.
-Die <b>Disziplin</b> der Truppe dämpft diese Schläge.</li>
-<li><b>Rückhalt:</b> Eigene Truppen in 40 m Umkreis (im Verhältnis zu den Feinden dort) mindern Moralverluste um bis zu 40 %.</li>
-<li><b>Erholung:</b> ohne Bedrohung +2,5 je Sekunde; Feldherren in der Nähe +1/s; eine wehende <b>Standarte</b> +0,6/s und
-+15 % Obergrenze.</li>
-<li><b>Flucht:</b> Bei Moral 0 – oder wenn nur noch 12 % der Truppe leben (außer bei sehr disziplinierten Truppen) – flieht
-das Bataillon. Nachbarn in 45 m Umkreis verlieren dann Moral.</li>
-<li><b>Sammeln:</b> Fliehende sammeln sich, wenn sie sich erholt haben (Moral über 25) und nicht mehr bedroht sind; weit
-weg vom Feind geht das schnell. Wer zweimal gesammelt wurde und wieder flieht, <b>verlässt das Schlachtfeld</b> – außer
-ein Feldherr ruft ihn zurück (oder der Kriegsruf „Sammelruf“).</li>
-<li><b>Fällt der Feldherr</b>, verliert jedes eigene Bataillon 14 / Disziplin Moral (halb so viel, wer weit vom Kampf steht).</li>
-<li><b>Erschöpfung über 80 %</b> zehrt im Angesicht des Feindes zusätzlich an der Moral.</li>
+<li><b>Obergrenze:</b> Moralwert × (35 % + 65 % × Anteil der Überlebenden), mit Standarte +15 %, im Feldzug zusätzlich durch
+Ausrüstung. Ein halbiertes Bataillon kommt also nie mehr über 67 % seiner Anfangsmoral.</li>
+<li><b>Bedroht</b> ist ein Bataillon, wenn ein Feind näher als 35 m ist (Schützen: plus 10 % ihrer Reichweite).</li>
+<li>Nicht bedroht und kaum frische Verluste: <b>+2,5 je Sekunde</b> bis zur Obergrenze. Im Gefecht, aber ohne Nahkampf und unter
+60 % der Obergrenze: +0,8 je Sekunde.</li>
+<li>Ein <b>Feldherr</b> im Umkreis von 60 m: +1 je Sekunde. Eine wehende <b>Standarte</b>: +0,6 je Sekunde. Dazu Kriegsrufe und
+die Kniffe der Feldherren.</li>
 </ul>
+<h3>Flucht und Sammeln</h3>
+<ul>
+<li>Ein Bataillon <b>flieht</b> bei Moral 0 – oder sobald weniger als 12 % leben (nicht bei Disziplin ab 2,5 und nicht bei sehr
+kleinen Trupps).</li>
+<li>Fliehende rennen von der Front weg und verteidigen sich nur mit 30 %. Jeder Nachbar im Umkreis von 45 m verliert Moral – so
+entstehen Kettenreaktionen, die ganze Flügel zusammenbrechen lassen.</li>
+<li>Fliehende erholen sich: +4 je Sekunde ohne Bedrohung, weitere +8 je Sekunde weiter als 80 m vom Feind; ein Feldherr ruft
+sie zusätzlich zurück.</li>
+<li><b>Sammeln:</b> bei Moral über 25 und ohne Bedrohung (oder mit einem starken Feldherrenruf). Wer zweimal gesammelt wurde und
+ein drittes Mal flieht, <b>verlässt nach 6 Sekunden das Schlachtfeld</b> – es sei denn, ein Feldherr ruft ihn zurück.</li>
+</ul>
+<div class="box"><b>Rechenbeispiel:</b> 120 Legionäre (Moral 75, Disziplin 1,5) verlieren 12 Mann. Das kostet
+130 × 12 ÷ 120 ÷ 1,5 ≈ 8,7 Moral; stehen gleich viele eigene wie feindliche Männer in der Nähe, mildert der Rückhalt um 20 % auf
+rund 7. Die Obergrenze sinkt auf 75 × (0,35 + 0,65 × 0,9) ≈ 70. Ein einzelner Treffer in den Rücken kostet nur
+28 ÷ 120 ÷ 1,5 ≈ 0,16 – teuer wird es erst, wenn eine ganze Flanke auf einmal einschlägt.</div>
 
 <h2 id="ausdauer">Ausdauer</h2>
 <div class="tbl"><table><tr><th>Tätigkeit</th><th>Erschöpfung je Sekunde (Fußvolk)</th><th>Reiter</th></tr>
@@ -107,15 +211,45 @@ Keil für den Reiterangriff. Eine vom Spieler befohlene Formation lässt sie ein
 <p><b>Tiefe:</b> Große Bataillone stehen in mindestens drei bis vier Gliedern, Musketiere in drei, Reiter in zwei – lächerliche
 Ein-Mann-Linien gibt es nicht. An Engstellen (Tor, Bresche, Furt) zieht sich ein Bataillon von selbst schmaler zusammen.</p>
 
-<h2 id="verhalten">Verhalten der Truppen</h2>
+<h2 id="autokampf">Autokampf, Drill und KI</h2>
+<p>Drei Ebenen führen ein Heer: der <b>Drill</b>, den jede Truppe von selbst beherrscht, der <b>Autokampf</b>, mit dem ein
+KI-General die eigene Seite übernimmt, und der <b>Schlachtplan</b> dieses Generals.</p>
+<h3>Drill – gilt immer, auch ohne Autokampf</h3>
 <ul>
-<li><b>Angriff</b> (Sandbox): jeder Soldat sucht sich selbst den nächsten Feind.</li>
-<li><b>Halten:</b> bleibt stehen und kämpft nur gegen Feinde in der Nähe.</li>
-<li><b>Formation:</b> rückt geordnet vor, eine einfache KI gibt die Befehle.</li>
-<li><b>Befehl:</b> vom Spieler oder vom KI-General geführt.</li>
-<li>Truppengattungen handeln nach ihrer Art: Legionen bilden unter Beschuss die Schildkröte, Spießer gegen Reiter das Karree,
-Plänkler und berittene Schützen weichen dem Nahkampf aus, schwere Reiterei reitet nach dem Aufprall zurück und greift
-erneut an, Schützen ziehen sich hinter das eigene Fußvolk zurück.</li>
+<li><b>Selbstständig kämpfen:</b> Jeder Soldat greift nach den Regeln aus <a href="#soldat">So kämpft ein Soldat</a> an,
+was in seine Reichweite kommt. Schützen feuern von selbst, solange „Feuer frei“ gilt.</li>
+<li><b>Formation nach Lage:</b> Liegt ein Bataillon unter Beschuss, bildet es die Schildkröte (wenn es sie kann); kommen feindliche
+Reiter auf 55 m heran, das Karree – und es bleibt dabei, bis sie weiter als 90 m weg sind. Auf dem Marsch wird ein Karree oder eine
+Schildkröte wieder zur Linie, sobald kein Feind näher als 40 m ist. Eine vom Spieler befohlene Formation bleibt 30 Sekunden
+unangetastet und wird danach nicht von sich aus zurückgenommen.</li>
+<li><b>Pilum:</b> Hastati, Legionäre und Prätorianer werfen einmal pro Schlacht eine Pilum-Salve, wenn der Feind 8–26 m entfernt
+ist – die vorderen Glieder werfen, bis zu zwei Pilen je Gegner.</li>
+<li><b>Wilder Ansturm:</b> Gallier, Germanen, Wikinger, Berserker und andere erschüttern den Gegner beim Aufprall
+(siehe <a href="#moral">Moral</a>).</li>
+<li><b>Nachschub und Sanität:</b> Schützen holen Munition selbst, wenn das Lager höchstens 140 m entfernt ist; Sanitäter heilen in
+ihrer Nähe.</li>
+<li><b>Festgefahren:</b> Kommt ein Bataillon mit Marschbefehl nicht vom Fleck, stellt es sich nach wenigen Sekunden neu auf und
+sucht einen anderen Weg.</li>
+</ul>
+<h3>Autokampf – ein KI-General für die eigene Seite</h3>
+<ul>
+<li><b>Einschalten:</b> In Feldschlacht, Feldzug und Mehrspieler vorab in den Regeln („Autokampf: an/aus“, Standard aus) und in
+der Schlacht jederzeit mit <kbd>A</kbd> oder dem Knopf „Autokampf“. In <b>Auto-Stratego</b> ist er immer an – dort führt nur
+die KI.</li>
+<li><b>Was dann passiert:</b> Für die eigene Seite läuft derselbe KI-General wie für den Gegner – mit Schlachtplan, Zielwahl,
+Befestigungen und den Eigenarten aller Gattungen (siehe unten).</li>
+<li><b>Eigene Befehle gehen immer vor:</b> Ein Bataillon, dem du etwas befiehlst, ist 30 Sekunden lang von der KI ausgenommen;
+Wach- und Planaufträge der KI für dieses Bataillon enden sofort.</li>
+<li><b>Ausschalten:</b> Alle Pläne der KI enden, jedes Bataillon behält seinen letzten Befehl und hört wieder nur auf dich.</li>
+</ul>
+<h3>Was nur unter KI-Führung geschieht</h3>
+<ul>
+<li><b>Plänkler</b> halten Abstand: Kommt ein Nahkämpfer näher als 14 m, weichen sie 16 m zurück und schießen weiter.
+<b>Berittene Schützen</b> weichen schon auf 22 m aus, reiten an, schießen etwa sechs Sekunden und drehen dann seitlich ab.</li>
+<li><b>Schützen zu Fuß</b> ziehen sich hinter das nächste eigene Fußvolk zurück, wenn Reiter oder Großtiere auf sie zuhalten
+(bis 75 m) oder Nahkämpfer anstürmen (bis 18 m).</li>
+<li><b>Schwere Reiterei</b> löst sich nach 5–7 Sekunden Handgemenge, reitet 45 m zurück und setzt erneut an.</li>
+<li><b>Bautrupps</b> brechen ab und bringen sich in Sicherheit, wenn Reiter auf sie zuhalten.</li>
 </ul>
 
 <h2 id="feldherren">Feldherren und Standarten</h2>
@@ -130,10 +264,12 @@ Bataillone ab 100 Mann führen eine <b>Standarte</b>: solange sie weht, hält di
 <h2 id="gelaende">Gelände</h2>
 <ul>
 <li><b>Anhöhen:</b> weiter schießen, schwerer getroffen werden, im Nahkampf stärker. Bergauf langsamer und kein Sturmangriff.</li>
-<li><b>Wald:</b> schützt vor Beschuss, bremst Reiter und Fahrzeuge.</li>
-<li><b>Wasser und Sumpf:</b> bremsen stark; tiefe Flüsse lassen sich nur an Furten oder Brücken überqueren.</li>
-<li><b>Steile Felsen</b> sind unpassierbar.</li>
+<li><b>Wald:</b> schützt vor Beschuss, bremst Reiter und Fahrzeuge, verbirgt Fußvolk und leichte Reiter.</li>
+<li><b>Seichtes Wasser und Sumpf:</b> halbes Tempo, Fahrzeuge 35 %. Tiefes Wasser ist unpassierbar – über Flüsse geht es nur an
+Furten, über Seen nur an Landbrücken vorbei.</li>
+<li><b>Steile Felsen</b>, Schluchten und Gletscherspalten sind unpassierbar.</li>
 </ul>
+<p>Alle Zahlen zum Gelände und ein Führer durch jedes Schlachtfeld stehen auf der Seite <a href="karten.html">Karten</a>.</p>
 
 <h2 id="wetter">Wetter</h2>
 <div class="tbl"><table><tr><th>Wetter</th><th>Wirkung</th></tr><tr><td><b>Klar</b></td><td>Klare Sicht, trockener Boden</td></tr><tr><td><b>Regen</b></td><td>Aufgeweichter Boden: alle langsamer, Fahrzeuge besonders. Nasse Bogensehnen tragen weniger weit, Musketen versagen oft. Wer rennt, rutscht leicht aus.</td></tr><tr><td><b>Schnee</b></td><td>Tiefer Schnee: alle deutlich langsamer, Reiter am meisten. Schlechte Sicht verkürzt die Reichweite und macht Schüsse ungenauer. Am Hang rutschen viele aus.</td></tr></table></div>
@@ -167,7 +303,7 @@ Geschütze.</li>
 (Linienzeit), Rollschild (Weltkriege) und Schildwagen (Moderne). Sie fangen Geschosse von vorn ab.</li>
 <li>Rechtsklick einer Truppe auf das Fahrzeug: sie <b>folgt dicht dahinter</b>. Kurz vor dem Ziel bleibt das Fahrzeug stehen,
 damit die Truppe vorbei stürmen kann.</li>
-<li>Der <b>Kuppelwagen</b> der Zukunft spannt eine blaue Energiekuppel von etwa 20 m Durchmesser auf (rund 2 × 2 Kästchen):
+<li>Der <b>Kuppelwagen</b> der Zukunft spannt eine blaue Energiekuppel von etwa 20 m Durchmesser auf:
 kein Schaden hinein und keiner hinaus – weder Geschosse noch Explosionen noch Nahkampf über die Grenze.</li>
 </ul>
 
@@ -183,16 +319,30 @@ nicht auf sie, und die KI weiß nicht, wo sie stehen. Fahrzeuge, Großtiere, sch
 den Zustand „Verborgen (Sichtschutz)“.</li>
 </ul>
 
-<h2 id="ki">Die KI</h2>
+<h3 id="ki">Der Schlachtplan der KI</h3>
 <ul>
 <li><b>Aufstellung passend zum Gegner:</b> Die KI kennt das Heer, gegen das sie antritt. Gegen viel Reiterei stellt sie Speere
-und Piken an die Enden ihrer Linie und die Schützen dahinter, gegen viel Artillerie stellt sie ungeschütztes Fußvolk locker auf,
-gegen ein Schützenheer schickt sie die Schilde nach vorn.</li>
-<li><b>Schlachtplan:</b> Zu Beginn vergleicht sie die Kräfte und sucht die schwächere Flanke des Gegners (wenig Spieße, wenig
-Reiterei). Ihre Reiterei reitet im weiten Bogen um diese Flanke und fällt dem Gegner in den Rücken – zuerst auf Schützen,
-Geschütze und Tross. Ist sie weit überlegen, umfasst sie von beiden Seiten.</li>
-<li><b>Unterlegen</b> bleibt sie mit dem Fußvolk in Stellung und lässt die eigenen Schützen arbeiten; die Reiterei wartet dann als
-Reserve hinter der Linie und greift nur an, was durchbricht.</li>
+und Piken an die Enden ihrer Linie und die Schützen dahinter, gegen viel Artillerie ungeschütztes Fußvolk locker, gegen ein
+Schützenheer die Schilde nach vorn.</li>
+<li><b>Kräftevergleich:</b> Zu Beginn teilt sie den Wert ihrer Truppen durch den des Gegners (Preis × Anteil der Überlebenden).</li>
+<li><b>Unterlegen</b> (unter 0,75) und mit genug Schützen (über ein Viertel des Werts): Das Fußvolk bleibt in Stellung, bis der
+Feind auf 70 m herankommt (höchstens 150 Sekunden, in Auto-Stratego 45), und lässt die Schützen arbeiten. Die Reiterei wartet als
+Reserve und greift nur an, was bis auf 110 m an die eigene Linie herankommt.</li>
+<li><b>Flankenangriff:</b> Bei einem Verhältnis ab 0,8 – oder wenn die eigene Reiterei 20 % stärker ist als die feindliche – reitet
+die Reiterei im weiten Bogen um die schwächere Flanke des Gegners (die mit weniger Spießen, Karrees und Reitern) und fällt ihm in
+den Rücken: zuerst auf Schützen, Sanitäter und Tross. Ab einem Verhältnis von 1,4 mit mindestens zwei Reiterverbänden umfasst
+sie von beiden Seiten. Berittene Schützen plänkeln an der schwachen Flanke.</li>
+<li><b>Leibwachen:</b> Geschütze und Feldherren bekommen je ein Nahkampf-Bataillon als Wache, wenn genug davon da sind.</li>
+<li><b>Befestigen:</b> Solange der Feind weit weg ist (über 70 m, für Pfähle über 130 m), bauen Pioniere und Schützen Minen,
+Stacheldraht, Gräben (nur wenn ein Ort zu halten ist), Palisaden, eine Wagenburg oder Pfähle (nur gegen Reiterei).</li>
+<li><b>Zielwahl der Bataillone:</b> der nächste Feind – aber kaum verwundbare Ziele zählen sechsfach so weit, Panzerabwehr sucht
+Panzer, Schützen nehmen Großtiere zuerst, Reiterei sucht Schützen und bereits gebundene Gegner und meidet Spieße und Karree
+(schwere Tiere nicht).</li>
+<li><b>Belagerung:</b> Liegt der Feind hinter Mauern, wartet das Fußvolk außer Reichweite, bis Geschütze eine Bresche schlagen.
+Ohne Geschütze baut die KI einen Notrammbock und eskortiert ihn mit dem Fußvolk als lebendem Schild. Nach 150 Sekunden greift
+sie trotzdem an.</li>
+<li><b>Sanitäter</b> laufen hinter das am heftigsten kämpfende eigene Bataillon, <b>Munitionsträger</b> pendeln zwischen Lager
+und Schützen.</li>
 </ul>
 
 <h2 id="sieg">Siegbedingungen</h2>
@@ -200,21 +350,25 @@ Reserve hinter der Linie und greift nur an, was durchbricht.</li>
 
 <h2 id="kriegsrufe">Kriegsrufe (Fertigkeiten im Feldzug)</h2>
 <p>Im Feldzug ist jeder Erfahrungspunkt auch ein Fertigkeitspunkt. Aktive Fertigkeiten (Kriegsrufe) wirken in der Schlacht auf
-die gerade gewählten Bataillone und haben eine Abklingzeit; passive gelten immer. Die Leiste der Kriegsrufe ist rechts
-angedockt und horizontal angeordnet, damit sie die Übersichten nicht verdeckt.</p>
+die gerade gewählten Bataillone und haben eine Abklingzeit; passive gelten immer. Die Kriegsrufe liegen in der Schlacht
+rechts unten bereit.</p>
 <div class="tbl"><table><tr><th>Fertigkeit</th><th>Art</th><th>ab Stufe</th><th>Wirkung Stufe 1</th><th>Wirkung Stufe 3</th>
 <th>Kosten (Punkte)</th></tr><tr><td><b>Kriegsruf</b></td><td>aktiv</td><td>1</td><td>+20% Schaden und +25 Moral für 20 s · Abklingzeit 90 s</td><td>+40% Schaden und +25 Moral für 20 s · Abklingzeit 60 s</td><td>150 / 500 / 1.500</td></tr><tr><td><b>Ansporn</b></td><td>aktiv</td><td>1</td><td>+25% Tempo und Angriffstempo für 20 s · Abklingzeit 90 s</td><td>+45% Tempo und Angriffstempo für 20 s · Abklingzeit 60 s</td><td>150 / 500 / 1.500</td></tr><tr><td><b>Berserkerwut</b></td><td>aktiv</td><td>6</td><td>+50% Schaden, +30% Angriffstempo, kein Fliehen, −10 Rüstung · 15 s · Abklingzeit 120 s</td><td>+90% Schaden, +30% Angriffstempo, kein Fliehen, −10 Rüstung · 25 s · Abklingzeit 120 s</td><td>400 / 1.200 / 3.000</td></tr><tr><td><b>Unverwundbarkeit</b></td><td>aktiv</td><td>12</td><td>Keinerlei Verluste für 5 s · Abklingzeit 150 s</td><td>Keinerlei Verluste für 12 s · Abklingzeit 110 s</td><td>800 / 2.000 / 5.000</td></tr><tr><td><b>Wiederbelebung</b></td><td>aktiv</td><td>16</td><td>10% der Gefallenen kehren sofort zurück · einmal je Schlacht</td><td>30% der Gefallenen kehren sofort zurück · einmal je Schlacht</td><td>1.000 / 2.500 / 6.000</td></tr><tr><td><b>Deckung!</b></td><td>aktiv</td><td>4</td><td>−50% Schaden durch Pfeile, Kugeln und Granaten für 15 s – Schilde hoch, Köpfe runter · Abklingzeit 90 s</td><td>−80% Schaden durch Pfeile, Kugeln und Granaten für 25 s – Schilde hoch, Köpfe runter · Abklingzeit 70 s</td><td>300 / 900 / 2.400</td></tr><tr><td><b>Sammelruf</b></td><td>aktiv</td><td>8</td><td>Fliehende sammeln sich sofort, +40 Moral (Wert in Punkten) · Abklingzeit 120 s</td><td>Fliehende sammeln sich sofort, +70 Moral (Wert in Punkten) · Abklingzeit 80 s</td><td>500 / 1.500 / 3.500</td></tr><tr><td><b>Nebelwand</b></td><td>aktiv</td><td>10</td><td>Rauch verhüllt die Truppe: feindliche Schützen verlieren sie 8 s aus dem Blick · Abklingzeit 140 s</td><td>Rauch verhüllt die Truppe: feindliche Schützen verlieren sie 16 s aus dem Blick · Abklingzeit 100 s</td><td>600 / 1.800 / 4.000</td></tr><tr><td><b>Händler</b></td><td>passiv</td><td>1</td><td>Entlassen bringt 40% des Werts zurück (sonst 30%)</td><td>Entlassen bringt 60% des Werts zurück (sonst 30%)</td><td>100 / 400 / 1.200</td></tr><tr><td><b>Feldscher</b></td><td>passiv</td><td>1</td><td>Auffüllen (Heilung) kostet 15% weniger</td><td>Auffüllen (Heilung) kostet 45% weniger</td><td>150 / 500 / 1.500</td></tr><tr><td><b>Quartiermeister</b></td><td>passiv</td><td>1</td><td>Pfeillager: +20% Munition (zusätzlich zum Stufenbonus)</td><td>Pfeillager: +60% Munition (zusätzlich zum Stufenbonus)</td><td>100 / 400 / 1.200</td></tr></table></div>
 
 <h2 id="pfad">Wegfindung</h2>
 <ul>
-<li>Jeder Soldat folgt einem Wegefeld zum Ziel, das Mauern, Gebäude, tiefes Wasser und Klippen umgeht. Wird ein Bataillon durch
-ein Hindernis getrennt, findet jeder Teil um das Hindernis herum, und die Truppe ordnet sich am Ziel wieder.</li>
+<li>Jedes Bataillon marschiert entlang eines Wegefelds, das Mauern, Gebäude, tiefes Wasser und Klippen umgeht. Liegt ein
+Hindernis auf der geraden Linie, folgt es immer dem Weg – auch wenn der Umweg kurz ist.</li>
+<li>Soldaten, die ihren Platz nicht auf geradem Weg erreichen, folgen dem Weg zu ihrem Bataillon und ordnen sich dort wieder ein.
+Wer an ein Ufer oder eine Felswand stößt, gleitet daran entlang, statt stehen zu bleiben.</li>
+<li>Formationsplätze, die im tiefen Wasser oder in einer Felswand lägen, rücken ans nächste Ufer. Abgeschnittene Flecken – etwa
+die Streifen hinter den Bergketten des Gebirgspasses – gelten als unpassierbar.</li>
 <li>Zerstörte Tore und Breschen werden als Durchgang genutzt. An Engstellen (Tor, Bresche, Furt) zieht sich das Bataillon zur
-Kolonne zusammen.</li>
+Kolonne zusammen und wird danach wieder breit.</li>
 <li>Hubschrauber brauchen keine Wege.</li>
 </ul>
 </main>
-<footer>Stratego 3D · Version 1.0.3 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
+<footer>Stratego 3D · Version 1.0.4 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
 <code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{

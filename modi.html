@@ -43,46 +43,94 @@ Reichweite, Moral). Bezahlt wird mit den Punkten des Armee-Budgets; „−“ gi
 (<a href="bedienung.html">Handy-Steuerung</a>). Es ist keine Installation nötig.</li>
 <li><b>Teams</b> haben einen <b>gemeinsamen Aufstellungsbereich</b>. Verbündete sehen live, wohin der andere seine Truppen
 stellen will.</li>
-<li>Bricht die Verbindung ab (Handy gesperrt, WLAN weg), zeigt das Spiel „Mitspieler getrennt“ an.</li>
+<li>Bricht die Verbindung ab (Handy gesperrt, WLAN weg), zeigt das Spiel „Mitspieler getrennt“ an. Beim Wiederverbinden – auch
+nach einem Neuladen der Seite – bekommt der Mitspieler seinen alten Platz zurück.</li>
 <li><b>Chat:</b> am Rand, einklappbar – siehe <a href="bedienung.html">Bedienung</a>.</li>
 </ul>
 
 <h2 id="auto">Auto-Stratego</h2>
-<p>Ein Mehrspieler-Modus fürs Handy nach dem Prinzip der Autobattler: <b>planen statt befehligen</b>. Der Host startet
-„Auto-Stratego“ im Hauptmenü, Mitspieler öffnen die angezeigte Adresse im Handy-Browser. Freie Plätze (bis vier Spieler)
-füllen KI-Bots auf.</p>
+<p class="lead">Ein Mehrspieler-Modus fürs Handy nach dem Prinzip der Autobattler: <b>planen statt befehligen</b>. Jeder kauft,
+verstärkt und wählt eine Kampfweise – gekämpft wird von der KI. Der Host startet „Auto-Stratego“ im Hauptmenü, Mitspieler öffnen
+die angezeigte Adresse im Handy-Browser. Freie Plätze (bis vier Spieler) füllen KI-Bots auf.</p>
+<h3>Ablauf einer Runde</h3>
 <ol>
-<li><b>Lobby:</b> ein oder mehrere Zeitalter, Startgeld (1.500 bis 8.000), Rundenzahl (5 bis 20), Anzahl der KI-Bots und das
-Kampftempo. Die Einstellungen bleiben gespeichert.</li>
-<li><b>Planung (60 s):</b> Jeder sieht drei zufällige Einheiten und kauft davon beliebig viele Bataillone. Verkaufen bringt
-50 %. <b>Neu würfeln</b> kostet Startgeld/8, ein <b>Buff</b> – eine Ausrüstungsstufe einer Waffenklasse wie im Feldzug –
-Startgeld/10. Unter <b>Aufstellung</b> wählt man die Kampfweise. Bei mehreren Zeitaltern erscheinen die späteren erst im Laufe
-des Spiels und werden dann häufiger.</li>
+<li><b>Lobby:</b> Zeitalter (mehrere möglich), Startgeld (1.500 bis 8.000), Rundenzahl (5 bis 20), Anzahl der KI-Bots und das
+Kampftempo – alles bleibt gespeichert. Jedes Handy sieht, welche Farbe es spielt, und kann „Nur zuschauen“ wählen. Mit
+<b>„PC schaut nur zu“</b> wird der PC zum Zuschauerbildschirm, etwa am Fernseher – dann spielen bis zu vier Handys.</li>
+<li><b>Planung (95 s):</b> Jeder sieht drei zufällige Einheiten und kauft davon beliebig viele Bataillone.
+Verkaufen bringt 50 %, <b>Neu würfeln</b> kostet ein Achtel des Startgeldes. Dazu kommen Buffs (siehe unten) und die Wahl der
+Kampfweise. Bei mehreren Zeitaltern erscheinen die späteren erst im Laufe des Spiels und werden dann häufiger. Der Gegner der
+Runde steht schon in der Planung fest – ein Bataillon-Heer oder ein Mitspieler samt Heer und Bilanz.</li>
 <li><b>Kampf:</b> Die KI stellt auf und kämpft. Schützen stehen nach Reichweite gestaffelt (kurze vorn, weite hinten), Geschütze
-ganz hinten, Munitionsträger am Munitionslager. Tempo: 2×, ab 30 s 3×, ab 40 s 6×, ab 50 s 8× (einstellbar). Ab 90 s rechnet
-der PC den Rest unsichtbar aus; ist der Kampf dann noch offen, entscheiden die verbleibenden Truppen und das Verlustverhältnis.</li>
-<li><b>Ergebnis:</b> Jede Runde gibt es das Startgeld, für einen Sieg noch einmal. Das Heer bleibt vollständig erhalten.</li>
+ganz hinten, Munitionsträger am Lager. Tempo 2×, ab 30 s 3×, ab 40 s 6×, ab 50 s 8× (in der Lobby einstellbar). Ab
+140 s Kampfzeit rechnet der PC den Rest unsichtbar mit 100-fachem Tempo aus. Ist der Kampf danach immer noch
+offen, entscheidet eine Wertung: 60 % zählt die verbliebene Stärke, 40 % das Verlustverhältnis.</li>
+<li><b>Ergebnis:</b> Jede Runde gibt es das Startgeld, für einen Sieg noch einmal. Verluste werden nicht übernommen – das Heer
+steht in der nächsten Runde wieder vollständig.</li>
 </ol>
-<div class="tbl"><table><tr><th>Kampfweise</th><th>Was die KI tut</th></tr>
-<tr><td><b>Defensiv</b></td><td>Schützen hinter dem Fußvolk, die Linie hält, bis der Feind herankommt (höchstens 45 s);
-Reiterei als Reserve.</td></tr>
-<tr><td><b>Ausgewogen</b></td><td>Geschlossene Linie, Schützen dahinter, Reiter an den Flanken – alle rücken gemeinsam vor.</td></tr>
-<tr><td><b>Flankenangriff</b></td><td>Das Fußvolk bindet den Feind, die Reiterei reitet im Bogen in seinen Rücken.</td></tr>
-<tr><td><b>Sturm</b></td><td>Schützen vorn als Plänkler, alles greift sofort im Laufschritt an.</td></tr>
+<h3>Buffs</h3>
+<p>Ein Buff ist eine Ausrüstungsstufe einer Waffenklasse wie im Feldzug (Schaden, Angriffstempo, Rüstung, Durchschlag, Lebenskraft,
+Tempo, Reichweite, Moral) und gilt für alle Truppen dieser Klasse. Teure Waffen kosten mehr, aber flacher als im Feldzug – und
+<b>jede weitere Stufe kostet das Doppelte</b>. Die Preise wachsen mit dem Startgeld; bei 2.000 Gold Startgeld:</p>
+<div class="tbl"><table><tr><th>Waffenklasse</th><th class=num>Stufe 1</th><th class=num>2</th><th class=num>3</th><th class=num>4</th>
+<th class=num>5</th></tr><tr><td>Hiebwaffen</td><td class=num>60</td><td class=num>120</td><td class=num>230</td><td class=num>470</td><td class=num>930</td></tr><tr><td>Stangenwaffen</td><td class=num>60</td><td class=num>120</td><td class=num>230</td><td class=num>470</td><td class=num>930</td></tr><tr><td>Wurfwaffen</td><td class=num>60</td><td class=num>130</td><td class=num>260</td><td class=num>510</td><td class=num>1.020</td></tr><tr><td>Bögen</td><td class=num>70</td><td class=num>150</td><td class=num>300</td><td class=num>590</td><td class=num>1.190</td></tr><tr><td>Armbrüste</td><td class=num>100</td><td class=num>190</td><td class=num>390</td><td class=num>780</td><td class=num>1.550</td></tr><tr><td>Feuerwaffen</td><td class=num>140</td><td class=num>280</td><td class=num>560</td><td class=num>1.120</td><td class=num>2.250</td></tr><tr><td>Gewehre</td><td class=num>210</td><td class=num>430</td><td class=num>850</td><td class=num>1.700</td><td class=num>3.410</td></tr><tr><td>Hightech-Waffen</td><td class=num>320</td><td class=num>630</td><td class=num>1.260</td><td class=num>2.520</td><td class=num>5.040</td></tr><tr><td>Reiterei</td><td class=num>120</td><td class=num>240</td><td class=num>480</td><td class=num>960</td><td class=num>1.920</td></tr><tr><td>Tiere</td><td class=num>100</td><td class=num>200</td><td class=num>400</td><td class=num>810</td><td class=num>1.620</td></tr><tr><td>Geschütze</td><td class=num>180</td><td class=num>350</td><td class=num>710</td><td class=num>1.410</td><td class=num>2.820</td></tr><tr><td>Panzer &amp; Fahrzeuge</td><td class=num>370</td><td class=num>750</td><td class=num>1.500</td><td class=num>2.990</td><td class=num>5.980</td></tr></table></div>
+<h3>Kampfweisen</h3>
+<div class="tbl"><table><tr><th>Kampfweise</th><th>Aufstellung und Verhalten</th></tr>
+<tr><td><b>Defensiv</b></td><td>Schützen hinter dem Fußvolk. Das Fußvolk hält, bis der Feind auf 70 m heran ist (höchstens 45 s);
+die Schützen bleiben stehen, bis ein Ziel in Reichweite ist. Die Reiterei wartet als Reserve und greift an, was bis auf 110 m an
+die Linie herankommt.</td></tr>
+<tr><td><b>Ausgewogen</b></td><td>Geschlossene Linie, Schützen dahinter, Reiter an beiden Flanken – alle rücken gemeinsam vor.</td></tr>
+<tr><td><b>Flankenangriff</b></td><td>Die Reiterei steht geballt an einer Flanke und reitet im weiten Bogen in den Rücken des
+Feindes – auch, wenn das eigene Heer schwächer ist. Das Fußvolk bindet ihn frontal.</td></tr>
+<tr><td><b>Sturm</b></td><td>Schützen vorn als Plänkler, Fußvolk dahinter; alles greift sofort im Laufschritt an.</td></tr>
+<tr><td><b>Zange</b></td><td>Die stärksten 60 % des Fußvolks stehen auf den Flügeln, vorgezogen und um gut 15° eingedreht; die
+schwache Mitte steht zurück und rückt erst nach 25 s vor. Die Reiterei umfasst den Feind von beiden Seiten.</td></tr>
+<tr><td><b>Schiefe Ordnung</b></td><td>Das Fußvolk steht nach Stärke geordnet – die stärksten links – und nach rechts um bis zu
+26 m gestaffelt zurück. Der rechte Flügel hält, bis der Feind auf 55 m heran ist (höchstens 60 s); die Reiterei steht geballt
+links. Übermacht an einer Stelle statt überall.</td></tr>
+<tr><td><b>Igel</b></td><td>Rundumverteidigung: 45 % des Fußvolks vorn, der Rest an den Flanken (nach außen gewandt) und hinten.
+Schützen, Sanitäter, Geschütze und die Reiterreserve stehen in der Mitte. Jeder hält seinen Platz, bis der Feind herankommt
+(Nahkämpfer bis 30 m, Schützen bis in Reichweite; höchstens 100 s).</td></tr>
 </table></div>
+<h3>Gegner, Spielerkämpfe und Ausscheiden</h3>
 <ul>
-<li><b>Gegner:</b> ein zufälliges Bataillon-Heer aus den freigeschalteten Zeitaltern – in Runde 1 etwa 70 % des Startgeldes,
-danach jede Runde um gut ein Startgeld stärker. Alle Spieler treffen in einer Runde auf denselben Gegner.</li>
+<li><b>Gegner:</b> ein zufälliges Heer aus ein oder zwei Einheitentypen der freigeschalteten Zeitalter – in Runde 1 etwa 70 %
+des Startgeldes, danach jede Runde um 110 % des Startgeldes stärker. Alle Spieler treffen in einer Runde auf denselben Gegner.</li>
 <li><b>Spielerkämpfe ab Runde 3:</b> Die beiden stärksten Heere kämpfen gegeneinander, bei vier Spielern zusätzlich Platz 3 gegen
-Platz 4. Wer in der Vorrunde gegen einen Spieler gekämpft hat, kämpft diesmal gegen ein zufälliges Bataillon – niemand kämpft
-zweimal hintereinander gegen einen anderen Spieler.</li>
+Platz 4. Wer in der Vorrunde gegen einen Spieler gekämpft hat, kämpft diesmal gegen das Bataillon-Heer – niemand kämpft zweimal
+hintereinander gegen einen anderen Spieler.</li>
 <li><b>Ausscheiden:</b> nach drei Niederlagen in Folge oder drei Niederlagen gegen denselben Spieler. Ausgeschiedene stehen
-ausgegraut in der Wertung und können weiter zusehen.</li>
-<li><b>Ende:</b> nach der letzten Runde oder wenn nur noch einer übrig ist. Es gewinnt, wer die meisten Siege hat.</li>
-<li><b>Handy:</b> aufgebaut wie ein Gameboy – oben der Bildschirm mit der eigenen Schlacht (wischen dreht, zwei Finger zoomen),
-darunter eine LCD-Anzeige mit Runde, Timer und Gold, dann die Reiter <b>Kaufen</b> (mit Einheitenbildern), <b>Buff</b>,
-<b>Aufstellung</b> und <b>Wertung</b> sowie der große <b>Bereit</b>-Knopf. Im Querformat steht das Bild links, das Menü rechts.</li>
+ausgegraut in der Wertung und schauen weiter zu.</li>
 </ul>
+<h3>Das Finale</h3>
+<p>Nach der letzten Runde treten alle, die noch nicht ausgeschieden sind, in einer gemeinsamen Schlacht an – <b>alle gegen alle</b>.
+Vorher gibt es eine normale Planungsphase. Die Heere stehen gleichmäßig im Kreis: zwei gegenüber, drei im Dreieck, vier von allen
+Seiten. Es gewinnt, wer zuletzt noch kämpfende Truppen hat; ist nach 140 s noch keiner übrig, das stärkste
+verbliebene Heer. <b>Das Finale entscheidet das Spiel</b>: Sein Sieger gewinnt Auto-Stratego, die übrigen Finalisten folgen nach
+verbliebener Stärke, die Ausgeschiedenen dahinter. Bleibt vor dem Finale nur ein Spieler übrig, hat er gewonnen.</p>
+<h3>Im Kampf zusehen</h3>
+<ul>
+<li><b>Am PC:</b> die Kameraleiste wie in jeder Schlacht – Feldherr, Karte, Schulter, Ego, Kampfflug, Übersicht
+(<kbd>C</kbd> wechselt, <kbd>K</kbd> Kampfflug). <b>Bataillone</b> [<kbd>L</kbd>] zeigt alle Bataillone beider Seiten mit ihrer
+Stärke, ein Klick fliegt hin; <b>Kräfteverlauf</b> [<kbd>V</kbd>] zeigt die Truppenstärke über die Zeit. Unten links steht, wer
+gegen wen kämpft.</li>
+<li><b>Am Handy:</b> Ansicht wählen (Kampfflug, Feldherr, Karte, Schulter), Bataillonsliste und Kräfteverlauf ein- und ausblenden.
+Oben steht der Gegner – das Bataillon-Heer mit seiner Stärke oder der Mitspieler mit Heer, Bilanz und Kampfweise.</li>
+</ul>
+<h3>Zuschauer</h3>
+<ul>
+<li>Wer während eines laufenden Spiels die Adresse öffnet, <b>schaut automatisch zu</b>. Wer nur kurz weg war – Handy gesperrt,
+WLAN weg, Seite neu geladen –, bekommt beim Wiederverbinden seinen Platz und seine Farbe zurück.</li>
+<li>Zuschauer wählen eine Schlacht oder <b>„Alle zugleich“</b>: ein Mosaik aus bis zu vier Schlachten, jede mit eigener
+Kampfflug-Kamera; bei drei Schlachten steht die Wertung im freien Viertel. Für eine einzelne Schlacht gibt es Kamera,
+Bataillonsliste und Kräfteverlauf wie für Spieler.</li>
+<li><b>PC als Zuschauerbildschirm:</b> unten die Auswahl („Alle zugleich“ oder eine Schlacht), die Wertung blendet <kbd>Tab</kbd>
+ein und aus. In der Planung zeigt er, wie viele Spieler schon bereit sind.</li>
+</ul>
+<h3>Das Handy</h3>
+<p>Aufgebaut wie ein Gameboy: oben der Bildschirm mit der eigenen Schlacht (wischen dreht, zwei Finger zoomen), darunter eine
+LCD-Anzeige mit Runde, Timer und Gold, dann die Reiter <b>Kaufen</b> (mit Einheitenbildern), <b>Buff</b>, <b>Aufstellung</b> und
+<b>Wertung</b> sowie der große <b>Bereit</b>-Knopf. Im Querformat steht das Bild links, das Menü rechts.</p>
 
 <h2>Gemeinsame Verteidigung (Koop)</h2>
 <p>Bis zu vier Spieler verteidigen gemeinsam eine von sieben Stellungen gegen eine Übermacht in einer eigenen Farbe (Violett).
@@ -118,7 +166,7 @@ wahlweise eine <b>Kamerafahrt</b> („Ansicht übernehmen“ speichert die aktue
 </ol>
 <p>Eigene Szenarien erscheinen unter <b>Geschichte → Eigene Szenarien</b> zum Ansehen und Bearbeiten.</p>
 </main>
-<footer>Stratego 3D · Version 1.0.3 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
+<footer>Stratego 3D · Version 1.0.4 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
 <code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{
