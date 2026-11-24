@@ -385,6 +385,20 @@ Stacheldraht, Gräben (nur wenn ein Ort zu halten ist), Palisaden, eine Wagenbur
 <li><b>Zielwahl der Bataillone:</b> der nächste Feind – aber kaum verwundbare Ziele zählen sechsfach so weit, Panzerabwehr sucht
 Panzer, Schützen nehmen Großtiere zuerst, Reiterei sucht Schützen und bereits gebundene Gegner und meidet Spieße und Karree
 (schwere Tiere nicht).</li>
+<li><b>Bedrohung:</b> Die KI merkt sich, wer ihr in den letzten 20 Sekunden Verluste zugefügt hat – je acht Gefallene zählt ein
+Ziel bis zu doppelt so nah. Schützennester und die stärksten Kämpfer werden so zum Ziel, ein Köder, der keinen Schaden macht,
+verliert an Reiz.
+<b>Aber:</b> Steht feindliches Fußvolk zwischen dem Angreifer und den Schützen (bis 35° seitlich, mindestens 8 m näher), gilt die
+Bedrohung nicht – die KI rennt nicht durch eine Speerlinie auf die Bogenschützen dahinter.</li>
+<li><b>Angreifer-Deckel:</b> Auf ein Ziel gehen höchstens so viele Nahkämpfer, wie es braucht: zusammen nicht mehr als das
+1,5-Fache seines Werts (Preis × Anteil der Überlebenden). Der Rest nimmt das nächste Ziel – solange es nicht mehr als
+zweieinhalbmal so weit ist. Wer schon im Handgemenge steckt, bleibt bei seinem Gegner. Schützen bündeln ihr Feuer weiter.</li>
+<li><b>Reaktion auf Beschuss:</b> Nimmt Fußvolk Treffer von Schützen, ohne selbst im Nahkampf zu stecken, stürmt es im
+Laufschritt auf den nächsten Schützen los, der es erreicht (bis 220 m) – außer, der Schütze ist abgeschirmt (siehe oben).
+Jede Haltung „in Stellung bleiben“ endet dann.</li>
+<li><b>Flankenkommando:</b> Besteht das feindliche Heer zu mehr als 35 % aus Schützen zu Fuß, schickt die KI zu Beginn bis zu zwei
+Bataillone – Reiter aus der Reserve oder ihr schnellstes Fußvolk – im weiten Bogen um die Flanke auf genau diese Schützen
+(nicht, wenn ihre Reiterei ohnehin schon umgeht).</li>
 <li><b>Belagerung:</b> Liegt der Feind hinter Mauern, wartet das Fußvolk außer Reichweite, bis Geschütze eine Bresche schlagen.
 Ohne Geschütze baut die KI einen Notrammbock und eskortiert ihn mit dem Fußvolk als lebendem Schild. Nach 150 Sekunden greift
 sie trotzdem an.</li>
@@ -396,11 +410,22 @@ und Schützen.</li>
 <div class="tbl"><table><tr><th>Bedingung</th><th>Regel</th></tr><tr><td><b>Vernichtung</b></td><td>Gewonnen hat, wer als Letzter noch kämpfende Truppen hat.</td></tr><tr><td><b>Ort halten</b></td><td>Haltet den markierten Ort allein besetzt, bis die Zeit abgelaufen ist.</td></tr><tr><td><b>König</b></td><td>Jede Seite hat einen schwachen König. Fällt er, flieht sein ganzes Heer.</td></tr></table></div>
 
 <h2 id="kriegsrufe">Kriegsrufe (Fertigkeiten im Feldzug)</h2>
-<p>Im Feldzug ist jeder Erfahrungspunkt auch ein Fertigkeitspunkt. Aktive Fertigkeiten (Kriegsrufe) wirken in der Schlacht auf
-die gerade gewählten Bataillone und haben eine Abklingzeit; passive gelten immer. Die Kriegsrufe liegen in der Schlacht
-rechts unten bereit.</p>
-<div class="tbl"><table><tr><th>Fertigkeit</th><th>Art</th><th>ab Stufe</th><th>Wirkung Stufe 1</th><th>Wirkung Stufe 3</th>
-<th>Kosten (Punkte)</th></tr><tr><td><b>Kriegsruf</b></td><td>aktiv</td><td>1</td><td>+20% Schaden und +25 Moral für 20 s · Abklingzeit 90 s</td><td>+40% Schaden und +25 Moral für 20 s · Abklingzeit 60 s</td><td>150 / 500 / 1.500</td></tr><tr><td><b>Ansporn</b></td><td>aktiv</td><td>1</td><td>+25% Tempo und Angriffstempo für 20 s · Abklingzeit 90 s</td><td>+45% Tempo und Angriffstempo für 20 s · Abklingzeit 60 s</td><td>150 / 500 / 1.500</td></tr><tr><td><b>Berserkerwut</b></td><td>aktiv</td><td>6</td><td>+50% Schaden, +30% Angriffstempo, kein Fliehen, −10 Rüstung · 15 s · Abklingzeit 120 s</td><td>+90% Schaden, +30% Angriffstempo, kein Fliehen, −10 Rüstung · 25 s · Abklingzeit 120 s</td><td>400 / 1.200 / 3.000</td></tr><tr><td><b>Unverwundbarkeit</b></td><td>aktiv</td><td>12</td><td>Keinerlei Verluste für 5 s · Abklingzeit 150 s</td><td>Keinerlei Verluste für 12 s · Abklingzeit 110 s</td><td>800 / 2.000 / 5.000</td></tr><tr><td><b>Wiederbelebung</b></td><td>aktiv</td><td>16</td><td>10% der Gefallenen kehren sofort zurück · einmal je Schlacht</td><td>30% der Gefallenen kehren sofort zurück · einmal je Schlacht</td><td>1.000 / 2.500 / 6.000</td></tr><tr><td><b>Deckung!</b></td><td>aktiv</td><td>4</td><td>−50% Schaden durch Pfeile, Kugeln und Granaten für 15 s – Schilde hoch, Köpfe runter · Abklingzeit 90 s</td><td>−80% Schaden durch Pfeile, Kugeln und Granaten für 25 s – Schilde hoch, Köpfe runter · Abklingzeit 70 s</td><td>300 / 900 / 2.400</td></tr><tr><td><b>Sammelruf</b></td><td>aktiv</td><td>8</td><td>Fliehende sammeln sich sofort, +40 Moral (Wert in Punkten) · Abklingzeit 120 s</td><td>Fliehende sammeln sich sofort, +70 Moral (Wert in Punkten) · Abklingzeit 80 s</td><td>500 / 1.500 / 3.500</td></tr><tr><td><b>Nebelwand</b></td><td>aktiv</td><td>10</td><td>Rauch verhüllt die Truppe: feindliche Schützen verlieren sie 8 s aus dem Blick · Abklingzeit 140 s</td><td>Rauch verhüllt die Truppe: feindliche Schützen verlieren sie 16 s aus dem Blick · Abklingzeit 100 s</td><td>600 / 1.800 / 4.000</td></tr><tr><td><b>Händler</b></td><td>passiv</td><td>1</td><td>Entlassen bringt 40% des Werts zurück (sonst 30%)</td><td>Entlassen bringt 60% des Werts zurück (sonst 30%)</td><td>100 / 400 / 1.200</td></tr><tr><td><b>Feldscher</b></td><td>passiv</td><td>1</td><td>Auffüllen (Heilung) kostet 15% weniger</td><td>Auffüllen (Heilung) kostet 45% weniger</td><td>150 / 500 / 1.500</td></tr><tr><td><b>Quartiermeister</b></td><td>passiv</td><td>1</td><td>Pfeillager: +20% Munition (zusätzlich zum Stufenbonus)</td><td>Pfeillager: +60% Munition (zusätzlich zum Stufenbonus)</td><td>100 / 400 / 1.200</td></tr></table></div>
+<p>Im Feldzug ist jeder Erfahrungspunkt auch ein Fertigkeitspunkt. Jede Fertigkeit hat <b>fünf Stufen</b>: Stufe 1–3 wirken wie
+bisher, Stufe 4 und 5 legen mit abnehmendem Zuwachs noch etwas drauf – und kosten deutlich mehr. Aktive Fertigkeiten
+(Kriegsrufe) wirken in der Schlacht auf die gerade gewählten Bataillone und haben eine Abklingzeit; passive gelten immer. Die
+Kriegsrufe liegen in der Schlacht rechts unten bereit.</p>
+<ul>
+<li><b>Ziel-Deckel:</b> Ein Kriegsruf erreicht auf Stufe 1 höchstens 2 Bataillone, auf Stufe 5 höchstens
+6 (2 / 3 / 4 / 5 / 6). Sind mehr gewählt, bekommen ihn die wichtigsten: erst die im
+Nahkampf, dann die unter Beschuss, dann die nächsten am Feind.</li>
+<li><b>Kampfrausch:</b> Kriegsruf, Ansporn und Berserkerwut teilen sich eine Abklingzeit – es wirkt immer nur einer, und nach
+seinem Ende vergehen noch 20 Sekunden, bis der nächste Rausch geht. Jeder behält zusätzlich seine eigene
+Abklingzeit.</li>
+<li><b>Bedingungen:</b> Der Kriegsruf wirkt nur auf Bataillone mit einem Feind im Umkreis von 60 m, „Deckung!“ nur auf
+Bataillone, die gerade unter Beschuss liegen. Berserkerwut kostet weiterhin 10 Rüstung.</li>
+</ul>
+<div class="tbl"><table><tr><th>Fertigkeit</th><th>Art</th><th>ab Stufe</th><th>Stufe 1</th><th>Stufe 3</th><th>Stufe 5</th>
+<th>Kosten (Punkte)</th></tr><tr><td><b>Kriegsruf</b></td><td>aktiv</td><td>1</td><td>+20% Schaden und +25 Moral für 20 s · nur mit Feind im Umkreis von 60 m · Abklingzeit 90 s</td><td>+40% Schaden und +25 Moral für 20 s · nur mit Feind im Umkreis von 60 m · Abklingzeit 60 s</td><td>+50% Schaden und +25 Moral für 25 s · nur mit Feind im Umkreis von 60 m · Abklingzeit 50 s</td><td>150 / 500 / 1.500 / 3.300 / 6.500</td></tr><tr><td><b>Ansporn</b></td><td>aktiv</td><td>1</td><td>+25% Tempo und Angriffstempo für 20 s · Abklingzeit 90 s</td><td>+45% Tempo und Angriffstempo für 20 s · Abklingzeit 60 s</td><td>+55% Tempo und Angriffstempo für 25 s · Abklingzeit 50 s</td><td>150 / 500 / 1.500 / 3.300 / 6.500</td></tr><tr><td><b>Berserkerwut</b></td><td>aktiv</td><td>6</td><td>+50% Schaden, +30% Angriffstempo, kein Fliehen, −10 Rüstung · 15 s · Abklingzeit 120 s</td><td>+90% Schaden, +30% Angriffstempo, kein Fliehen, −10 Rüstung · 25 s · Abklingzeit 120 s</td><td>+110% Schaden, +30% Angriffstempo, kein Fliehen, −10 Rüstung · 30 s · Abklingzeit 110 s</td><td>400 / 1.200 / 3.000 / 6.600 / 13.000</td></tr><tr><td><b>Unverwundbarkeit</b></td><td>aktiv</td><td>12</td><td>Keinerlei Verluste für 5 s · Abklingzeit 150 s</td><td>Keinerlei Verluste für 12 s · Abklingzeit 110 s</td><td>Keinerlei Verluste für 16 s · Abklingzeit 95 s</td><td>800 / 2.000 / 5.000 / 11.000 / 22.000</td></tr><tr><td><b>Wiederbelebung</b></td><td>aktiv</td><td>16</td><td>10% der Gefallenen kehren sofort zurück · einmal je Schlacht</td><td>30% der Gefallenen kehren sofort zurück · einmal je Schlacht</td><td>40% der Gefallenen kehren sofort zurück · einmal je Schlacht</td><td>1.000 / 2.500 / 6.000 / 13.000 / 26.000</td></tr><tr><td><b>Deckung!</b></td><td>aktiv</td><td>4</td><td>−50% Schaden durch Pfeile, Kugeln und Granaten für 15 s · nur unter Beschuss · Abklingzeit 90 s</td><td>−80% Schaden durch Pfeile, Kugeln und Granaten für 25 s · nur unter Beschuss · Abklingzeit 70 s</td><td>−90% Schaden durch Pfeile, Kugeln und Granaten für 30 s · nur unter Beschuss · Abklingzeit 60 s</td><td>300 / 900 / 2.400 / 5.300 / 10.500</td></tr><tr><td><b>Sammelruf</b></td><td>aktiv</td><td>8</td><td>Fliehende sammeln sich sofort, +40 Moral (Wert in Punkten) · Abklingzeit 120 s</td><td>Fliehende sammeln sich sofort, +70 Moral (Wert in Punkten) · Abklingzeit 80 s</td><td>Fliehende sammeln sich sofort, +84 Moral (Wert in Punkten) · Abklingzeit 66 s</td><td>500 / 1.500 / 3.500 / 7.700 / 15.000</td></tr><tr><td><b>Nebelwand</b></td><td>aktiv</td><td>10</td><td>Rauch verhüllt die Truppe: feindliche Schützen verlieren sie 8 s aus dem Blick · Abklingzeit 140 s</td><td>Rauch verhüllt die Truppe: feindliche Schützen verlieren sie 16 s aus dem Blick · Abklingzeit 100 s</td><td>Rauch verhüllt die Truppe: feindliche Schützen verlieren sie 20 s aus dem Blick · Abklingzeit 85 s</td><td>600 / 1.800 / 4.000 / 8.800 / 17.500</td></tr><tr><td><b>Händler</b></td><td>passiv</td><td>1</td><td>Entlassen bringt 40% des Werts zurück (sonst 30%)</td><td>Entlassen bringt 60% des Werts zurück (sonst 30%)</td><td>Entlassen bringt 66% des Werts zurück (sonst 30%)</td><td>100 / 400 / 1.200 / 2.600 / 5.200</td></tr><tr><td><b>Feldscher</b></td><td>passiv</td><td>1</td><td>Auffüllen (Heilung) kostet 15% weniger</td><td>Auffüllen (Heilung) kostet 45% weniger</td><td>Auffüllen (Heilung) kostet 56% weniger</td><td>150 / 500 / 1.500 / 3.300 / 6.500</td></tr><tr><td><b>Quartiermeister</b></td><td>passiv</td><td>1</td><td>Pfeillager: +20% Munition (zusätzlich zum Stufenbonus)</td><td>Pfeillager: +60% Munition (zusätzlich zum Stufenbonus)</td><td>Pfeillager: +76% Munition (zusätzlich zum Stufenbonus)</td><td>100 / 400 / 1.200 / 2.600 / 5.200</td></tr></table></div>
 
 <h2 id="pfad">Wegfindung</h2>
 <ul>
@@ -493,7 +518,7 @@ Welle und nach jedem Sieg.</li>
 </ul>
 
 </main>
-<footer>Stratego 3D · Version 1.0.5 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
+<footer>Stratego 3D · Version 1.0.6 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
 <code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{
