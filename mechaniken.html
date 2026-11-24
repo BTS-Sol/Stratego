@@ -11,12 +11,14 @@ Regeln – mit den echten Zahlen aus dem Spiel.</p>
 <div class="toc">
 <a href="#soldat">So kämpft ein Soldat</a><a href="#nahkampf">Nahkampf</a><a href="#wucht">Ansturm, Wucht und Überreiten</a>
 <a href="#fernkampf">Fernkampf und Beschuss</a><a href="#explosion">Artillerie und Explosionen</a>
-<a href="#panzer">Rüstung, Härte und Durchschlag</a><a href="#moral">Moral und Flucht</a><a href="#ausdauer">Ausdauer</a>
+<a href="#panzer">Rüstung, Härte und Durchschlag</a><a href="#moral">Moral und Flucht</a>
+<a href="#synergien">Armee-Synergien und Startmoral</a><a href="#ausdauer">Ausdauer</a>
 <a href="#formationen">Formationen</a><a href="#autokampf">Autokampf, Drill und KI</a><a href="#feldherren">Feldherren und Standarten</a>
 <a href="#gelaende">Gelände</a><a href="#wetter">Wetter</a><a href="#munition">Munition und Nachschub</a>
 <a href="#sanitaet">Sanität</a><a href="#flieger">Hubschrauber</a><a href="#schutz">Schutzfahrzeuge und Kuppel</a>
 <a href="#sicht">Sichtschutz und Tarnung</a>
 <a href="#sieg">Siegbedingungen</a><a href="#kriegsrufe">Kriegsrufe (Fertigkeiten)</a><a href="#pfad">Wegfindung</a>
+<a href="#survival">Survival in Zahlen</a><a href="#erweiterung">Kartenerweiterung</a>
 </div>
 
 <h2 id="soldat">So kämpft ein Soldat</h2>
@@ -162,13 +164,17 @@ Mit wehender Standarte 20 % weniger.</td></tr>
 <tr><td>Wilder Ansturm des Gegners</td><td>einmalig 9 ÷ Disziplin beim Aufprall (Gallier, Germanen, Wikinger, Berserker,
 Highlander, Zulu, Jaguarkrieger …)</td></tr>
 <tr><td>Erschöpfung über 80 %</td><td>im Angesicht des Feindes bis 0,8 je Sekunde</td></tr>
+<tr><td>Schützen ohne Deckung</td><td>Schützen mit eigenem Fußvolk zwischen sich und dem nächsten Feind (bis 45 m) verlieren
+20 % weniger Moral; ungedeckte Geschütze (kein anderes Bataillon im Umkreis von 40 m) 25 % mehr – siehe
+<a href="#synergien">Armee-Synergien</a>.</td></tr>
 </table></div>
 <p><b>Rückhalt</b> mildert alle diese Verluste: Faktor 1 − 0,4 × eigene ÷ (eigene + feindliche Männer im Umkreis von 40 m). Wer
 mitten im eigenen Heer steht, verliert bis zu 40 % weniger; wer allein gegen eine Übermacht steht, trägt jeden Schlag voll.</p>
 <h3>Obergrenze und Erholung</h3>
 <ul>
 <li><b>Obergrenze:</b> Moralwert × (35 % + 65 % × Anteil der Überlebenden), mit Standarte +15 %, im Feldzug zusätzlich durch
-Ausrüstung. Ein halbiertes Bataillon kommt also nie mehr über 67 % seiner Anfangsmoral.</li>
+Ausrüstung, dazu die halbe Wirkung der <a href="#synergien">Heereszusammensetzung</a> (75–125 % → 87,5–112,5 %). Ein halbiertes
+Bataillon kommt also nie mehr über 67 % seiner Anfangsmoral.</li>
 <li><b>Bedroht</b> ist ein Bataillon, wenn ein Feind näher als 35 m ist (Schützen: plus 10 % ihrer Reichweite).</li>
 <li>Nicht bedroht und kaum frische Verluste: <b>+2,5 je Sekunde</b> bis zur Obergrenze. Im Gefecht, aber ohne Nahkampf und unter
 60 % der Obergrenze: +0,8 je Sekunde.</li>
@@ -190,6 +196,47 @@ ein drittes Mal flieht, <b>verlässt nach 6 Sekunden das Schlachtfeld</b> – es
 130 × 12 ÷ 120 ÷ 1,5 ≈ 8,7 Moral; stehen gleich viele eigene wie feindliche Männer in der Nähe, mildert der Rückhalt um 20 % auf
 rund 7. Die Obergrenze sinkt auf 75 × (0,35 + 0,65 × 0,9) ≈ 70. Ein einzelner Treffer in den Rücken kostet nur
 28 ÷ 120 ÷ 1,5 ≈ 0,16 – teuer wird es erst, wenn eine ganze Flanke auf einmal einschlägt.</div>
+
+<h2 id="synergien">Armee-Synergien und Startmoral</h2>
+<p>Ein Heer ist mehr als die Summe seiner Bataillone. Drei Ebenen wirken zusammen – jede bewusst gedeckelt, damit nichts
+ins Unendliche stapelt. Alles gilt für alle Seiten (auch für die KI) und wird in der Aufstellung rechts im Feld
+<b>Armee-Synergien</b> angezeigt: Startmoral, was sie hebt oder senkt und welche Kultur noch wie viele Bataillone braucht.</p>
+<h3>1. Zusammensetzung → Startmoral 75–125 %</h3>
+<p>Gezählt werden die Rollen der Bataillone: <b>Fußvolk</b> (hält die Linie – ab der Linienzeit auch Musketiere und
+Schützeninfanterie), <b>Schützen</b>, <b>Reiterei</b> (dazu zählen für die Vielfalt auch berittene Schützen und Tiere),
+<b>Artillerie</b> und <b>Unterstützung</b> (Tross, Sanität, Pioniere). Feldherren zählen nicht. Unter drei Bataillonen gilt
+immer 100 %.</p>
+<div class="tbl"><table><tr><th>Regel</th><th class=num>Wirkung</th></tr>
+<tr><td>Gemischt: zwei / drei / vier Rollen vertreten (je mindestens 8 % der Bataillone)</td><td class=num>+5 / +12 / +18 %</td></tr>
+<tr><td>Sanität oder Tross dabei (ab vier Bataillonen, höchstens 40 %)</td><td class=num>+4 %</td></tr>
+<tr><td>Zwei oder mehr Schützen-Bataillone ohne jedes Fußvolk</td><td class=num>−10 % −4 % je Schützen-Bataillon, höchstens −25 %</td></tr>
+<tr><td>Mehr als drei Schützen auf ein Fußvolk-Bataillon</td><td class=num>−8 % je Schütze über dem Verhältnis 3 : 1, höchstens −25 %</td></tr>
+<tr><td>Artillerie ohne genug Bedeckung (Fußvolk + halbe Reiterei und Schützen unter 1,5 je Geschütz)</td><td class=num>bis −15 %</td></tr>
+<tr><td>Über 70 % Nahkampf-Reiterei oder Tiere – niemand hält die Stellung</td><td class=num>−10 %</td></tr>
+<tr><td>Mehr als 40 % Tross</td><td class=num>−5 %</td></tr>
+</table></div>
+<p>Die Summe wird auf 75–125 % begrenzt. Sie wirkt <b>voll auf die Startmoral</b> und <b>halb auf die Moral-Obergrenze</b>:
+Ein ausgewogenes Heer geht mutiger in die Schlacht und erholt sich etwas höher; ein reines Bogenheer beginnt mit Dreiviertel-Moral
+und bricht früher.</p>
+<h3>2. Nähe im Gefecht (jede Sekunde neu)</h3>
+<ul>
+<li><b>Schützen mit Deckung:</b> Steht eigenes Fußvolk bis 45 m entfernt zwischen den Schützen und dem nächsten Feind, verlieren
+sie 20 % weniger Moral. Berittene Schützen brauchen das nicht – sie weichen aus.</li>
+<li><b>Spieße schützen:</b> Fußvolk mit Anti-Reiter-Wert bis 30 m neben Schützen macht diese schwer umzureiten (+0,8 Widerstand
+gegen <a href="#wucht">Überreiten</a>).</li>
+<li><b>Ungedeckte Geschütze:</b> Ist kein anderes eigenes Bataillon im Umkreis von 40 m, treffen Moralverluste ein Geschütz um
+25 % härter.</li>
+</ul>
+<h3>3. Kultur</h3>
+<p>Bataillone derselben Kultur stärken einander: ab <b>3</b> Bataillonen einer Kultur wirkt ihre Stärke, ab
+<b>6</b> 1,5-fach. Jedes Bataillon bekommt höchstens einen Kulturbonus (den stärksten, der auf es passt). Zu welcher
+Kultur eine Einheit gehört, ergibt sich aus den Heeresvorlagen (Einheiten, die in höchstens zwei Kulturen vorkommen) und
+eindeutigen Namen; Geschütze, Tross und überall verbreitete Truppen gehören keiner Kultur.</p>
+<div class="tbl"><table><tr><th>Kultur</th><th>Stärke (ab 3 Bataillonen)</th><th>Wirkt auf</th><th>Heeresvorlagen</th></tr>
+<tr><td><b>Ägypten</b></td><td>Schützen +10 % Lebenskraft und Moral</td><td>Schützen</td><td>Ägypten (Neues Reich)</td></tr><tr><td><b>Griechen</b></td><td>Fußvolk +6 Rüstung und +8 % Moral – die Phalanx</td><td>Fußvolk</td><td>Griechische Hopliten, Sparta, Theben (Leuktra), Makedonien (Alexander)</td></tr><tr><td><b>Rom</b></td><td>+12 % Moral für alle – römische Disziplin</td><td>alle</td><td>Römische Legion, Römische Republik</td></tr><tr><td><b>Persien</b></td><td>Schützen +8 % Feuerrate – der Pfeilhagel</td><td>Schützen</td><td>Perserreich, Achämenidenreich, Sassanidenreich</td></tr><tr><td><b>Kelten und Germanen</b></td><td>Nahkämpfer +10 % Schaden – ungestümer Angriff</td><td>Nahkämpfer</td><td>Gallier und Germanen</td></tr><tr><td><b>Nordmänner</b></td><td>Nahkämpfer +8 % Lebenskraft</td><td>Nahkämpfer</td><td>Wikinger, Kiewer Rus</td></tr><tr><td><b>Byzanz</b></td><td>+5 Rüstung für alle</td><td>alle</td><td>Byzanz</td></tr><tr><td><b>Steppenvölker</b></td><td>Reiter +10 % Tempo</td><td>Reiterei</td><td>Mongolen, Hunnen (Attila)</td></tr><tr><td><b>Japan</b></td><td>+8 % Tempo für alle</td><td>alle</td><td>Samurai, Japan (Sengoku)</td></tr><tr><td><b>China</b></td><td>Schützen +10 % Feuerrate – Salven aus vielen Gliedern</td><td>Schützen</td><td>Song-China, Ming-China, Han-China</td></tr><tr><td><b>Kreuzfahrer und Franken</b></td><td>Reiterei +8 % Schaden</td><td>Reiterei</td><td>Kreuzfahrer, Frankenreich, Frankreich (Jeanne d&#x27;Arc)</td></tr><tr><td><b>England</b></td><td>Schützen +6 % Reichweite</td><td>Schützen</td><td>Englisches Heer (Azincourt)</td></tr><tr><td><b>Sarazenen und Araber</b></td><td>Reiter +10 % Moral und +5 % Tempo</td><td>Reiterei</td><td>Sarazenen, Arabische Wüstenkrieger</td></tr><tr><td><b>Azteken</b></td><td>Nahkämpfer +8 % Schaden und +6 % Moral</td><td>Nahkämpfer</td><td>Azteken</td></tr><tr><td><b>Landsknechte und Tercio</b></td><td>Fußvolk +12 % Moral – der Gewalthaufen</td><td>Fußvolk</td><td>Landsknechte, Spanischer Tercio</td></tr><tr><td><b>Preußen und Frankreich</b></td><td>Linieninfanterie +8 % Feuerrate – der Drill</td><td>Fußvolk</td><td>Napoleonische Armee, Preußen (Friedrich)</td></tr><tr><td><b>Polen-Litauen</b></td><td>Reiterei +10 % Schaden</td><td>Reiterei</td><td>Polen-Litauen (Kircholm)</td></tr><tr><td><b>Karthago</b></td><td>Reiter +6 % Tempo und Moral</td><td>Reiterei</td><td>Karthago (Hannibal)</td></tr><tr><td><b>Hethiter</b></td><td>+6 % Lebenskraft für alle</td><td>alle</td><td>Hethiter</td></tr></table></div>
+<div class="box tip"><b>Praxis:</b> Drei bis vier Rollen, ein Fußvolk-Bataillon je bis zu drei Schützen, Geschütze nie allein.
+Wer eine Kultur spielen will, braucht drei passende Bataillone – sechs lohnen sich doppelt.</div>
+
 
 <h2 id="ausdauer">Ausdauer</h2>
 <div class="tbl"><table><tr><th>Tätigkeit</th><th>Erschöpfung je Sekunde (Fußvolk)</th><th>Reiter</th></tr>
@@ -367,8 +414,86 @@ die Streifen hinter den Bergketten des Gebirgspasses – gelten als unpassierbar
 Kolonne zusammen und wird danach wieder breit.</li>
 <li>Hubschrauber brauchen keine Wege.</li>
 </ul>
+
+<h2 id="survival">Survival in Zahlen</h2>
+<p>Wie Survival abläuft, steht unter <a href="modi.html#survival">Spielmodi → Survival</a>. Hier alle Regeln mit den echten
+Werten. Gold-Angaben gelten für die frühen Epochen; in teuren Epochen (Weltkriege bis Zukunft) wachsen Startgold, Einkommen,
+Wellen, Freischaltungen und Baukosten mit demselben <b>Goldmaßstab</b>: dem mittleren Preis im günstigsten Drittel der
+Kampftruppen der gewählten Epochen, geteilt durch 360 (dem Wert für Antike und Frühmittelalter, mindestens 1). Beispiele:
+Linienzeit bis Kalter Krieg ×1,6, Weltkriege ×2,0, Gegenwart ×2,8. So fühlt sich jede Epoche gleich an.</p>
+<h3>Die Wellen</h3>
+<ul>
+<li><b>Feindwert</b> der Welle w: (350 × 1,12<sup>w−1</sup> + 60 × w) Gold × Anlauf. Der Anlauf beträgt in Welle 1 70 % und
+steigt um 3 % je Welle bis 100 % ab Welle 11 – erst aufbauen, dann halten. Jede zehnte Welle ist eine <b>Feldherrnwelle</b>
+mit +25 % und einem Feldherrn.</li>
+<li><b>Abgehärtet:</b> Ab Welle 22 bekommen alle Feinde je Welle 1,5 % mehr Schaden und Lebenskraft (Welle 42: +30 %) – ohne
+Gegenwert in Gold.</li>
+<li><b>Zusammensetzung:</b> zwei Truppentypen aus Fußvolk, Schützen und Reiterei, ab Welle 6 ein dritter (auch Geschütze),
+deren Zeitalter mit den Wellen von der ersten zur
+letzten gewählten Epoche wandert (in 25 Wellen). Ab Welle 6 bringt die Welle Belagerungsgerät mit, wenn du mindestens sechs
+Mauer-, Palisaden- oder Torstücke hast. Höchstens 6 + w Bataillone (bis 60).</li>
+<li><b>Richtungen:</b> eine bis Welle 4, zwei bis Welle 11, drei bis Welle 24, danach vier – aus den acht Himmelsrichtungen,
+mindestens 90° auseinander. Die Gegner sammeln sich am Kartenrand.</li>
+<li><b>Die Welle greift an:</b> Sie stürmt (Kampfweise „Sturm“, auch auf Burgkarten). Schützen mit großer Reichweite rücken bis
+auf halbe Reichweite heran, statt am Rand zu stehen. Nach 180 s greift jeder an, der noch zögert, nach
+300 s läuft der Rest geschlossen auf die nächsten eigenen Truppen.</li>
+<li><b>Patt:</b> Fällt nach dem Sturm 75 Sekunden lang niemand mehr – oder dauert die Welle 12
+Minuten –, zieht der Rest ab und die Welle gilt als gehalten (Beute nur für Besiegte).</li>
+</ul>
+<div class="tbl"><table><tr><th class=num>Welle</th><th class=num>Feindwert</th><th class=num>Einkommen</th>
+<th class=num>Freigeschaltet bis (je Bataillon)</th><th class=num>Richtungen</th><th class=num>Feindstärke</th></tr><tr><td class=num>1</td><td class=num>287</td><td class=num>290</td><td class=num>420</td><td class=num>1</td><td class=num>100 %</td></tr><tr><td class=num>2</td><td class=num>373</td><td class=num>330</td><td class=num>483</td><td class=num>1</td><td class=num>100 %</td></tr><tr><td class=num>3</td><td class=num>470</td><td class=num>370</td><td class=num>555</td><td class=num>1</td><td class=num>100 %</td></tr><tr><td class=num>5</td><td class=num>697</td><td class=num>450</td><td class=num>735</td><td class=num>2</td><td class=num>100 %</td></tr><tr><td class=num>8</td><td class=num>1.140</td><td class=num>570</td><td class=num>1.117</td><td class=num>2</td><td class=num>100 %</td></tr><tr><td class=num>10</td><td class=num>1.904</td><td class=num>650</td><td class=num>1.478</td><td class=num>2</td><td class=num>100 %</td></tr><tr><td class=num>12</td><td class=num>1.937</td><td class=num>730</td><td class=num>1.954</td><td class=num>3</td><td class=num>100 %</td></tr><tr><td class=num>15</td><td class=num>2.610</td><td class=num>850</td><td class=num>2.972</td><td class=num>3</td><td class=num>100 %</td></tr><tr><td class=num>20</td><td class=num>5.268</td><td class=num>1.050</td><td class=num>5.977</td><td class=num>3</td><td class=num>100 %</td></tr><tr><td class=num>25</td><td class=num>6.812</td><td class=num>1.250</td><td class=num>12.023</td><td class=num>4</td><td class=num>104 %</td></tr><tr><td class=num>30</td><td class=num>13.953</td><td class=num>1.450</td><td class=num>24.182</td><td class=num>4</td><td class=num>112 %</td></tr><tr><td class=num>35</td><td class=num>18.599</td><td class=num>1.650</td><td class=num>48.638</td><td class=num>4</td><td class=num>120 %</td></tr><tr><td class=num>40</td><td class=num>39.348</td><td class=num>1.850</td><td class=num>97.828</td><td class=num>4</td><td class=num>127 %</td></tr><tr><td class=num>45</td><td class=num>53.946</td><td class=num>2.050</td><td class=num>196.768</td><td class=num>4</td><td class=num>134 %</td></tr><tr><td class=num>50</td><td class=num>116.641</td><td class=num>2.250</td><td class=num>395.771</td><td class=num>4</td><td class=num>142 %</td></tr></table></div>
+<h3>Wirtschaft</h3>
+<ul>
+<li><b>Start:</b> 500 Gold – in teuren Epochen mehr, ab Goldmaßstab 1,5 das 720-Fache des Maßstabs (genug für zwei günstige
+Bataillone).
+<b>Nach jeder gehaltenen Welle:</b> 250 + 40 × w Gold (mit „Nachschub“ bis +30 %) und
+8 % des Werts der besiegten Feinde als Beute; dazu 30 + 8 × w Survival-Erfahrung (EP).</li>
+<li><b>Warum es irgendwann bricht:</b> Das Einkommen wächst linear, die Wellen um 12 % je Welle. Bis etwa Welle 20 wächst die
+Festung schneller als die Wellen, danach holen sie auf. Gemessen mit einem Test-Spieler: Bei Welle 20 hat die Festung
+rund 1,6-mal so viel Wert wie die Welle, bei Welle 34 noch 1,2-mal; um Welle 37–38 kreuzen sich die Kurven, und die
+Feldherrnwelle 40 (Feinde +27 %) hält kaum eine Festung. Bei Tempo 1× sind das knapp vier Stunden, mit 2× etwa zweieinhalb.</li>
+<li><b>Kaufen:</b> Alles aus den gewählten Epochen; teure Einheiten erst ab der Welle, deren Grenze ihren Bataillonspreis erreicht
+(420 × 1,15<sup>w−1</sup>). Elitetruppen des Feldzugs ab Welle 12, Feldherren ab Welle 20 (einer zur Zeit).</li>
+<li><b>Auffüllen</b> kostet 70 % des Neupreises der Fehlenden (mit „Werber“ bis 45 % günstiger), <b>Verkaufen</b> bringt 50 %
+des Restwerts.</li>
+<li><b>Ränge:</b> Abschüsse bringen Erfahrung wie im Feldzug; je Rang +5 % Schaden, +2 Rüstung, +8 % Moral.</li>
+</ul>
+<h3>Bauen</h3>
+<p>Gebaut wird in der Planung im Reiter <b>Bauen</b>: Linien mit der rechten Maustaste ziehen, Einzelstücke mit Linksklick
+setzen (<kbd>R</kbd> dreht), nur in der Festung und in Außenposten. <b>Abreißen</b> gibt die Hälfte der Kosten (nach Schaden)
+zurück, <b>Reparieren</b> kostet die Hälfte der Schadens-Anteile. Beschädigte Bauwerke bleiben beschädigt, zerstörte sind weg.
+Was in der Festung steht, behält seinen Platz von Welle zu Welle.</p>
+<div class="tbl"><table><tr><th>Bauwerk</th><th class=num>Gold</th><th>je</th><th class=num>ab Welle</th><th>ab Epoche</th>
+<th>Zweck</th></tr><tr><td><b>Pfähle</b></td><td class=num>25</td><td>je 10 m</td><td class=num>1</td><td>Urzeit</td><td>Verletzen Reiter, die hineinreiten</td></tr><tr><td><b>Palisade</b></td><td class=num>45</td><td>je 10 m</td><td class=num>1</td><td>Urzeit</td><td>Holzwand: hält Fußvolk auf, Schützen dahinter</td></tr><tr><td><b>Holzturm</b></td><td class=num>140</td><td>Stück</td><td class=num>3</td><td>Urzeit</td><td>8 Schützen oben – sie schießen weiter</td></tr><tr><td><b>Schanzkörbe</b></td><td class=num>80</td><td>je 10 m</td><td class=num>3</td><td>Renaissance</td><td>Deckung gegen Beschuss</td></tr><tr><td><b>Schützengraben</b></td><td class=num>60</td><td>je 10 m</td><td class=num>2</td><td>Linienzeit</td><td>Schützen darin sind schwer zu treffen</td></tr><tr><td><b>Stacheldraht</b></td><td class=num>50</td><td>je 10 m</td><td class=num>2</td><td>Weltkriege</td><td>Bremst Feinde auf Schritttempo und verletzt</td></tr><tr><td><b>Minenfeld</b></td><td class=num>90</td><td>je 10 m</td><td class=num>4</td><td>Weltkriege</td><td>Explodiert unter dem Feind</td></tr><tr><td><b>Burgmauer</b></td><td class=num>160</td><td>je 10 m</td><td class=num>5</td><td>Antike</td><td>Stein: hält lange, Schützen können sie besetzen</td></tr><tr><td><b>Torhaus</b></td><td class=num>220</td><td>Stück</td><td class=num>5</td><td>Antike</td><td>Durchgang in der Mauer – nur für deine Truppen</td></tr><tr><td><b>Wachturm</b></td><td class=num>260</td><td>Stück</td><td class=num>6</td><td>Antike</td><td>Steinturm für 12 Schützen</td></tr><tr><td><b>Erdwall</b></td><td class=num>120</td><td>je 10 m</td><td class=num>6</td><td>Linienzeit</td><td>Besetzbarer Wall, schluckt Kanonenkugeln</td></tr><tr><td><b>Betonwand</b></td><td class=num>200</td><td>je 10 m</td><td class=num>8</td><td>Kalter Krieg</td><td>Hält fast alles auf</td></tr><tr><td><b>Betonbunker</b></td><td class=num>600</td><td>Stück</td><td class=num>10</td><td>Weltkriege</td><td>14 Mann, kaum zu knacken</td></tr><tr><td><b>Festungsmauer</b></td><td class=num>320</td><td>je 10 m</td><td class=num>12</td><td>Hochmittelalter</td><td>Die dickste Mauer</td></tr><tr><td><b>Rundturm</b></td><td class=num>480</td><td>Stück</td><td class=num>14</td><td>Hochmittelalter</td><td>18 Schützen, sehr zäh</td></tr><tr><td><b>Energiebarriere</b></td><td class=num>350</td><td>je 10 m</td><td class=num>10</td><td>Zukunft</td><td>Undurchdringlich für Geschosse</td></tr></table></div>
+<ul>
+<li><b>Festung:</b> ein Quadrat um die Kartenmitte, halbe Kantenlänge 42 % der halben Kartengröße + 30 m je Erweiterungsring.</li>
+<li><b>Außenposten:</b> ab Welle 3, ein Posten plus einer je Ring (höchstens 4), je 44 ×
+44 m. Der erste kostet 300 Gold, jeder weitere 50 % mehr. Er muss vor der Festung liegen
+und mindestens 30 m Abstand zum Kartenrand halten. Dort darfst du bauen und Truppen aufstellen – so entstehen Ringfestungen mit
+vorgeschobenen Posten.</li>
+</ul>
+<h3>Fähigkeiten (Survival-EP)</h3>
+<div class="tbl"><table><tr><th>Fähigkeit</th><th>Wirkung Stufe 1 / 2 / 3</th><th class=num>EP</th><th class=num>ab Welle</th></tr>
+<tr><td><b>Festes Mauerwerk</b></td><td>Bauwerke +15 / 30 / 45 % Haltbarkeit</td><td class=num>120 / 300 / 650</td><td class=num>1</td></tr><tr><td><b>Baumeister</b></td><td>Bauen 10 / 20 / 30 % günstiger</td><td class=num>100 / 260 / 550</td><td class=num>1</td></tr><tr><td><b>Wiederaufbau</b></td><td>Nach jeder Welle 25 / 50 / 75 % der Schäden repariert</td><td class=num>150 / 360 / 750</td><td class=num>3</td></tr><tr><td><b>Feldlazarett</b></td><td>15 / 30 / 45 % der Gefallenen kehren nach der Welle zurück</td><td class=num>150 / 360 / 750</td><td class=num>2</td></tr><tr><td><b>Werber</b></td><td>Auffüllen 15 / 30 / 45 % günstiger</td><td class=num>100 / 260 / 550</td><td class=num>1</td></tr><tr><td><b>Nachschub</b></td><td>+10 / 20 / 30 % Gold je Welle</td><td class=num>160 / 420 / 900</td><td class=num>4</td></tr><tr><td><b>Kundschafter</b></td><td>Stufe 1: Stärke und Truppen der nächsten Welle · 2: ihre Richtungen · 3: sie kommt 15 s später</td><td class=num>80 / 220 / 450</td><td class=num>1</td></tr><tr><td><b>Lockfeuer</b></td><td>Lockfeuer setzen: 30 / 50 / 70 % der Welle ziehen zuerst dorthin</td><td class=num>220 / 480 / 950</td><td class=num>6</td></tr></table></div>
+<p><b>Spezialisierung</b> (ab Welle 8, 300 EP, immer nur eine – ein Wechsel kostet erneut):</p>
+<div class="tbl"><table><tr><th>Richtung</th><th>Wirkung</th></tr><tr><td><b>Bollwerk</b></td><td>Bauwerke +25 % Haltbarkeit, Bauen 10 % günstiger</td></tr><tr><td><b>Ausfall</b></td><td>Reiterei und Tiere +15 % Tempo und Schaden</td></tr><tr><td><b>Feuerwall</b></td><td>Schützen +12 % Reichweite, dafür −10 % Lebenskraft</td></tr></table></div>
+<p><b>Grenzen:</b> Bauwerke halten höchstens +70 % (Mauerwerk 3 + Bollwerk), Bauen wird höchstens 37 % günstiger,
+Lazarett holt höchstens 45 % der Gefallenen zurück. Nichts wird unzerstörbar, und keine Fähigkeit erzeugt Gold aus dem Nichts.</p>
+
+<h2 id="erweiterung">Kartenerweiterung</h2>
+<ul>
+<li>Nach jeder fünften gehaltenen Welle wächst das Spielfeld um einen <b>Ring</b> von 40 m an jeder Seite (höchstens
+4 Ringe). Die Festung wächst um 30 m mit, ein Außenposten mehr wird möglich, und die Wellen sammeln sich weiter draußen.</li>
+<li><b>Nichts verschiebt sich:</b> Gelände, Wälder, Büsche, Felsen, Gebäude und Truppen bleiben Meter für Meter, wo sie waren.
+Der Bergrand am Kartenende weicht nach außen; im neuen Streifen entstehen aus eigenen Bausteinen neue Wälder, Büsche und
+Felsen. Eigene Karten werden am Rand fortgesetzt.</li>
+<li>Alles steht im Spielstand <code>survival.json</code>: Karte, Ringe, Welle, Gold, EP, Fähigkeiten, Spezialisierung,
+Truppen mit Platz, Stärke und Erfahrung, Bauwerke mit Schaden, Außenposten, Lockfeuer und Epochen. Gespeichert wird vor jeder
+Welle und nach jedem Sieg.</li>
+</ul>
+
 </main>
-<footer>Stratego 3D · Version 1.0.4 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
+<footer>Stratego 3D · Version 1.0.5 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
 <code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{

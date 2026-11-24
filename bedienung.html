@@ -103,8 +103,15 @@ haben rechts ein eigenes Chatfenster; eingeklappt meldet ein leuchtender „CHAT
 <p>Erreichbar im Hauptmenü, mit <kbd>F2</kbd> und in der Schlacht über den Knopf <b>Einstellungen</b>. Musik ist überall gleich
 laut; Geräusche werden leiser, je weiter die Kamera vom Geschehen entfernt ist. <kbd>Strg</kbd>+<kbd>M</kbd> schaltet die
 Musik stumm. Eigene Musikstücke liegen im Ordner <code>assets/Music</code>.</p>
+<h3>Grafikkarte nutzen (Laptops mit zwei Grafikchips)</h3>
+<p>Viele Laptops starten Python auf dem sparsamen Grafikchip im Prozessor – die eigentliche Grafikkarte bleibt dann ungenutzt.
+Die Einstellungen zeigen unter <b>Grafik</b>, auf welchem Chip das Spiel rechnet, und warnen, wenn eine bessere Karte
+brachliegt. Umstellen: <b>Windows-Grafikeinstellungen öffnen</b> → „Durchsuchen“ → den Pfad des Python-Programms einfügen
+(<b>Pfad kopieren</b>) → „Optionen“ → <b>„Hohe Leistung“</b> → Spiel neu starten. Greift das nicht, hilft bei NVIDIA die
+NVIDIA-Systemsteuerung: „3D-Einstellungen verwalten“ → „Programmeinstellungen“ → <code>python.exe</code> →
+„Hochleistungs-NVIDIA-Prozessor“.</p>
 </main>
-<footer>Stratego 3D · Version 1.0.4 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
+<footer>Stratego 3D · Version 1.0.5 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
 <code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{

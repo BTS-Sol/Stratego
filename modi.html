@@ -6,6 +6,38 @@
 <main>
 <h1>Spielmodi</h1>
 
+<h2 id="survival">Survival</h2>
+<p class="lead">Eine Festung bauen und halten – Welle um Welle, bis sie fällt. Jede Welle ist eine Feldschlacht: Die
+Aufstellung ist die Planungsphase, die Gegner kommen erst beim Start von den Rändern.</p>
+<ol>
+<li><b>Neues Spiel:</b> Hauptmenü → Einzelspieler → <b>Survival</b>. Karte wählen (alle eingebauten und eigenen Karten) und eine
+Epoche oder einen Epochen-Bereich („von – bis“). Start mit 500 Gold (in teuren Epochen entsprechend mehr). Ein
+vorhandener Spielstand erscheint oben mit <b>Fortsetzen</b>.</li>
+<li><b>Planung</b> – links das Survival-Fenster mit vier Reitern:
+<ul>
+<li><b>Truppen:</b> Klick kauft ein Bataillon, es erscheint frei in der Festung. „Alle auffüllen“ ersetzt Verluste, gewählte
+Bataillone lassen sich verkaufen. Teure Einheiten stehen ausgegraut mit „ab Welle …“.</li>
+<li><b>Bauen:</b> Pfähle, Palisaden, Gräben, Draht, Minen, Türme, Mauern, Tore, Bunker … – Linie mit der rechten Maustaste ziehen,
+Einzelstück mit Linksklick, <kbd>R</kbd> dreht. Abreißen, Reparieren, Außenposten setzen, Lockfeuer legen.</li>
+<li><b>Können:</b> Fähigkeiten mit Survival-Erfahrung lernen, ab Welle 8 eine Spezialisierung.</li>
+<li><b>Welle:</b> was über die nächste Welle bekannt ist (mit „Kundschafter“: Truppen und Richtungen), wann der nächste Ring kommt,
+die bisherige Bilanz.</li>
+</ul>
+Truppen werden wie in jeder Aufstellung verschoben und gedreht – in der Festung und in Außenposten (gelbe Flächen).</li>
+<li><b>Welle starten</b> [<kbd>Enter</kbd>]: Die Feinde erscheinen am Rand und greifen an. Führen wie in der Feldschlacht –
+mit Befehlen, Formationen, Autokampf und Tempo.</li>
+<li><b>Gehalten:</b> Die Reste des Feindes verblassen, es gibt Gold und Erfahrung, und es geht zurück in die Planung: Deine
+Truppen stehen wieder an ihren Plätzen von vorher, Verluste bleiben, Bauwerke behalten ihren Schaden.</li>
+<li><b>Gefallen:</b> Die Auswertung zeigt, bis zu welcher Welle die Festung gehalten hat. <b>Welle erneut versuchen</b> setzt beim
+automatisch gespeicherten Stand vor der Welle wieder an.</li>
+</ol>
+<p>Alle fünf Wellen weitet sich das Land um einen Ring – Festung und Außenposten dürfen mitwachsen, ohne dass sich etwas
+verschiebt. Alle Zahlen: <a href="mechaniken.html#survival">Mechaniken → Survival in Zahlen</a>.</p>
+<div class="box tip"><b>Tipps:</b> Erst ein Ring aus Palisaden mit Schützen dahinter, dann Mauern weiter außen – so entsteht
+Schicht um Schicht eine Ringfestung. Außenposten an den Hauptrichtungen fangen Wellen früh ab. Gemischte Heere beginnen mit mehr
+Moral (<a href="mechaniken.html#synergien">Armee-Synergien</a>). Geld für Reparaturen zurücklegen: ab Welle 6 bringen die Wellen
+Belagerungsgerät, wenn du Mauern hast.</div>
+
 <h2>Sandbox-Schlacht</h2>
 <ul>
 <li>Links die Einheitenliste mit fünf Reitern (Infanterie, Fernkampf, Kavallerie, Artillerie, Unterstützung), unterteilt in
@@ -37,9 +69,15 @@ mehrere wählen, zwischen Draufsicht und 3D-Ansicht wechseln, vorab Feldbefestig
 Waffenklassen-Upgrades wie im <a href="feldzug.html">Feldzug</a> (Schaden, Angriffstempo, Rüstung, Durchschlag, Lebenskraft, Tempo,
 Reichweite, Moral). Bezahlt wird mit den Punkten des Armee-Budgets; „−“ gibt eine Stufe zurück.</p>
 
+<h2 id="lobby">Mehrspieler-Lobby</h2>
+<p>Im Hauptmenü gibt es einen einzigen Eintrag <b>Mehrspieler</b>. Er öffnet die gemeinsame Lobby: Der PC zeigt die Adresse,
+Mitspieler öffnen sie im Browser (bis zu acht Geräte) und sehen „Warte auf den Host“. Der Host wählt dann den Modus –
+<b>Schlacht im LAN</b> oder <b>Auto-Stratego</b>. Die Handys wechseln von selbst auf die passende Seite und behalten ihren
+Platz; mit „Zurück“ zum Hauptmenü wird die Verbindung beendet.</p>
+
 <h2>Mehrspieler (LAN)</h2>
 <ul>
-<li>Der Gastgeber startet „Mehrspieler (LAN)“. Mitspieler öffnen die angezeigte Adresse im Browser – am PC oder am Handy
+<li>Der Gastgeber wählt in der Lobby „Schlacht im LAN“. Mitspieler öffnen die angezeigte Adresse im Browser – am PC oder am Handy
 (<a href="bedienung.html">Handy-Steuerung</a>). Es ist keine Installation nötig.</li>
 <li><b>Teams</b> haben einen <b>gemeinsamen Aufstellungsbereich</b>. Verbündete sehen live, wohin der andere seine Truppen
 stellen will.</li>
@@ -50,8 +88,8 @@ nach einem Neuladen der Seite – bekommt der Mitspieler seinen alten Platz zur�
 
 <h2 id="auto">Auto-Stratego</h2>
 <p class="lead">Ein Mehrspieler-Modus fürs Handy nach dem Prinzip der Autobattler: <b>planen statt befehligen</b>. Jeder kauft,
-verstärkt und wählt eine Kampfweise – gekämpft wird von der KI. Der Host startet „Auto-Stratego“ im Hauptmenü, Mitspieler öffnen
-die angezeigte Adresse im Handy-Browser. Freie Plätze (bis vier Spieler) füllen KI-Bots auf.</p>
+verstärkt und wählt eine Kampfweise – gekämpft wird von der KI. Der Host wählt „Auto-Stratego“ in der
+<a href="#lobby">Mehrspieler-Lobby</a>, Mitspieler öffnen die angezeigte Adresse im Handy-Browser. Freie Plätze (bis vier Spieler) füllen KI-Bots auf.</p>
 <h3>Ablauf einer Runde</h3>
 <ol>
 <li><b>Lobby:</b> Zeitalter (mehrere möglich), Startgeld (1.500 bis 8.000), Rundenzahl (5 bis 20), Anzahl der KI-Bots und das
@@ -126,6 +164,9 @@ Kampfflug-Kamera; bei drei Schlachten steht die Wertung im freien Viertel. Für 
 Bataillonsliste und Kräfteverlauf wie für Spieler.</li>
 <li><b>PC als Zuschauerbildschirm:</b> unten die Auswahl („Alle zugleich“ oder eine Schlacht), die Wertung blendet <kbd>Tab</kbd>
 ein und aus. In der Planung zeigt er, wie viele Spieler schon bereit sind.</li>
+<li><b>Frei umsehen am Handy:</b> Im Bild wischt ein Finger die Kamera über das Schlachtfeld, zwei Finger zoomen, drehen und
+neigen. Dazu das Steuerkreuz: ▲◀▶▼ schieben, ⟲ ⟳ drehen, ＋ − zoomen, ⤒ ⤓ neigen (gedrückt halten wiederholt), ⌂ setzt die Ansicht
+zurück. Ein Tipp auf eine Schlacht im Mosaik wählt sie aus; wer die Kamera bewegt, wechselt in die freie Feldherren-Ansicht.</li>
 </ul>
 <h3>Das Handy</h3>
 <p>Aufgebaut wie ein Gameboy: oben der Bildschirm mit der eigenen Schlacht (wischen dreht, zwei Finger zoomen), darunter eine
@@ -166,7 +207,7 @@ wahlweise eine <b>Kamerafahrt</b> („Ansicht übernehmen“ speichert die aktue
 </ol>
 <p>Eigene Szenarien erscheinen unter <b>Geschichte → Eigene Szenarien</b> zum Ansehen und Bearbeiten.</p>
 </main>
-<footer>Stratego 3D · Version 1.0.4 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
+<footer>Stratego 3D · Version 1.0.5 – Handbuch · erzeugt aus den Spieldaten (212 Einheiten) mit
 <code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{
