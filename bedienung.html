@@ -5,11 +5,11 @@
 <nav><a href="index.html">Start</a><a href="bedienung.html" class=on>Bedienung</a><a href="mechaniken.html">Mechaniken</a><a href="bauen.html">Bauen &amp; Gebäude</a><a href="feldzug.html">Feldzug</a><a href="modi.html">Spielmodi</a><a href="karten.html">Karten</a><a href="geschichte.html">Geschichte</a><a href="einheiten.html">Alle Einheiten</a><a href="changelog.html">Änderungen</a></nav></div></header>
 <main>
 <h1>Bedienung</h1>
-<p class="lead">Alles, was man mit Maus, Tastatur und Handy steuern kann. Im Spiel zeigt <kbd>F1</kbd> jederzeit die
+<p class="lead">Alles, was man mit Maus, Tastatur, Controller und Handy steuern kann. Im Spiel zeigt <kbd>F10</kbd> jederzeit die
 Tastenübersicht.</p>
 
 <h2>Tastenübersicht (wie im Spiel)</h2>
-<div class="tbl"><table><tr><th>Bereich</th><th>Tasten</th></tr><tr><td><b>Kamera</b></td><td>W A S D / Pfeile: schieben · Q E: drehen · Bild↑ Bild↓: neigen · +/− oder Mausrad: zoomen · rechte oder mittlere Maustaste ziehen: drehen · Pos1: Grundstellung · C: Kameramodus · K: Kampfflug</td></tr><tr><td><b>Sandbox</b></td><td>Linksklick: setzen · Rechtsklick: radieren · Tab: Seite wechseln · Strg+Z: rückgängig · Entf: Bataillon löschen · R: Gebäude drehen · Enter: Schlacht starten</td></tr><tr><td><b>Schlacht</b></td><td>Leertaste: Pause · Punkt: Einzelschritt (Shift: 1 s) · Komma: langsamer · Tempo-Regler: ziehen oder Mausrad (0,1× bis 8×) · 1–4: Tempo · Tab: Statistik · L: Bataillonsliste · V: Kamera folgt · A: Autokampf (die KI führt, du greifst ein) · Klick auf die Minikarte: dorthin schauen</td></tr><tr><td><b>Truppen führen</b></td><td>Linksklick: wählen (ziehen = Rahmen) · Rechtsklick: Marsch, Angriff, Besetzen (ziehen = Linie) · H: Halt · R: Laufen · F: Formation · G: Feuer frei · T: Stellung halten · Strg+A: alle</td></tr><tr><td><b>Gelände</b></td><td>Auf einer Anhöhe: weiter schießen, schwerer getroffen werden, im Nahkampf stärker. Bergauf langsamer, kein Sturmangriff. Regen und Schnee bremsen, verkürzen die Reichweite und lassen Läufer ausrutschen.</td></tr><tr><td><b>Allgemein</b></td><td>F1: diese Hilfe · Strg+M: Musik stumm · Esc: zurück</td></tr></table></div>
+<div class="tbl"><table><tr><th>Bereich</th><th>Tasten</th></tr><tr><td><b>Kamera</b></td><td>W A S D / Pfeile: schieben · Q E: drehen · Bild↑ Bild↓: neigen · +/− oder Mausrad: zoomen · rechte oder mittlere Maustaste ziehen: drehen · Pos1: Grundstellung · C: Kameramodus · K: Kampfflug</td></tr><tr><td><b>Sandbox</b></td><td>Linksklick: setzen · Rechtsklick: radieren · Tab: Seite wechseln · Strg+Z: rückgängig · Entf: Bataillon löschen · R: Gebäude drehen · Enter: Schlacht starten</td></tr><tr><td><b>Schlacht</b></td><td>Leertaste: Pause · Punkt: Einzelschritt (Shift: 1 s) · Komma: langsamer · Tempo-Regler: ziehen oder Mausrad (0,1× bis 8×) · 1–4: Tempo · Tab: Statistik · L: Bataillonsliste · V: Kamera folgt · A: Autokampf (die KI führt, du greifst ein) · Klick auf die Minikarte: dorthin schauen</td></tr><tr><td><b>Truppen führen</b></td><td>Linksklick: wählen (ziehen = Rahmen) · Rechtsklick: Marsch, Angriff, Besetzen (ziehen = Linie) · H: Halt · R: Laufen · F: Formation · G: Feuer frei · T: Stellung halten · Strg+A: alle</td></tr><tr><td><b>Gruppen</b></td><td>Strg+1…9: gewählte Bataillone als Gruppe speichern · F1…F9: Gruppe wählen · danach Shift+Klick oder Shift+Rahmen: Bataillone zur Gruppe hinzufügen bzw. aus ihr entfernen</td></tr><tr><td><b>Gelände</b></td><td>Auf einer Anhöhe: weiter schießen, schwerer getroffen werden, im Nahkampf stärker. Bergauf langsamer, kein Sturmangriff. Regen und Schnee bremsen, verkürzen die Reichweite und lassen Läufer ausrutschen.</td></tr><tr><td><b>Allgemein</b></td><td>F10: diese Hilfe · F12: Ton · Strg+M: Musik stumm · Esc: zurück</td></tr></table></div>
 
 <h2>Truppen führen</h2>
 <div class="tbl"><table>
@@ -99,8 +99,25 @@ Vollbild – „Leisten weg“ blendet alles aus</td></tr>
 er tippt, lösen die Tasten keine Befehle aus), <kbd>Enter</kbd> sendet, <kbd>Esc</kbd> verlässt das Feld. Mitspieler im Browser
 haben rechts ein eigenes Chatfenster; eingeklappt meldet ein leuchtender „CHAT“-Reiter neue Nachrichten.</p>
 
+<h2 id="gruppen">Gruppen (Control Groups)</h2>
+<ul>
+<li><kbd>Strg</kbd>+<kbd>1</kbd>…<kbd>9</kbd> speichert die gewählten Bataillone als Gruppe.</li>
+<li><kbd>F1</kbd>…<kbd>F9</kbd> wählt die Gruppe wieder – auch schon in der Aufstellung.</li>
+<li>Danach ändert eine Auswahl mit gehaltener <kbd>Shift</kbd>-Taste (Klick oder Rahmen) die zuletzt gewählte Gruppe mit:
+Bataillone kommen dazu oder fallen heraus.</li>
+</ul>
+<p>Deshalb liegt die Hilfe jetzt auf <kbd>F10</kbd> und der Ton-Regler auf <kbd>F12</kbd>.</p>
+
+<h2 id="controller">Controller (Xbox)</h2>
+<p>Ein Xbox-Controller funktioniert ohne Zusatzprogramm (Windows, XInput). Der linke Stick bewegt den Mauszeiger, der
+rechte schiebt die Kamera. Standardbelegung: <b>A</b> Linksklick (halten = Rahmen), <b>B</b> Rechtsklick (halten = Linie),
+<b>RT/LT</b> zoomen, <b>RB/LB</b> Tempo schneller/langsamer, <b>Start</b> Pause, <b>Back</b> zurück, <b>X</b> Halt,
+<b>Y</b> Autokampf, Steuerkreuz Gruppe 1–4, linker Stick drücken: alle wählen, rechter Stick drücken: Grundansicht.
+Unter <b>Einstellungen → Controller …</b> lässt sich jede Aktion umbelegen (Aktion anklicken, dann die Taste drücken),
+dazu Zeigertempo und Totzone.</p>
+
 <h2>Einstellungen</h2>
-<p>Erreichbar im Hauptmenü, mit <kbd>F2</kbd> und in der Schlacht über den Knopf <b>Einstellungen</b>. Musik ist überall gleich
+<p>Erreichbar im Hauptmenü, mit <kbd>F12</kbd> (Ton) und in der Schlacht über den Knopf <b>Einstellungen</b>. Musik ist überall gleich
 laut; Geräusche werden leiser, je weiter die Kamera vom Geschehen entfernt ist. <kbd>Strg</kbd>+<kbd>M</kbd> schaltet die
 Musik stumm. Eigene Musikstücke liegen im Ordner <code>assets/Music</code>. Stücke in den Unterordnern je Zeitalter
 (<code>assets/Music/Antike</code>, <code>…/Weltkriege</code> usw.) laufen in Schlachten dieses Zeitalters – im Feldzug je
