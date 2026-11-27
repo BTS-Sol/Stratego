@@ -64,6 +64,19 @@ Beispiele: <img class="sym" src="bilder/symbole/hieb.png" alt="Hiebwaffen (Schwe
 <img class="sym" src="bilder/symbole/geschuetz.png" alt="Geschütze und Belagerungsgerät" title="Geschütze und Belagerungsgerät"> <img class="sym" src="bilder/symbole/panzer.png" alt="Panzer und Fahrzeuge" title="Panzer und Fahrzeuge"> <img class="sym" src="bilder/symbole/heli.png" alt="Hubschrauber" title="Hubschrauber"> <img class="sym" src="bilder/symbole/pionier.png" alt="Pioniere und Stellungsbau" title="Pioniere und Stellungsbau"> <img class="sym" src="bilder/symbole/sanitaet.png" alt="Sanität" title="Sanität"></li>
 </ul>
 
+<h2 id="pc">Mitspielen am PC (ohne Browser, 1.0.8)</h2>
+<p>Am zweiten PC im Hauptmenü <b>Beitreten</b> wählen. Das Spiel sucht selbst nach Spielen im selben Netz (Rundruf an
+UDP-Port 47821, der Host antwortet mit seiner Adresse) – ein Klick auf den Fund verbindet. Findet es nichts, die Adresse aus
+dem Mehrspieler-Fenster des Hosts eingeben (z. B. <code>192.168.1.20:8765</code>).</p>
+<ul>
+<li>Der Host rendert für jeden Mitspieler eine eigene Ansicht (1280 × 720) und schickt sie als Bildstrom; das Spiel zeigt sie
+auf die Fenstergröße skaliert. Maus, Mausrad und Tastatur gehen an den Host – gesteuert wird wie dort.</li>
+<li>Bis der Host die Schlacht startet, steht „Verbunden – warte …“ da; der Platz bleibt auch nach einem Abbruch erhalten.</li>
+<li><kbd>Strg</kbd>+<kbd>Q</kbd> trennt die Verbindung. <b>Auto-Stratego</b> spielt man weiter auf der Handy- bzw.
+Browser-Seite – der Knopf „Im Browser öffnen“ führt hin.</li>
+<li>Falls der Fund ausbleibt: Die Windows-Firewall muss Python auf dem Host im privaten Netz erlauben.</li>
+</ul>
+
 <h2>Handy-Modus (Mitspieler im Browser)</h2>
 <p>Im Mehrspieler zeigt das Spiel eine Adresse, die der Mitspieler im Browser öffnet – auch am Handy.
 Das Handy bitte <b>quer</b> halten.</p>
@@ -131,7 +144,7 @@ brachliegt. Umstellen: <b>Windows-Grafikeinstellungen öffnen</b> → „Durchsu
 NVIDIA-Systemsteuerung: „3D-Einstellungen verwalten“ → „Programmeinstellungen“ → <code>python.exe</code> →
 „Hochleistungs-NVIDIA-Prozessor“.</p>
 </main>
-<footer>Stratego 3D · Version 1.0.7 – Handbuch · erzeugt aus den Spieldaten (214 Einheiten) mit
+<footer>Stratego 3D · Version 1.0.8 – Handbuch · erzeugt aus den Spieldaten (221 Einheiten) mit
 <code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{

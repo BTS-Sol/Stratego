@@ -15,7 +15,8 @@ Regeln – mit den echten Zahlen aus dem Spiel.</p>
 <a href="#synergien">Armee-Synergien und Startmoral</a><a href="#ausdauer">Ausdauer</a>
 <a href="#formationen">Formationen</a><a href="#autokampf">Autokampf, Drill und KI</a><a href="#feldherren">Feldherren und Standarten</a>
 <a href="#gelaende">Gelände</a><a href="#wetter">Wetter</a><a href="#munition">Munition und Nachschub</a>
-<a href="#sanitaet">Sanität</a><a href="#flieger">Hubschrauber</a><a href="#schutz">Schutzfahrzeuge und Kuppel</a>
+<a href="#sanitaet">Sanität</a><a href="#flieger">Hubschrauber</a><a href="#schutz">Schutzfahrzeuge, Kuppel und Katze</a>
+<a href="#gelaendebau">Geländebau</a><a href="#bedienung">Geschützbedienung, Salven, Granaten</a>
 <a href="#sicht">Sichtschutz und Tarnung</a><a href="#durchschuss">Durchschuss</a>
 <a href="#sieg">Siegbedingungen</a><a href="#kriegsrufe">Kriegsrufe (Fertigkeiten)</a><a href="#pfad">Wegfindung</a>
 <a href="#survival">Survival in Zahlen</a><a href="#erweiterung">Kartenerweiterung</a>
@@ -24,7 +25,7 @@ Regeln – mit den echten Zahlen aus dem Spiel.</p>
 <h2 id="werte">Die Werte einer Einheit</h2>
 <p>Alle Formeln dieser Seite benutzen diese Werte. Jede Einheit hat sie fest; im Feldzug kommen Ausrüstung, Rang und Taktiken
 dazu („Ausrüstung“ in den Formeln, sonst 0 bzw. 1).</p>
-<div class="tbl"><table><tr><th>Wert</th><th>Bedeutung</th><th>Wo im Spiel</th></tr><tr><td><b>Lebenspunkte</b></td><td>Was ein Soldat bzw. ein Fahrzeug aushält. Bei 0 fällt er.</td><td>Einheitenkarte „Lebenspunkte“, Steckbrief „Leben“</td></tr><tr><td><b>Rüstung</b></td><td>Schwächt jeden Treffer ab (Formeln unten). 0–90 %, mit Ausrüstung und Rang höchstens 92 %. Menschen, Tiere und Fahrzeuge haben sie – sie ist etwas anderes als die Härte.</td><td>Einheitenkarte und Steckbrief „Rüstung“</td></tr><tr><td><b>Härte</b></td><td>Panzerungsklasse, ganze Zahl 0–3: 0 Mensch oder Tier, 1 leicht gepanzert, 2 gepanzert, 3 schwer gepanzert. Bestimmt mit dem Durchschlag der Waffe den Härtefaktor.</td><td>nur als Wort auf der Einheitenkarte („Leicht gepanzert“, „Gepanzert“, „Schwer gepanzert“), im Steckbrief ab 2</td></tr><tr><td><b>Angriff</b></td><td>Treffsicherheit im Nahkampf (Trefferchance unten).</td><td>Einheitenkarte, Steckbrief „Angriff / Abwehr“</td></tr><tr><td><b>Abwehr</b></td><td>Verteidigung im Nahkampf (Trefferchance unten).</td><td>Einheitenkarte, Steckbrief „Angriff / Abwehr“</td></tr><tr><td><b>Schaden je Hieb</b></td><td>Höchstschaden eines Schlags; ausgewürfelt werden 45–85 % davon.</td><td>Einheitenkarte, Steckbrief „Nahkampf-Schaden“</td></tr><tr><td><b>Hiebe je Minute</b></td><td>60 ÷ Schlagzeit; jede Schlagzeit schwankt um ±15 %.</td><td>Einheitenkarte</td></tr><tr><td><b>Durchschlag (Nahkampf)</b></td><td>Ganze Zahl 0–3, wird von der Härte des Ziels abgezogen.</td><td>nur „Schwere Nahkampfwaffe“ (ab 1) auf der Einheitenkarte</td></tr><tr><td><b>Schaden je Schuss</b></td><td>Schaden eines Geschosses; ausgewürfelt werden 80–120 % davon.</td><td>Einheitenkarte, Steckbrief „Schuss-Schaden“</td></tr><tr><td><b>Schüsse je Minute</b></td><td>60 ÷ Nachladezeit; jede Nachladezeit schwankt um −8 % bis +15 %.</td><td>Einheitenkarte</td></tr><tr><td><b>Reichweite</b></td><td>In Metern (Formel unten).</td><td>Einheitenkarte, Steckbrief</td></tr><tr><td><b>Mindestreichweite</b></td><td>Näher schießt die Waffe nicht (Mörser, Haubitzen, Lenkwaffen).</td><td>nicht angezeigt</td></tr><tr><td><b>Munition</b></td><td>Schuss je Soldat; danach holt er Nachschub.</td><td>Einheitenkarte, Steckbrief</td></tr><tr><td><b>Streuung</b></td><td>Abweichung des Geschosses je Meter Entfernung (Formel unten).</td><td>nicht angezeigt</td></tr><tr><td><b>Rüstungsbrechung</b></td><td>0–100 %: dieser Anteil der Rüstung zählt gegen das Geschoss nicht (Spannen je Geschossart unten).</td><td>nicht angezeigt</td></tr><tr><td><b>Durchschlag (Fernkampf)</b></td><td>Ganze Zahl 0–3, wird von der Härte des Ziels abgezogen.</td><td>nur „Durchschlägt Panzer“ (3) auf der Einheitenkarte, „Durchschlägt Panzerung“ (ab 2) im Steckbrief</td></tr><tr><td><b>Geschossart</b></td><td>Pfeil, Kugel, Granate, Energie … – bestimmt, wie gut Schilde es abfangen (Tabelle unten).</td><td>nicht angezeigt</td></tr><tr><td><b>Fläche</b></td><td>Explosionsradius in Metern; ohne Fläche trifft ein Geschoss genau einen Soldaten.</td><td>„Explosion … m“</td></tr><tr><td><b>Schild</b></td><td>Grundchance, ein Geschoss von vorn abzufangen (mal Geschossart-Faktor).</td><td>„Schild (… % der Pfeile)“</td></tr><tr><td><b>Masse</b></td><td>In Fußsoldaten gemessen (Mensch 1, Ritter 6, Kampfpanzer 252). Bestimmt Rückstoß, Wucht, Schlamm, Durchschuss-Widerstand.</td><td>nicht angezeigt</td></tr><tr><td><b>Tempo</b></td><td>Höchsttempo in m/s; im Marsch 60 %, im Laufschritt 85 % davon.</td><td>Einheitenkarte, Steckbrief</td></tr><tr><td><b>Wucht (Anzeige)</b></td><td>Masse<sup>0,7</sup> × Tempo ÷ 28 × (1 + Ansturm) – ein Vergleichswert. In der Simulation zählt die Höchstwucht Masse<sup>0,7</sup> × Tempo ÷ 28 (Abschnitt Wucht).</td><td>Einheitenkarte</td></tr><tr><td><b>Ansturm, Anti-Reiter</b></td><td>Aufschlag beim Aufprall bzw. gegen Berittene (Nahkampf unten).</td><td>„Sturmangriff +… %“, „Stark gegen Reiterei“</td></tr><tr><td><b>Moral</b></td><td>Mut zu Beginn der Schlacht (Abschnitt Moral).</td><td>Einheitenkarte, Steckbrief</td></tr><tr><td><b>Disziplin</b></td><td>Teilt fast jeden Moralverlust (Abschnitt Moral).</td><td>nicht angezeigt</td></tr><tr><td><b>Belagerung</b></td><td>Faktor für Schaden an Bauwerken: 1, Rammbock und Räumpanzer 40–60.</td><td>„Zerstört Mauern“</td></tr></table></div>
+<div class="tbl"><table><tr><th>Wert</th><th>Bedeutung</th><th>Wo im Spiel</th></tr><tr><td><b>Lebenspunkte</b></td><td>Was ein Soldat bzw. ein Fahrzeug aushält. Bei 0 fällt er.</td><td>Einheitenkarte „Lebenspunkte“, Steckbrief „Leben“</td></tr><tr><td><b>Rüstung</b></td><td>Schwächt jeden Treffer ab (Formeln unten). 0–90 %, mit Ausrüstung und Rang höchstens 92 %. Menschen, Tiere und Fahrzeuge haben sie – sie ist etwas anderes als die Härte.</td><td>Einheitenkarte und Steckbrief „Rüstung“</td></tr><tr><td><b>Härte</b></td><td>Panzerungsklasse, ganze Zahl 0–6: 0 keine Panzerung, 1 Holzbauweise, 2 Eisen und Holz, 3 leicht gepanzert, 4 gepanzert, 5 schwer gepanzert, 6 schwerst gepanzert. Bestimmt mit dem Durchschlag der Waffe den Härtefaktor.</td><td>Einheitenkarte „Härte …/6 (Klasse)“ ab 1, Steckbrief „Härte … von 6“</td></tr><tr><td><b>Angriff</b></td><td>Treffsicherheit im Nahkampf (Trefferchance unten).</td><td>Einheitenkarte, Steckbrief „Angriff / Abwehr“</td></tr><tr><td><b>Abwehr</b></td><td>Verteidigung im Nahkampf (Trefferchance unten).</td><td>Einheitenkarte, Steckbrief „Angriff / Abwehr“</td></tr><tr><td><b>Schaden je Hieb</b></td><td>Höchstschaden eines Schlags; ausgewürfelt werden 45–85 % davon.</td><td>Einheitenkarte, Steckbrief „Nahkampf-Schaden“</td></tr><tr><td><b>Hiebe je Minute</b></td><td>60 ÷ Schlagzeit; jede Schlagzeit schwankt um ±15 %.</td><td>Einheitenkarte</td></tr><tr><td><b>Durchschlag (Nahkampf)</b></td><td>Ganze Zahl 0–6, wird von der Härte des Ziels abgezogen.</td><td>Einheitenkarte „Schwere Nahkampfwaffe (Durchschlag …/6)“ ab 1, Steckbrief</td></tr><tr><td><b>Schaden je Schuss</b></td><td>Schaden eines Geschosses; ausgewürfelt werden 80–120 % davon.</td><td>Einheitenkarte, Steckbrief „Schuss-Schaden“</td></tr><tr><td><b>Schüsse je Minute</b></td><td>60 ÷ Nachladezeit; jede Nachladezeit schwankt um −8 % bis +15 %.</td><td>Einheitenkarte</td></tr><tr><td><b>Reichweite</b></td><td>In Metern (Formel unten).</td><td>Einheitenkarte, Steckbrief</td></tr><tr><td><b>Mindestreichweite</b></td><td>Näher schießt die Waffe nicht (Mörser, Haubitzen, Lenkwaffen).</td><td>nicht angezeigt</td></tr><tr><td><b>Munition</b></td><td>Schuss je Soldat; danach holt er Nachschub.</td><td>Einheitenkarte, Steckbrief</td></tr><tr><td><b>Streuung</b></td><td>Abweichung des Geschosses je Meter Entfernung (Formel unten).</td><td>nicht angezeigt</td></tr><tr><td><b>Rüstungsbrechung</b></td><td>0–100 %: dieser Anteil der Rüstung zählt gegen das Geschoss nicht – je nach Waffenklasse und Zeitalter (Tabelle unten).</td><td>Steckbrief „Rüstungsbrechung … %“</td></tr><tr><td><b>Durchschlag (Fernkampf)</b></td><td>Ganze Zahl 0–6, wird von der Härte des Ziels abgezogen.</td><td>Einheitenkarte „Durchschlag …/6“ ab 1 und „Durchschlägt Panzer“ ab 5, Steckbrief</td></tr><tr><td><b>Geschossart</b></td><td>Pfeil, Kugel, Granate, Energie … – bestimmt, wie gut Schilde es abfangen (Tabelle unten).</td><td>nicht angezeigt</td></tr><tr><td><b>Fläche</b></td><td>Explosionsradius in Metern; ohne Fläche trifft ein Geschoss genau einen Soldaten.</td><td>„Explosion … m“</td></tr><tr><td><b>Schild</b></td><td>Grundchance, ein Geschoss von vorn abzufangen (mal Geschossart-Faktor).</td><td>„Schild (… % der Pfeile)“</td></tr><tr><td><b>Masse</b></td><td>In Fußsoldaten gemessen (Mensch 1, Ritter 6, Kampfpanzer 252). Bestimmt Rückstoß, Wucht, Schlamm, Durchschuss-Widerstand.</td><td>nicht angezeigt</td></tr><tr><td><b>Tempo</b></td><td>Höchsttempo in m/s; im Marsch 60 %, im Laufschritt 85 % davon.</td><td>Einheitenkarte, Steckbrief</td></tr><tr><td><b>Wucht (Anzeige)</b></td><td>Masse<sup>0,7</sup> × Tempo ÷ 28 × (1 + Ansturm) – ein Vergleichswert. In der Simulation zählt die Höchstwucht Masse<sup>0,7</sup> × Tempo ÷ 28 (Abschnitt Wucht).</td><td>Einheitenkarte</td></tr><tr><td><b>Ansturm, Anti-Reiter</b></td><td>Aufschlag beim Aufprall bzw. gegen Berittene (Nahkampf unten).</td><td>„Sturmangriff +… %“, „Stark gegen Reiterei“</td></tr><tr><td><b>Moral</b></td><td>Mut zu Beginn der Schlacht (Abschnitt Moral).</td><td>Einheitenkarte, Steckbrief</td></tr><tr><td><b>Disziplin</b></td><td>Teilt fast jeden Moralverlust (Abschnitt Moral).</td><td>nicht angezeigt</td></tr><tr><td><b>Belagerung</b></td><td>Faktor für Schaden an Bauwerken: 1, Rammbock und Räumpanzer 40–60.</td><td>„Zerstört Mauern“</td></tr></table></div>
 <p><b>Kampfkraft</b> eines Soldaten = Veteranenfaktor × (1 − 0,25 × Erschöpfung) × Feldherrenaura. Veteranenfaktor: 1 ohne
 Rang, im Feldzug und in Survival 1 + 0,04 je Rang (Rekrut 0 … Legende 4). Feldherrenaura: 1, mit dem Kniff eines Feldherrn 1,05 bis 1,18.</p>
 
@@ -34,9 +35,9 @@ bestimmen das: die <b>Zielwahl</b> und die <b>Leine</b> zu seinem Platz in der F
 <h3>Zielwahl</h3>
 <ul>
 <li>Jeder Soldat betrachtet die sechs nächsten Feinde und nimmt den mit der kleinsten Kennzahl <b>Entfernung² × Vorliebe</b>.</li>
-<li><b>Vorliebe:</b> Ein Ziel, das er kaum verletzen kann (Härte zwei Stufen über seinem Durchschlag), zählt sechsfach, eine Stufe
-darüber doppelt. Panzerabwehr dagegen sucht gepanzerte Ziele (Faktor 0,15) – sie sieht einen Panzer in 60 m wie einen Soldaten
-in 23 m.</li>
+<li><b>Vorliebe:</b> Ein Ziel, das er kaum verletzen kann (Härte vier Stufen und mehr über seinem Durchschlag), zählt sechsfach,
+zwei bis drei Stufen darüber doppelt, eine Stufe 1,3-fach. Panzerabwehr (Durchschlag ab 5) sucht dagegen Ziele ab Härte 4
+(Faktor 0,15) – sie sieht einen Panzer in 60 m wie einen Soldaten in 23 m.</li>
 <li><b>Fliehende</b> sind uninteressant, solange ein kämpfender Feind in der Nähe ist: Sie zählen, als stünden sie 30 m weiter weg.</li>
 <li><b>Hubschrauber</b> nehmen nur Schützen ins Visier. Verborgene sieht niemand über 15 m hinaus, Truppen im Rauch kein Schütze
 über 12 m.</li>
@@ -165,17 +166,23 @@ Flugbahn (vor allem dicht vor dem Ziel – Steilfeuer fliegt darüber hinweg).</
 <li><b>Besatzung:</b> Ziele in Turm oder Mauer zu 35 %, in einem Haus zu 55 %.</li>
 </ul>
 <div class="tbl"><table><tr><th>Geschossart</th><th>Beispiel</th><th class=num>Schild-Faktor</th>
-<th class=num>Rüstungsbrechung im Spiel</th></tr><tr><td>0</td><td>Pfeil</td><td class=num>100 %</td><td class=num>15 % – 35 %</td></tr><tr><td>1</td><td>Musketenkugel</td><td class=num>35 %</td><td class=num>70 % – 85 %</td></tr><tr><td>2</td><td>Gewehrkugel</td><td class=num>20 %</td><td class=num>50 % – 90 %</td></tr><tr><td>3</td><td>Granate, Stein, Rakete</td><td class=num>20 %</td><td class=num>40 % – 100 %</td></tr><tr><td>4</td><td>Energie</td><td class=num>10 %</td><td class=num>60 % – 100 %</td></tr><tr><td>5</td><td>Schleuderstein, Handgranate</td><td class=num>90 %</td><td class=num>30 % – 60 %</td></tr><tr><td>6</td><td>Speer, Bolzen</td><td class=num>80 %</td><td class=num>20 % – 90 %</td></tr><tr><td>7</td><td>Flamme</td><td class=num>0 %</td><td class=num>70 %</td></tr></table></div>
+<th class=num>Rüstungsbrechung im Spiel</th></tr><tr><td>0</td><td>Pfeil</td><td class=num>100 %</td><td class=num>10 % – 25 %</td></tr><tr><td>1</td><td>Musketenkugel</td><td class=num>35 %</td><td class=num>45 % – 72 %</td></tr><tr><td>2</td><td>Gewehrkugel</td><td class=num>20 %</td><td class=num>77 % – 100 %</td></tr><tr><td>3</td><td>Granate, Stein, Rakete</td><td class=num>20 %</td><td class=num>35 % – 100 %</td></tr><tr><td>4</td><td>Energie</td><td class=num>10 %</td><td class=num>80 % – 100 %</td></tr><tr><td>5</td><td>Schleuderstein, Handgranate</td><td class=num>90 %</td><td class=num>15 % – 70 %</td></tr><tr><td>6</td><td>Speer, Bolzen</td><td class=num>80 %</td><td class=num>6 % – 60 %</td></tr><tr><td>7</td><td>Flamme</td><td class=num>0 %</td><td class=num>70 %</td></tr></table></div>
 <ul>
 <li><b>Nasses Pulver:</b> Bei Regen versagt jede Musketenkugel zu 30 %; das Nachladen dauert dann 1,5-mal so lang.</li>
 <li><b>Lockere Formation</b> mindert Explosionsschaden (siehe unten), <b>Nebel und Rauch</b>: Truppen darin werden über 12 m
 nicht anvisiert.</li>
 </ul>
 <div class="box"><b>Rechenbeispiel Rüstungsbrechung:</b> Gegen Ritter (Rüstung 65 %) richtet ein Pfeil des
-Langbogenschützes (30 Schaden, Rüstungsbrechung 15 %) im Mittel 30 × (1 − 0,65 ×
-0,85) = 13,4 an, eine Kugel des Musketiers (85, Rüstungsbrechung 80 %) dagegen
-85 × (1 − 0,65 × 0,2) = 74. Darum ist die Rüstung gegen Musketen fast
-wertlos.</div>
+Langbogenschützes (30 Schaden, Rüstungsbrechung 18 %) im Mittel 30 × (1 − 0,65 ×
+0,82) = 13,9 an, eine Kugel des Musketiers (85, Rüstungsbrechung 60 %) dagegen
+85 × (1 − 0,65 × 0,4) = 62,9. Darum schützt Rüstung gegen Feuerwaffen
+nur noch wenig.</div>
+<h3>Rüstungsbrechung nach Zeitalter</h3>
+<p>Alte Waffen brechen Rüstung schlecht, neue gut. Jede Fernwaffe gehört zu einer Waffenklasse; ihre Rüstungsbrechung ist der
+<b>Grundwert ihrer Klasse in ihrem Zeitalter</b> (Tabelle, in %) plus ein kleiner fester Zu- oder Abschlag der einzelnen Waffe
+(Langbogen mehr als Jagdbogen, Büchse mehr als Muskete), begrenzt auf 0–100 %. Waffen mit Durchschlag ab 5 (Panzerabwehr,
+Kampfpanzer, Plasma) brechen Rüstung immer ganz. Der Flammenwerfer behält seine 70 %.</p>
+<div class="tbl"><table><tr><th>Waffenklasse</th><th class=num>Urzeit</th><th class=num>Antike</th><th class=num>Frühmittelalter</th><th class=num>Hochmittelalter</th><th class=num>Renaissance</th><th class=num>Linienzeit</th><th class=num>Weltkriege</th><th class=num>Kalter Krieg</th><th class=num>Gegenwart</th><th class=num>Zukunft</th><th class=num>im Spiel</th></tr><tr><td><b>Bögen</b></td><td class=num>8</td><td class=num>12</td><td class=num>15</td><td class=num>20</td><td class=num>22</td><td class=num>24</td><td class=num>26</td><td class=num>28</td><td class=num>30</td><td class=num>32</td><td class=num>10 % – 25 %</td></tr><tr><td><b>Schleudern, Handgranaten</b></td><td class=num>10</td><td class=num>15</td><td class=num>18</td><td class=num>20</td><td class=num>30</td><td class=num>55</td><td class=num>65</td><td class=num>70</td><td class=num>75</td><td class=num>80</td><td class=num>15 % – 70 %</td></tr><tr><td><b>Speere, Wurfwaffen</b></td><td class=num>12</td><td class=num>30</td><td class=num>32</td><td class=num>35</td><td class=num>35</td><td class=num>38</td><td class=num>40</td><td class=num>42</td><td class=num>45</td><td class=num>50</td><td class=num>6 % – 35 %</td></tr><tr><td><b>Armbrüste, Skorpion</b></td><td class=num>30</td><td class=num>45</td><td class=num>50</td><td class=num>55</td><td class=num>58</td><td class=num>60</td><td class=num>65</td><td class=num>70</td><td class=num>75</td><td class=num>80</td><td class=num>45 % – 60 %</td></tr><tr><td><b>Musketen</b></td><td class=num>45</td><td class=num>45</td><td class=num>48</td><td class=num>50</td><td class=num>60</td><td class=num>70</td><td class=num>74</td><td class=num>78</td><td class=num>82</td><td class=num>86</td><td class=num>45 % – 72 %</td></tr><tr><td><b>Gewehre, MG</b></td><td class=num>55</td><td class=num>55</td><td class=num>58</td><td class=num>60</td><td class=num>65</td><td class=num>72</td><td class=num>78</td><td class=num>83</td><td class=num>88</td><td class=num>92</td><td class=num>77 % – 100 %</td></tr><tr><td><b>Energiewaffen</b></td><td class=num>80</td><td class=num>80</td><td class=num>82</td><td class=num>84</td><td class=num>86</td><td class=num>88</td><td class=num>90</td><td class=num>92</td><td class=num>94</td><td class=num>95</td><td class=num>80 % – 100 %</td></tr><tr><td><b>Geschütze, Raketen</b></td><td class=num>40</td><td class=num>50</td><td class=num>55</td><td class=num>60</td><td class=num>75</td><td class=num>80</td><td class=num>90</td><td class=num>93</td><td class=num>97</td><td class=num>100</td><td class=num>35 % – 100 %</td></tr></table></div>
 
 <h2 id="explosion">Artillerie und Explosionen</h2>
 <p>Jedes Geschütz verschießt sein eigenes, im Flug sichtbares Geschoss. Geschosse mit Fläche explodieren am Einschlag.</p>
@@ -197,48 +204,52 @@ Explosion 0,25.<br>
 <b>Getroffen</b> wird der Reihe nach, wer höchstens Radius + 0,25 m neben der Linie steht (keine Flieger, niemand in Gebäuden).<br>
 <b>Schaden</b> = Fernschaden × (0,35 + 0,55 × E) × Zufall (80–120 %) × (1 − R × (1 − Rüstungsbrechung)) × Härtefaktor; danach
 E = E − Widerstand ÷ Waffenwucht<br>
-<b>Widerstand</b> = (0,3 + 0,07 × Masse<sup>0,8</sup>) × (1 + Rüstung) + 1,5 × Härte – zum Beispiel Soldat 0,44 · Legionär 0,55 · Ritter 0,98 · Kriegselefant 2,57 · Kampfpanzer 13,71<br>
+<b>Widerstand</b> = (0,3 + 0,07 × Masse<sup>0,8</sup>) × (1 + Rüstung) + 0,75 × Härte – zum Beispiel Soldat 0,44 · Legionär 0,55 · Ritter 0,98 · Kriegselefant 2,57 · Kampfpanzer 13,71<br>
 <b>Ende:</b> bei E ≤ 0,05, nach der Höchstzahl Ziele, an einem Ziel, dessen Härte über dem Durchschlag liegt (es wird noch
 getroffen), an Mauern, Häusern und Energiekuppeln.</div>
 <div class="tbl"><table><tr><th>Waffe</th><th class=num>Wucht</th><th class=num>höchstens weitere Ziele</th></tr><tr><td>Scharfschütze</td><td class=num>2,5</td><td class=num>5</td></tr><tr><td>Gauß-Scharfschütze</td><td class=num>3,5</td><td class=num>5</td></tr><tr><td>Feldschlange</td><td class=num>5</td><td class=num>10</td></tr><tr><td>Panzerabwehrkanone</td><td class=num>6</td><td class=num>10</td></tr><tr><td>Weltkriegspanzer</td><td class=num>6</td><td class=num>10</td></tr><tr><td>Kanone</td><td class=num>7</td><td class=num>14</td></tr><tr><td>Bombarde</td><td class=num>7</td><td class=num>14</td></tr><tr><td>Kampfpanzer</td><td class=num>8</td><td class=num>14</td></tr><tr><td>Schwebepanzer</td><td class=num>8</td><td class=num>14</td></tr><tr><td>Railgun-Geschütz</td><td class=num>45</td><td class=num>200</td></tr></table></div>
 
 <h2 id="panzer">Rüstung, Härte und Durchschlag</h2>
 <p>Zwei Dinge schützen ein Ziel, und sie wirken unabhängig voneinander: die <b>Rüstung</b> (ein Prozentwert, den jede Einheit
-hat) und die <b>Härte</b> (die Panzerungsklasse 0–3, die nur Fahrzeuge und Maschinen haben).</p>
+hat) und die <b>Härte</b> (die Panzerungsklasse 0–6, die nur Fahrzeuge, Geschütze und Maschinen haben).</p>
 <h3>Rüstung</h3>
 <ul>
 <li>Nahkampf: Schaden × (1 − 0,8 × R). Fernkampf und Explosionen: Schaden × (1 − R × (1 − Rüstungsbrechung)).</li>
 <li>R = Rüstung + Ausrüstung (Feldzug: +4 % je Ausrüstungsstufe, +2 % je Rang), höchstens 92 %.</li>
 </ul>
 <h3>Härte und Durchschlag</h3>
-<p>Jede Waffe hat einen <b>Durchschlag</b> von 0 bis 3 – getrennt für Fernkampf und Nahkampf. Entscheidend ist die
-<b>Lücke = Härte des Ziels − Durchschlag der Waffe</b> (unter 0 zählt als 0, über 3 als 3):</p>
-<div class="tbl"><table><tr><th class=num>Lücke</th><th class=num>0</th><th class=num>1</th><th class=num>2</th>
-<th class=num>3</th></tr><tr><td><b>Härtefaktor</b> (auf den Schaden)</td><td class=num>100 %</td><td class=num>45 %</td><td class=num>20 %</td><td class=num>10 %</td></tr>
+<p>Jede Waffe hat einen <b>Durchschlag</b> von 0 bis 6 – getrennt für Fernkampf und Nahkampf. Entscheidend ist die
+<b>Lücke = Härte des Ziels − Durchschlag der Waffe</b> (unter 0 zählt als 0, über 6 als 6):</p>
+<div class="tbl"><table><tr><th class=num>Lücke</th><th class=num>0</th><th class=num>1</th><th class=num>2</th><th class=num>3</th><th class=num>4</th><th class=num>5</th><th class=num>6</th></tr>
+<tr><td><b>Härtefaktor</b> (auf den Schaden)</td><td class=num>100 %</td><td class=num>67 %</td><td class=num>45 %</td><td class=num>30 %</td><td class=num>20 %</td><td class=num>14 %</td><td class=num>10 %</td></tr>
 </table></div>
-<p>Der Faktor wird nie null: Auch ein Bogen verletzt einen Kampfpanzer – mit 10 % seines Schadens.</p>
+<p>Jede Stufe nimmt rund ein Drittel weg; der Faktor wird nie null: Auch ein Bogen verletzt einen Kampfpanzer – mit
+10 % seines Schadens.</p>
 <div class="tbl"><table><tr><th class=num>Härte</th><th>Klasse (so steht es auf der Einheitenkarte)</th><th>Einheiten</th></tr>
-<tr><td class=num>0</td><td><b>keine Panzerung</b></td><td>alle Menschen und Tiere – auch Ritter in Vollrüstung, Elefanten, Mammuts und Dinosaurier (ihr Schutz ist die Rüstung)</td></tr><tr><td class=num>1</td><td><b>leicht gepanzert</b></td><td>Bombarde, Congreve-Raketen, Feldlazarett-Wagen, Feldschlange, Gatling-Kanone, Haubitze, Kampfhubschrauber AH-1 Cobra, Kanone, Mörser, Onager, Orgelgeschütz, Panzerabwehrkanone, Planwagen (Wagenburg), Pluteus (Römischer Schutzschild), Raketenwerfer, Rammbock, Skorpion, Sturmwand (Mantelet), Tribok</td></tr><tr><td class=num>2</td><td><b>gepanzert</b></td><td>Humvee, Kampfhubschrauber AH-64 Apache, Kuppelwagen (Energiekuppel), Plasmageschütz, Railgun-Geschütz, Raketenjagdpanzer, Rollschild (1915), Sappenwalze (Rollkorb), Schildbau-Drohnen, Schwebe-Gunship, Schützenpanzer</td></tr><tr><td class=num>3</td><td><b>schwer gepanzert</b></td><td>Kampfpanzer, Mech, Räumpanzer, Schutzwandfahrzeug, Schwebepanzer, Weltkriegspanzer</td></tr></table></div>
+<tr><td class=num>0</td><td><b>keine Panzerung</b></td><td>alle Menschen und Tiere – auch Ritter in Vollrüstung, Elefanten, Mammuts und Dinosaurier (ihr Schutz ist die Rüstung)</td></tr><tr><td class=num>1</td><td><b>Holzbauweise</b></td><td>Balliste, Feldlazarett-Wagen, Katze (Schutzhaus), Onager, Planwagen (Wagenburg), Pluteus (Römischer Schutzschild), Raketenwagen Huo Che (China), Rammbock, Skorpion, Sturmwand (Mantelet), Tribok</td></tr><tr><td class=num>2</td><td><b>Eisen und Holz</b></td><td>Bombarde, Congreve-Raketen, Feldschlange, Gatling-Kanone, Haubitze, Kampfhubschrauber AH-1 Cobra, Kanone, Mörser, Orgelgeschütz, Panzerabwehrkanone, Raketenwerfer</td></tr><tr><td class=num>3</td><td><b>leicht gepanzert</b></td><td>Humvee, Kuppelwagen (Energiekuppel), Rollschild (1915), Sappenwalze (Rollkorb), Schildbau-Drohnen, Schwebe-Gunship</td></tr><tr><td class=num>4</td><td><b>gepanzert</b></td><td>Kampfhubschrauber AH-64 Apache, Plasmageschütz, Railgun-Geschütz, Raketenjagdpanzer, Schützenpanzer</td></tr><tr><td class=num>5</td><td><b>schwer gepanzert</b></td><td>Räumpanzer, Schutzwandfahrzeug, Weltkriegspanzer</td></tr><tr><td class=num>6</td><td><b>schwerst gepanzert</b></td><td>Kampfpanzer, Mech, Schwebepanzer</td></tr></table></div>
 <ul>
-<li><b>Durchschlag 3</b> im Fernkampf (Einheitenkarte: „Durchschlägt Panzer“): Haubitze, Kampfhubschrauber AH-64 Apache, Kampfpanzer, Mech, Panzerabwehrkanone, Panzerabwehrtrupp, Panzerfaust-Schütze, Patriot-General, Plasmageschütz, Plasmawerfer, Railgun-Geschütz, Raketenjagdpanzer, Schwebepanzer, Weltkriegspanzer.</li>
-<li><b>Durchschlag 2</b> im Fernkampf: Bombarde, Feldschlange, Gauß-Scharfschütze, Humvee, Kampfhubschrauber AH-1 Cobra, Kanone, Lasersoldat, Mörser, Onager, Raketenwerfer, Scharfschütze, Schwebe-Gunship, Schützenpanzer, Tribok.</li>
-<li><b>Durchschlag 1</b> haben fast alle Feuerwaffen (Musketen, Gewehre, MG); <b>0</b> haben Bögen, Armbrüste, Schleudern,
-Speere und alles Steinzeitliche.</li>
-<li><b>Durchschlag im Nahkampf</b> (Einheitenkarte: „Schwere Nahkampfwaffe“) – 3: Rammbock, Räumpanzer; 2: Cyborg, Schildtruppe; 1: Hellebardier, Huskarl, Kriegselefant, Landsknecht, Warägergarde, Wikinger. Alle anderen haben 0.</li>
+<li><b>Durchschlag im Fernkampf</b> (Einheitenkarte „Durchschlag …/6“, ab 5 „Durchschlägt Panzer“); alle übrigen
+Fernkämpfer – Bögen, Schleudern, Speere und alles Steinzeitliche – haben 0:</li>
+</ul>
+<div class="tbl"><table><tr><th class=num>Durchschlag</th><th>Einheiten</th></tr><tr><td class=num>6</td><td>Kampfhubschrauber AH-64 Apache, Kampfpanzer, Mech, Panzerabwehrtrupp, Patriot-General, Plasmageschütz, Railgun-Geschütz, Raketenjagdpanzer, Schwebepanzer</td></tr><tr><td class=num>5</td><td>Haubitze, Panzerabwehrkanone, Panzerfaust-Schütze, Plasmawerfer, Weltkriegspanzer</td></tr><tr><td class=num>4</td><td>Bombarde, Feldschlange, Gauß-Scharfschütze, Kampfhubschrauber AH-1 Cobra, Kanone, Lasersoldat, Mörser, Raketenwerfer, Schwebe-Gunship, Schützenpanzer, Tribok</td></tr><tr><td class=num>3</td><td>Balliste, Humvee, Onager, Scharfschütze</td></tr><tr><td class=num>2</td><td>Arkebusier, Artilleristen, Berittene Grenadiere, Bunkerbautrupp, Congreve-Raketen, Dragoner, Drahtverhau-Trupp, Fallschirmjäger, Feldmarschall, Flammenwerfer, Gardegrenadier, Gatling-Kanone, Granatwerfer-Trupp, Grenadier, Handrohrschützen, Infanterist (WK), Janitschar, Jäger, KI-Kommandeur, Kommandeur, Linieninfanterie, MG-Schütze, Minenleger, Mot.-Schütze, Musketier, Orgelgeschütz, Pioniere, SAS, SEAL Team 6 (DEVGRU), Sanitäter, Schanzer, Schwarzer Reiter, Skorpion, Soldat, Stellungspioniere (T-Wände), Stoßtruppe, Tunnelbau-Kompanie, Tunnelbohr-Trupp (Zukunft), Voltigeur</td></tr><tr><td class=num>1</td><td>Armbrustschütze, Chinesischer Armbrustschütze, Chu-Armbrustschützen, Han-Elitearmbrustschützen, Wei-Wuzu (Elite von Wei)</td></tr></table></div>
+<ul>
+<li><b>Durchschlag im Nahkampf</b> (Einheitenkarte: „Schwere Nahkampfwaffe“) – 6: Rammbock, Räumpanzer; 4: Cyborg, Schildtruppe; 2: Hellebardier, Huskarl, Jomswikinger, Kriegselefant, Landsknecht, Warägergarde, Wikinger. Alle anderen haben 0.</li>
 <li><b>Ausrüstung „Durchschlag“</b> (Feldzug, Feldschlacht): Stufe 3 und Stufe 5 erhöhen den Durchschlag um je 1, jede Stufe
 dazu +5 % Schaden.</li>
-<li><b>Bauwerke</b> haben ebenfalls eine Härte (Schaden an Bauwerken × Härtefaktor): Härte 1: Holzturm, Munitionslager, Palisade, Pfähle gegen Reiter, Scheune, Stacheldraht, Wagenburg-Wagen, Wohnhaus; Härte 2: Erdwall, Flachdachhaus, Gasthof, Hausruine, Kirche, Lagerhalle, Reihenhaus, Schanzkörbe, Schützengraben, Torhaus, Wachturm; Härte 3: Bergfried, Betonbunker, Betonwand (T-Wand), Burgmauer, Container, Energiebarriere, Festungsmauer, Mauerpfeiler, Rundturm, Tunneleingang, Wohnblock, Wohnturm der Zukunft.</li>
-<li><b>Zielwahl:</b> Die Kennzahl Entfernung² wird bei einer Lücke ab 2 mit 6 multipliziert (das Ziel wirkt 2,4-mal so
-weit weg), bei Lücke 1 mit 2 (1,4-mal); Waffen mit Durchschlag 3 multiplizieren sie bei Zielen ab Härte 2 mit 0,15 (sie wirken
-nur 0,39-mal so weit weg).</li>
+<li><b>Bauwerke</b> haben ebenfalls eine Härte (Schaden an Bauwerken × Härtefaktor): Härte 2: Faschinen, Feldbrücke, Holzturm, Munitionslager, Palisade, Pfähle gegen Reiter, Scheune, Stacheldraht, Wagenburg-Wagen, Wohnhaus; Härte 4: Erdwall, Flachdachhaus, Gasthof, Hausruine, Kirche, Lagerhalle, Reihenhaus, Schanzkörbe, Schützengraben, Torhaus, Wachturm; Härte 6: Bergfried, Betonbunker, Betonwand (T-Wand), Burgmauer, Container, Energiebarriere, Festungsmauer, Mauerpfeiler, Rundturm, Tunneleingang, Wohnblock, Wohnturm der Zukunft.</li>
+<li><b>Zielwahl:</b> Die Kennzahl Entfernung² wird bei einer Lücke ab 4 mit 6 multipliziert (das Ziel wirkt 2,4-mal so
+weit weg), bei Lücke 2–3 mit 2 (1,4-mal), bei Lücke 1 mit 1,3 (1,14-mal); Waffen mit Durchschlag ab 5 multiplizieren sie bei
+Zielen ab Härte 4 mit 0,15 (sie wirken nur 0,39-mal so weit weg).</li>
 </ul>
 <div class="box"><b>Rechenbeispiele</b> (mittlerer Schaden je Treffer, ohne Ausrüstung): gegen einen Kampfpanzer (Härte
-3, Rüstung 50 %, 1.800 LP) richtet ein Langbogenschütze 1,7 an (Lücke 3 → 10 %),
-ein Soldat 6,1 (Lücke 2 → 20 %), ein Panzerfaust-Schütze 420 (Lücke 0 → 100 %).</div>
-<p><b>Im Spiel:</b> Die Einheitenkarte (Maus über eine Einheit) zeigt die Klasse als „Leicht gepanzert“, „Gepanzert“ oder
-„Schwer gepanzert“, dazu „Durchschlägt Panzer“ und „Schwere Nahkampfwaffe“. Der Steckbrief (Rechtsklick) nennt Härte 2 und 3
-(„Gepanzert: einfache Waffen prallen meist ab“, „Schwere Panzerung …“) und Durchschlag ab 2 („Durchschlägt Panzerung“).
-Die Zahlenwerte selbst stehen bisher nur hier im Handbuch.</p>
+6, Rüstung 50 %, 1.800 LP) richtet ein Langbogenschütze 1,8 an
+(Lücke 6 → 10 %), ein Soldat 7,1
+(Lücke 4 → 20 %), ein Panzerfaust-Schütze 281
+(Lücke 1 → 67 %).</div>
+<p><b>Im Spiel:</b> Die Einheitenkarte (Maus über eine Einheit) zeigt „Härte …/6 (Klasse)“, „Durchschlag …/6“, ab 5
+„Durchschlägt Panzer“ und „Schwere Nahkampfwaffe (Durchschlag …/6)“. Der Steckbrief (Rechtsklick) nennt Härte und
+Durchschlag „… von 6“ (ab Härte 3 „einfache Waffen prallen meist ab“, ab 5 „Pfeile, Schwerter und Gewehrkugeln richten
+fast nichts aus“) und bei Fernwaffen die Rüstungsbrechung in Prozent.</p>
 
 <h2 id="moral">Moral und Flucht</h2>
 <p>Schlachten werden selten bis zum letzten Mann ausgefochten – sie enden, wenn eine Seite den Mut verliert. Jedes Bataillon hat
@@ -342,7 +353,7 @@ zum <b>Rückzug</b> – die Truppe setzt sich vom Feind ab, statt stehen zu blei
 so kämpft immer eine ausgeruhte Truppe.</div>
 
 <h2 id="formationen">Formationen</h2>
-<div class="tbl"><table><tr><th>Formation</th><th>Wirkung</th><th class=num>Tempo</th><th>Wer kann sie?</th></tr><tr><td><b>Linie</b></td><td>Normale, dichte Formation in Rotten und Gliedern</td><td class=num>100 %</td><td>alle</td></tr><tr><td><b>Locker</b></td><td>Weiter Abstand: weniger Verluste durch Beschuss und Explosionen, schwächer im Nahkampf</td><td class=num>105 %</td><td>alle</td></tr><tr><td><b>Wall</b></td><td>Schild- oder Pikenwall: langsam, aber sehr stark von vorn</td><td class=num>45 %</td><td>43 Einheiten, z. B. Ägyptischer Krieger, Hastatus, Keltiberische Scutarii, Pedites Extraordinarii, Gallischer Krieger, Germanische Leibwache</td></tr><tr><td><b>Schildkröte</b></td><td>Schildkröte: Schilde rundum und über den Köpfen – Pfeile, Bolzen und Steine prallen ab. Sehr langsam, im Nahkampf beengt.</td><td class=num>35 %</td><td>18 Einheiten, z. B. Hastatus, Keltiberische Scutarii, Pedites Extraordinarii, Legionär, Prätorianer, Kreuzritter</td></tr><tr><td><b>Keil</b></td><td>Keil: die Spitze bricht in die feindliche Linie – deutlich stärkerer Ansturm, aber offene Flanken</td><td class=num>100 %</td><td>54 Einheiten, z. B. Keltiberische Scutarii, Gallischer Krieger, Xianzhen (Gao Shuns Sturmtruppe), Wikinger, Berserker, Ulfheðnar (Wolfskrieger)</td></tr><tr><td><b>Karree</b></td><td>Karree: hohles Viereck, nach allen Seiten gleich stark. Reiterei prallt ab. Sehr langsam.</td><td class=num>30 %</td><td>32 Einheiten, z. B. Hethitischer Speerträger, Phalangit, Argyraspiden (Silberschilde), Triarier, Libysche Speerträger, Yulin-Garde (Gefiederter Wald)</td></tr></table></div>
+<div class="tbl"><table><tr><th>Formation</th><th>Wirkung</th><th class=num>Tempo</th><th>Wer kann sie?</th></tr><tr><td><b>Linie</b></td><td>Normale, dichte Formation in Rotten und Gliedern</td><td class=num>100 %</td><td>alle</td></tr><tr><td><b>Locker</b></td><td>Weiter Abstand: weniger Verluste durch Beschuss und Explosionen, schwächer im Nahkampf</td><td class=num>105 %</td><td>alle</td></tr><tr><td><b>Wall</b></td><td>Schild- oder Pikenwall: langsam, aber sehr stark von vorn</td><td class=num>45 %</td><td>45 Einheiten, z. B. Ägyptischer Krieger, Hastatus, Keltiberische Scutarii, Pedites Extraordinarii, Gallischer Krieger, Germanische Leibwache</td></tr><tr><td><b>Schildkröte</b></td><td>Schildkröte: Schilde rundum und über den Köpfen – Pfeile, Bolzen und Steine prallen ab. Sehr langsam, im Nahkampf beengt.</td><td class=num>35 %</td><td>18 Einheiten, z. B. Hastatus, Keltiberische Scutarii, Pedites Extraordinarii, Legionär, Prätorianer, Kreuzritter</td></tr><tr><td><b>Keil</b></td><td>Keil: die Spitze bricht in die feindliche Linie – deutlich stärkerer Ansturm, aber offene Flanken</td><td class=num>100 %</td><td>55 Einheiten, z. B. Keltiberische Scutarii, Gallischer Krieger, Xianzhen (Gao Shuns Sturmtruppe), Wikinger, Berserker, Ulfheðnar (Wolfskrieger)</td></tr><tr><td><b>Karree</b></td><td>Karree: hohles Viereck, nach allen Seiten gleich stark. Reiterei prallt ab. Sehr langsam.</td><td class=num>30 %</td><td>34 Einheiten, z. B. Hethitischer Speerträger, Phalangit, Argyraspiden (Silberschilde), Triarier, Libysche Speerträger, Yulin-Garde (Gefiederter Wald)</td></tr></table></div>
 <p>Mit <kbd>F</kbd> wechselt man reihum. Die KI wählt auch selbst: Schildkröte unter Beschuss, Karree gegen nahende Reiter,
 Keil für den Reiterangriff. Eine vom Spieler befohlene Formation lässt sie eine Weile in Ruhe.</p>
 <p><b>Tiefe:</b> Große Bataillone stehen in mindestens drei bis vier Gliedern, Musketiere in drei, Reiter in zwei – lächerliche
@@ -387,6 +398,15 @@ Wach- und Planaufträge der KI für dieses Bataillon enden sofort.</li>
 (bis 75 m) oder Nahkämpfer anstürmen (bis 18 m).</li>
 <li><b>Schwere Reiterei</b> löst sich nach 5–7 Sekunden Handgemenge, reitet 45 m zurück und setzt erneut an.</li>
 <li><b>Bautrupps</b> brechen ab und bringen sich in Sicherheit, wenn Reiter auf sie zuhalten.</li>
+<li><b>Brückenschlag</b> (1.0.8): Liegt tiefes Wasser zwischen den Heeren und hat die KI Brückenbauer, zwängt sie sich nicht
+durch eine Furt: Sie sucht die schmalste Stelle (bis 75 m breit) nahe der direkten Linie, bis zu zwei Trupps schlagen
+nebeneinander Brücken, die zwei stärksten schweren Fußtruppen sichern das Ufer zu beiden Seiten der Baustelle, und das übrige
+Heer sammelt sich 50 m hinter dem Ufer. Steht die Brücke (spätestens nach 4 Minuten), rückt es geschlossen vor.</li>
+<li><b>Reiterei nutzt Lücken</b> (1.0.8): Reiter auf dem Umgehungsmarsch prüfen alle drei Sekunden, ob in 85 m ungedeckte
+Schützen oder Geschütze stehen (kein feindliches Fußvolk näher als 22 m, kein Karree) – angegriffen wird von der Flanke oder
+von hinten (mehr als 55° neben deren Blickrichtung oder schon näher als 35 m), nie frontal in die Mündungen – oder ob eine
+kämpfende Linie ohne Spieße ihre Flanke zeigt (mehr als 80°, bis 70 m). Dann brechen sie den Umweg ab und stürmen im Keil
+hinein.</li>
 </ul>
 
 <h2 id="feldherren">Feldherren und Standarten</h2>
@@ -402,8 +422,8 @@ Bataillone ab 100 Mann führen eine <b>Standarte</b>: solange sie weht, hält di
 <ul>
 <li><b>Anhöhen:</b> weiter schießen, schwerer getroffen werden, im Nahkampf stärker. Bergauf langsamer und kein Sturmangriff.</li>
 <li><b>Wald:</b> schützt vor Beschuss, bremst Reiter und Fahrzeuge, verbirgt Fußvolk und leichte Reiter.</li>
-<li><b>Seichtes Wasser und Sumpf:</b> halbes Tempo, Fahrzeuge 35 %. Tiefes Wasser ist unpassierbar – über Flüsse geht es nur an
-Furten, über Seen nur an Landbrücken vorbei.</li>
+<li><b>Seichtes Wasser und Sumpf:</b> halbes Tempo, Fahrzeuge 35 %. Tiefes Wasser ist unpassierbar – über Flüsse geht es an
+Furten oder über eine Feldbrücke (siehe <a href="#gelaendebau">Geländebau</a>), über Seen nur an Landbrücken vorbei.</li>
 <li><b>Steile Felsen</b>, Schluchten und Gletscherspalten sind unpassierbar.</li>
 </ul>
 <p>Alle Zahlen zum Gelände und ein Führer durch jedes Schlachtfeld stehen auf der Seite <a href="karten.html">Karten</a>.</p>
@@ -455,7 +475,7 @@ Geschütze.</li>
 <li>Abgeschossene Hubschrauber stürzen ab und explodieren am Boden.</li>
 </ul>
 
-<h2 id="schutz">Schutzfahrzeuge und Energiekuppel</h2>
+<h2 id="schutz">Schutzfahrzeuge, Energiekuppel und Katze</h2>
 <ul>
 <li><b>Panzerwand-Fahrzeuge</b> gibt es für jedes Zeitalter: Pluteus (Antike), Sturmwand (Mittelalter), Sappenwalze
 (Linienzeit), Rollschild (Weltkriege) und Schildwagen (Moderne). Sie fangen Geschosse von vorn ab.</li>
@@ -463,6 +483,35 @@ Geschütze.</li>
 damit die Truppe vorbei stürmen kann.</li>
 <li>Der <b>Kuppelwagen</b> der Zukunft spannt eine blaue Energiekuppel von etwa 20 m Durchmesser auf:
 kein Schaden hinein und keiner hinaus – weder Geschosse noch Explosionen noch Nahkampf über die Grenze.</li>
+<li>Die <b>Katze</b> (Hochmittelalter, 1.0.8) ist ein fahrbares Schutzhaus aus Holz, 12 × 16 m, mit Platz für
+<b>zwei Bataillone bis 180 Mann</b>. Rechtsklick mit Fußvolk auf die eigene Katze: die Truppe zieht hinein (eine vorn, eine
+hinten, je 12 Mann breit) und fährt mit. Wer drin steht (bis 9,5 m um die Mitte), ist vor Geschossen und Nahkampf von draußen
+sicher; Schützen schießen durch die Schlitze hinaus, Nahkämpfer stechen hinaus. Explosionen draußen erreichen die Insassen
+nicht. Feinde wählen die Insassen kaum als Ziel; wer im Nahkampf auf sie einschlägt, trifft die Holzwände – erst muss die
+Katze fallen (3.600 LP, Rüstung 45 %, Härte 1; der Belagerungswert des Angreifers zählt halb).</li>
+</ul>
+
+<h2 id="gelaendebau">Geländebau (1.0.8)</h2>
+<p>Bautrupps verändern das Gelände: <b>Faschinen</b> (Reisigbündel) machen den Boden fest, <b>Feldbrücken</b> führen über
+tiefes Wasser. Wer was bauen kann, steht auf der Seite <a href="bauen.html">Bauen</a>.</p>
+<div class="box"><b>Faschinen</b>: Abschnitte 10 × 4 m, als Linie gezogen (ohne Linie 30 m Weg vor der Front). Darauf gilt:
+Schlamm = 0, zählt als Weg (× 1,15). Liegt ein Schützengraben darunter, wird er aufgefüllt (zerstört). Geschütze auf Faschinen
+streuen um 20 % weniger (Streuung × 0,8, sie sinken nicht ein). Material: Holz vom nächsten Waldrand.<br>
+<b>Feldbrücke</b>: 8 m breit, Abschnitte 6 m, Linie von Ufer zu Ufer (ohne Linie: über das erste tiefe Wasser vor der
+Front, je 3 m auf beide Ufer). Das Deck liegt 0,3 m über dem Wasserspiegel: tiefes Wasser wird dort begehbar und zählt als Weg,
+die Wegfindung führt hindurch. Ein Trupp baut die ganze Brücke; die Pontons bringt er mit. Bauzeit = 24 s × Abschnitte ÷ 3
+× √(20 ÷ Mann).</div>
+
+<h2 id="bedienung">Geschützbedienung, Gewehrsalve und Handgranaten (1.0.8)</h2>
+<ul>
+<li><b>Geschützbedienung:</b> Eigene Geschütze im Umkreis von 30 m um Belagerungsingenieure laden 25 % schneller, um
+Artilleristen 30 % (Feuerrate × 1,25 bzw. × 1,3; es zählt der beste Trupp in der Nähe). Unter KI-Führung gehen beide zu den
+Geschützen, stellen sich 7 m davor und verschanzen sie („Deckung“ vor das Geschütz).</li>
+<li><b>Gewehrsalve</b> (Konquistadoren): Ist der nächste Feind 12–75 m entfernt und die Truppe nicht im Nahkampf, feuert sie
+eine Salve: bis zu zwei Kugeln je Gegner, 85 Schaden, Rüstungsbrechung 70 %, Durchschlag 2, Streuung 3,5 % der Entfernung.
+Nach 60 Sekunden ist sie wieder bereit.</li>
+<li><b>Handgranaten</b> (Artilleristen): einmal pro Schlacht beim ersten Feindkontakt (8–30 m), ein Drittel der Gegnerzahl
+(mindestens vier), je 70 Schaden mit 2,2 m Fläche.</li>
 </ul>
 
 <h2 id="sicht">Sichtschutz und Tarnung</h2>
@@ -629,7 +678,7 @@ Welle und nach jedem Sieg.</li>
 </ul>
 
 </main>
-<footer>Stratego 3D · Version 1.0.7 – Handbuch · erzeugt aus den Spieldaten (214 Einheiten) mit
+<footer>Stratego 3D · Version 1.0.8 – Handbuch · erzeugt aus den Spieldaten (221 Einheiten) mit
 <code>python handbuch/erzeugen.py</code></footer>
 <script>
 document.querySelectorAll('table.sortable').forEach(tb=>{
