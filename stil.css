@@ -24,6 +24,15 @@ p.lead{font-size:18px;color:var(--mut);max-width:880px}
 .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0}
 .box.tip{border-left:4px solid var(--gold)}
 .box.warn{border-left:4px solid var(--red)}
+.trailer{margin:18px 0 26px}
+.tr-frame{position:relative;border-radius:14px;overflow:hidden;background:#000;border:1px solid var(--gold2);
+  box-shadow:0 0 0 4px rgba(236,196,92,.08),0 0 46px rgba(236,196,92,.16),0 22px 60px rgba(0,0,0,.65)}
+.tr-frame video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.tr-cap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;color:var(--mut);font-size:14px}
+.tr-cap .tr-tag{background:var(--gold);color:#17130b;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  font-size:12px;padding:3px 10px;border-radius:999px}
+.tr-cap a{margin-left:auto;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:3px 12px}
+.tr-cap a:hover{border-color:var(--gold2)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
 .tile{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--tx)}
 .tile:hover{border-color:var(--gold2);background:var(--panel2)}
